@@ -5334,9 +5334,6 @@
 </li>
 <li>
 <p>Define a <a href="/docs/latest/reference/config/library.html">shared library</a> in your <code>server.xml</code> file and reference it with the <code>libraryRef</code> attribute of the <a href="/docs/latest/reference/config/mpMetrics.html">mpMetrics</a> configuration element. If you use this configuration, the <code>/metrics</code> endpoint is available only if you provide the Micrometer Prometheus registry library as part of the shared library. This configuration strategy does not provide access to the Micrometer metrics API in the application.</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
 <p>The following example shows the <code>server.xml</code> file configuration for the shared library reference.</p>
 </div>
@@ -5348,6 +5345,9 @@
     &lt;fileset dir="/path/to/directory/with/micrometer/libraries" includes="*.jar" /&gt;
 &lt;/library&gt;</code></pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 </li>
 <li>
