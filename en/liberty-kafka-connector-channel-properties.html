@@ -10,17 +10,17 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.3/styles/default.min.css">
 <link rel="stylesheet" href="../../_/css/site.css">
 <meta name="robots" content="noindex" />
-<meta name="description" content="The Liberty-Kafka connector offers a range of properties to fine-tune its operation. You can set these properties on the &#x60;liberty-kafka&#x60; connector to define certain behaviors during operation.">
+<meta name="description" content="You can fine-tune the Liberty-Kafka connector by setting MicroProfile Config properties. The attributes that you specify for these properties configure message channels, message acknowledgment, context services, and other operational details.">
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@OpenLibertyIO" />
 <meta name="twitter:title" content="Open Liberty Docs" />
-<meta name="twitter:description" content="The Liberty-Kafka connector offers a range of properties to fine-tune its operation. You can set these properties on the &#x60;liberty-kafka&#x60; connector to define certain behaviors during operation." />
+<meta name="twitter:description" content="You can fine-tune the Liberty-Kafka connector by setting MicroProfile Config properties. The attributes that you specify for these properties configure message channels, message acknowledgment, context services, and other operational details." />
 <meta name="twitter:image" content="https://openliberty.io/img/twitter_card.jpg" />
 
 
 <meta property="og:title" content="Open Liberty Docs" />
-<meta property="og:description" content="The Liberty-Kafka connector offers a range of properties to fine-tune its operation. You can set these properties on the &#x60;liberty-kafka&#x60; connector to define certain behaviors during operation." />
+<meta property="og:description" content="You can fine-tune the Liberty-Kafka connector by setting MicroProfile Config properties. The attributes that you specify for these properties configure message channels, message acknowledgment, context services, and other operational details." />
 <meta property="og:image" content="https://openliberty.io/img/twitter_card.jpg" />
 <meta property='og:type' content="website" />
 <meta property='og:url' content="https://openliberty.io/docs/latest/liberty-kafka-connector-channel-properties.html" />
@@ -67,14 +67,14 @@
         </div>
     </nav>
 </header><div class="body">
-<div class="nav-container" data-component="docs" data-version="24.0.0.2">
+<div class="nav-container" data-component="docs" data-version="24.0.0.3">
   <aside class="nav" aria-label="Navigation table of contents">
     <div class="panels">
       <div class="nav-panel-explore" data-panel="explore">
     <div class="doc_select version_select">
       <div class="context">
         <span class="title">Version</span>
-        <a class="version" href="#">24.0.0.2</a>
+        <a class="version" href="#">24.0.0.3</a>
         <img src="/_/img/chevron.svg" class="version_select_chevron"/>
       </div>
       <ul class="components">
@@ -82,7 +82,11 @@
           <ul class="versions">
               <li class="version is-current">
                 <span class="title">Version</span>
-                          <a href="liberty-kafka-connector-channel-properties.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
+                          <a href="liberty-kafka-connector-channel-properties.html" aria-label="Version 24.0.0.3">24.0.0.3</a>
+              </li>
+              <li class="version">
+                <span class="title">Version</span>
+                          <a href="../24.0.0.2/liberty-kafka-connector-channel-properties.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
               </li>
               <li class="version">
                 <span class="title">Version</span>
@@ -5296,7 +5300,7 @@
       <img id="docs_github_logo" src="/img/docs_github_logo.svg" alt="GitHub logo">
       <a id="open_issue_link" href="https://github.com/OpenLiberty/docs/issues/new?body=Document: Liberty-Kafka connector options and channel properties%0Ahttp://openliberty.io/docs/latest/liberty-kafka-connector-channel-properties.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it.**" target="_blank">Open Issue</a> 
       | 
-      <a id="edit_topic_link" href="https://github.com/OpenLiberty/docs/edit/v24.0.0.2/modules/ROOT/pages/liberty-kafka-connector-channel-properties.adoc" target="_blank" rel="noopener">Edit Topic</a>
+      <a id="edit_topic_link" href="https://github.com/OpenLiberty/docs/edit/v24.0.0.3/modules/ROOT/pages/liberty-kafka-connector-channel-properties.adoc" target="_blank" rel="noopener">Edit Topic</a>
     </div>
 </div>
 <article class="doc">   
@@ -5304,21 +5308,37 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>liberty-kafka</code> connector offers a range of properties to fine-tune its operation. You can set these properties on the <code>liberty-kafka</code> connector to define certain behaviors during operation.</p>
+<p>You can fine-tune the Liberty-Kafka connector by setting MicroProfile Config properties. The attributes that you specify for these properties configure message channels, message acknowledgment, context services, and other operational details.</p>
 </div>
 <div class="paragraph">
-<p>You can use all these options as attributes on either the connector or a channel that uses the <code>liberty-kafka</code> connector. If you specify the option on both the channel and the connector, the channel takes precedence.</p>
+<p>You can use all these options as attributes on either the connector or a channel that uses the Liberty-Kafka connector. If you specify the option on both the channel and the connector, the channel takes precedence.</p>
+</div>
+<div class="paragraph">
+<p>To secure communication with Kafka brokers, set the necessary security properties in the <a href="microprofile-config-properties.html#react" class="xref page">microprofile-config.properties</a> file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_managing_incoming_and_outgoing_channels_with_liberty_kafka_connector_attributes"><a class="anchor" href="#_managing_incoming_and_outgoing_channels_with_liberty_kafka_connector_attributes"></a>Managing incoming and outgoing channels with Liberty-Kafka connector attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Liberty-Kafka connector helps applications use Kafka for sending and receiving messages. It integrates with the MicroProfile Reactive Messaging framework, simplifying message management. You can configure how to receive messages from Kafka, such as selecting which topics to listen to and managing message acknowledgments, facilitating efficient messages processing.</p>
+</div>
+<div class="paragraph">
+<p>For sending messages, you can decide where to send messages by specifying topics and use settings to make sending messages more efficient, like managing background tasks better. This means you can adjust the connector to handle both incoming and outgoing messages in the best way for your application. It facilitates smooth operation and the ability to meet the demands of working with Kafka.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Properties supported by the <code>liberty-kafka</code> connector for incoming channels</caption>
+<caption class="title">Attributes supported by the Liberty-Kafka connector for incoming and outgoing channels</caption>
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Property Name</th>
+<th class="tableblock halign-left valign-top">Attribute Name</th>
+<th class="tableblock halign-left valign-top">Channel</th>
 <th class="tableblock halign-left valign-top">Default</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
@@ -5327,6 +5347,9 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>topic</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Incoming and Outgoing channels</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The name of the channel.</p>
@@ -5338,6 +5361,9 @@
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>unacked.limit</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Incoming channel</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Defaults to the value of <code>max.poll.records</code> if set, or to 500.</p>
@@ -5352,6 +5378,9 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>fast.ack</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Incoming channel</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -5364,11 +5393,11 @@
 </ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Defines the acknowledge behavior of the <code>liberty-kafka</code> connector within the MicroProfile Reactive Messaging framework for <code>incoming</code> channels in relation to activities with the Kafka topic.
+<p>Defines the acknowledge behavior of the Liberty-Kafka connector within the MicroProfile Reactive Messaging framework for <code>incoming</code> channels in relation to activities with the Kafka topic.
  <br>
 If the value of <code>fast.ack</code> is <code>false</code>, the acknowledgment is not reported as complete until the partition offset is committed to the Kafka broker. If an error occurs during this process, then the acknowledgment is reported as failed.
  <br>
-If the value of <code>fast.ack</code> is <code>true</code>, and the acknowledgment is reported as complete when the Kafka connector receives the acknowledgment signal.</p>
+If the value of <code>fast.ack</code> is <code>true</code>, and the acknowledgment is reported as complete when the Kafka connector receives the acknowledgment signal. For more information, see <a href="#fastack">fast.ack</a>.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -5376,19 +5405,25 @@ If the value of <code>fast.ack</code> is <code>true</code>, and the acknowledgme
 <p>context.service</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If the <code>concurrent-x.y</code> feature is enabled. the default context service is used.
- <br>
- If the concurrent feature is not enabled, the built in Liberty context service is used with a set list of context types to capture and apply around asynchronous tasks.</p>
+<p>Incoming and Outgoing channels</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Enabling the concurrent feature is needed for the <code>context.service</code> option to be effective for the <code>liberty-kafka</code> connector.
+<p>If the <a href="/docs/latest/reference/feature/concurrent.html">Jakarta Concurrency</a> feature is enabled. the default context service is used.
  <br>
-This setting specifies the Context Service that is used for Asynchronous tasks.</p>
+ If the <a href="/docs/latest/reference/feature/concurrent.html">Jakarta Concurrency</a> feature is not enabled, the built in Liberty context service is used with a set list of context types to capture and apply around asynchronous tasks.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Enabling the <a href="/docs/latest/reference/feature/concurrent.html">Jakarta Concurrency</a> feature is needed for the <code>context.service</code> option to be effective for the Liberty-Kafka connector.
+ <br>
+This setting specifies the Context Service that is used for Asynchronous tasks. For more information, see <a href="#contextservice">context.service</a>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>&lt;any other property&gt;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Incoming and Outgoing channels</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Uses the Kafka Client default</p>
@@ -5399,11 +5434,8 @@ This setting specifies the Context Service that is used for Asynchronous tasks.<
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_fast_ack"><a class="anchor" href="#_fast_ack"></a>fast.ack</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="fastack"><a class="anchor" href="#fastack"></a>fast.ack</h3>
 <div class="paragraph">
 <p>Properties like <code>fast.ack</code> allow for control over message acknowledgment processes, improving the efficiency of message processing.</p>
 </div>
@@ -5418,68 +5450,12 @@ mp.messaging.incoming.foo.connector=liberty-kafka
 mp.messaging.incoming.foo.fast.ack=true</pre>
 </div>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Properties supported by the <code>liberty-kafka</code> connector for outgoing channels</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property Name</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>topic</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The name of the channel.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The Kafka topic that the channel is to either send or receive messages from.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>context.service</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If the <code>concurrent-x.y</code> feature is enabled. the default context service is used.
- <br>
- If the concurrent feature is not enabled, the built in Liberty context service is used with a set list of context types to capture and apply around asynchronous tasks.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Enabling the concurrent feature is needed for the <code>context.service</code> option to be effective for the <code>liberty-kafka</code> connector.
- <br>
-This setting specifies the Context Service that is used for Asynchronous tasks.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>&lt;any other property&gt;</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Uses the Kafka Client default</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>All other properties are passed directly as config parameters to the KafkaProducer API. A list of required and optional properties can be found in the <a href="http://kafka.apache.org/documentation.html#producerconfigs">Kafka documentation</a>.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_context_service"><a class="anchor" href="#_context_service"></a>context.service</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="contextservice"><a class="anchor" href="#contextservice"></a>context.service</h3>
 <div class="paragraph">
 <p>The <code>context.service</code> attribute specifies the Context Service for asynchronous operations, critical for performance tuning.
-Context Services that are defined within the application itself cannot be used with the <code>liberty-kafka</code> connector.</p>
+Context Services that are defined within the application itself cannot be used with the Liberty-Kafka connector.</p>
 </div>
 <div class="paragraph">
 <p>In the following example, the <code>server.xml</code> file defines three different context services, each with a unique identifier (<code>rst</code>, <code>uvw</code>, and <code>xyz</code>).</p>
@@ -5515,6 +5491,7 @@ The <code>def</code> channel does not specify its own <code>context.service</cod
 <div class="paragraph">
 <p>By defining separate context services, the application can isolate certain operations or configurations, which can be useful in complex applications or during integration with external systems.
 These configurations demonstrate the flexibility and control that you have over message processing in Open Liberty applications.</p>
+</div>
 </div>
 </div>
 </div>

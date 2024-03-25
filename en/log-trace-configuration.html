@@ -67,14 +67,14 @@
         </div>
     </nav>
 </header><div class="body">
-<div class="nav-container" data-component="docs" data-version="24.0.0.2">
+<div class="nav-container" data-component="docs" data-version="24.0.0.3">
   <aside class="nav" aria-label="Navigation table of contents">
     <div class="panels">
       <div class="nav-panel-explore" data-panel="explore">
     <div class="doc_select version_select">
       <div class="context">
         <span class="title">Version</span>
-        <a class="version" href="#">24.0.0.2</a>
+        <a class="version" href="#">24.0.0.3</a>
         <img src="/_/img/chevron.svg" class="version_select_chevron"/>
       </div>
       <ul class="components">
@@ -82,7 +82,11 @@
           <ul class="versions">
               <li class="version is-current">
                 <span class="title">Version</span>
-                          <a href="log-trace-configuration.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
+                          <a href="log-trace-configuration.html" aria-label="Version 24.0.0.3">24.0.0.3</a>
+              </li>
+              <li class="version">
+                <span class="title">Version</span>
+                          <a href="../24.0.0.2/log-trace-configuration.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
               </li>
               <li class="version">
                 <span class="title">Version</span>
@@ -5295,7 +5299,7 @@
       <img id="docs_github_logo" src="/img/docs_github_logo.svg" alt="GitHub logo">
       <a id="open_issue_link" href="https://github.com/OpenLiberty/docs/issues/new?body=Document: Log and trace configuration%0Ahttp://openliberty.io/docs/latest/log-trace-configuration.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it.**" target="_blank">Open Issue</a> 
       | 
-      <a id="edit_topic_link" href="https://github.com/OpenLiberty/docs/edit/v24.0.0.2/modules/ROOT/pages/log-trace-configuration.adoc" target="_blank" rel="noopener">Edit Topic</a>
+      <a id="edit_topic_link" href="https://github.com/OpenLiberty/docs/edit/v24.0.0.3/modules/ROOT/pages/log-trace-configuration.adoc" target="_blank" rel="noopener">Edit Topic</a>
     </div>
 </div>
 <article class="doc">   
@@ -5306,7 +5310,7 @@
 <p>Open Liberty has a unified logging component that handles messages that are written by applications and the runtime, and provides First Failure Data Capture (FFDC) capability. Logging data that is written by applications by using the <code>System.out</code>, <code>System.err</code>, or <code>java.util.logging.Logger</code> streams is combined into the server logs.</p>
 </div>
 <div class="paragraph">
-<p>A server has the following three primary log files:</p>
+<p>A server has the following four primary log files:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -5318,6 +5322,9 @@
 </li>
 <li>
 <p><code>trace.log</code> - This file is created only if you enable trace. It contains all the content of the <code>messages.log</code> file plus any enabled trace. This file does not contain messages that are written directly by the JVM process.</p>
+</li>
+<li>
+<p><code>verbosegc.XXX.log</code> - These files contain verbose garbage collection output from the JVM and are created by default when the Java implementation is either IBM Java or IBM Semeru Runtimes. Up to 10 rolling log files are created in your log directory, with 1024 GC cycles per file, where <code>XXX</code> represents the sequence number of the log file. Custom configurations take precedence over the default behavior. To disable the verbose garbage collection logs, add <code>VERBOSEGC=false</code> to the <code>server.env</code> file. For more information, see the <a href="https://eclipse.dev/openj9/docs/vgclog">Verbose garbage collection logs</a>.</p>
 </li>
 </ul>
 </div>

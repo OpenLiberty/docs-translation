@@ -67,14 +67,14 @@
         </div>
     </nav>
 </header><div class="body">
-<div class="nav-container" data-component="docs" data-version="24.0.0.2">
+<div class="nav-container" data-component="docs" data-version="24.0.0.3">
   <aside class="nav" aria-label="Navigation table of contents">
     <div class="panels">
       <div class="nav-panel-explore" data-panel="explore">
     <div class="doc_select version_select">
       <div class="context">
         <span class="title">Version</span>
-        <a class="version" href="#">24.0.0.2</a>
+        <a class="version" href="#">24.0.0.3</a>
         <img src="/_/img/chevron.svg" class="version_select_chevron"/>
       </div>
       <ul class="components">
@@ -82,7 +82,11 @@
           <ul class="versions">
               <li class="version is-current">
                 <span class="title">Version</span>
-                          <a href="feature-overview.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
+                          <a href="feature-overview.html" aria-label="Version 24.0.0.3">24.0.0.3</a>
+              </li>
+              <li class="version">
+                <span class="title">Version</span>
+                          <a href="../../../24.0.0.2/reference/feature/feature-overview.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
               </li>
               <li class="version">
                 <span class="title">Version</span>
@@ -5314,7 +5318,7 @@ Changes to applications are processed in a similar way.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_features"><a class="anchor" href="#_using_features"></a>Using features</h2>
+<h2 id="_feature_configuration"><a class="anchor" href="#_feature_configuration"></a>Feature configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Features are specified in the system configuration files that are the <code>server.xml</code> file and any other included files.
@@ -5339,6 +5343,97 @@ For details about the server configuration, see the <a href="../config/server-co
 </div>
 <div class="paragraph">
 <p>Occasionally, Liberty features that are not listed in the <code>server.xml</code> file are enabled automatically by other features. To confirm whether a particular feature is enabled in a Liberty server, inspect the <code>CWWKF0012I</code> message in the <code>console.log</code>, <code>messages.log</code>, or <code>trace.log</code> from the Liberty server. This message provides a comprehensive list of all the features that are installed and running on the Liberty server.</p>
+</div>
+<div class="sect2">
+<h3 id="_feature_combinations_and_compatibility"><a class="anchor" href="#_feature_combinations_and_compatibility"></a>Feature combinations and compatibility</h3>
+<div class="paragraph">
+<p>Not all Open Liberty features and feature versions are interoperable and some combinations might result in compatibility errors if they are enabled in the same server configuration.</p>
+</div>
+<div class="sect3">
+<h4 id="_singleton_features_and_feature_versions"><a class="anchor" href="#_singleton_features_and_feature_versions"></a>Singleton features and feature versions</h4>
+<div class="paragraph">
+<p>A singleton feature is a feature for which you can configure only one version per server. Most Open Liberty features are singleton features. If your server configuration includes multiple versions of the same singleton feature, either in the <code>server.xml</code> file or through feature dependencies, an error occurs and neither version of that feature loads.</p>
+</div>
+<div class="paragraph">
+<p>To resolve this problem, ensure that the configured features all specify, or tolerate, the same version of that singleton feature.
+If you have hard requirements on both feature versions, you must move some of your applications to a different server.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_microprofile_jakarta_ee_and_java_ee_features"><a class="anchor" href="#_microprofile_jakarta_ee_and_java_ee_features"></a>MicroProfile, Jakarta EE, and Java EE features</h4>
+<div class="paragraph">
+<p>Open Liberty features that support the MicroProfile, Jakarta EE, and Java EE specifications are sensitive to the version of whatever platform specification they target. For example, features that support Jakarta EE 10 do not interoperate with features that support Jakarta EE 8. Errors occur if you enable these features in the same server configuration.</p>
+</div>
+<div class="paragraph">
+<p>To avoid these errors, see the <strong>Features that this feature enables</strong> section on the <a href="/docs/latest/reference/feature/microprofile.html">MicroProfile</a>, <a href="/docs/latest/reference/feature/jakartaee.html">Jakarta EE Platform</a> or <a href="/docs/latest/reference/feature/javaee.html">Java EE Platform</a> convenience feature pages. You can use this list to determine which individual feature versions align with each platform specification version. Alternatively, to enable all the features that support a particular platform specification version, use the MicroProfile, Jakarta EE, or Java EE <a href="#conv">convenience features</a>.</p>
+</div>
+<div class="paragraph">
+<p>For more information about migrating your applications from one version of a MicroProfile or Jakarta EE specification to another, see the relevant <em>Differences between&#8230;&#8203;</em> pages in the <a href="../microprofile-api.html" class="xref page">MicroProfile API</a> and <a href="../jakarta-ee-api.html" class="xref page">Jakarta EE API</a> sections of the documentation.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_java_ee_7_and_java_ee_8_feature_combinations"><a class="anchor" href="#_java_ee_7_and_java_ee_8_feature_combinations"></a>Java EE 7 and Java EE 8 feature combinations</h4>
+<div class="paragraph">
+<p>Open Liberty doesn&#8217;t support combining features from both Java EE 7 and Java EE 8, except when the Java EE 7 and Java EE 8 specifications share a component specification version.
+If you combine Java EE 7 and Java EE 8 features in a server configuration, the server reports errors at startup.</p>
+</div>
+<div class="paragraph">
+<p>The following features are included in both Java EE 7 and Java EE 8:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/docs/latest/reference/feature/appClientSupport-1.0.html">Application Client Support for Server 1.0</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/batch-1.0.html">Batch API 1.0</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/concurrent-1.0.html">Concurrency Utilities for Java EE 1.0</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/ejb-3.2.html">Enterprise JavaBeans 3.2</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/j2eeManagement-1.1.html">J2EE Management 1.1</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/jacc-1.5.html">Java Authorization Contract for Containers 1.5</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/jca-1.7.html">Java Connector Architecture 1.7</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/jcaInboundSecurity-1.0.html">Java Connector Architecture Security Inflow 1.0</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/jdbc-4.2.html">Java Database Connectivity 4.2</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/jdbc-4.3.html">Java Database Connectivity 4.3</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/jms-2.0.html">Java Message Service 2.0</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/jaxws-2.2.html">Java Web Services 2.2</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/wasJmsClient-2.0.html">JMS 2.0 Client for Message Server</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/wasJmsServer-1.0.html">Message Server 1.0</a></p>
+</li>
+<li>
+<p><a href="/docs/latest/reference/feature/wasJmsSecurity-1.0.html">Message Server Security 1.0</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For a complete list of features that support Java EE 7, see the <a href="/docs/latest/reference/feature/javaee-7.0.html">Java EE Full Platform 7.0</a> feature.
+For a complete list of features that support Java EE 8, see the <a href="/docs/latest/reference/feature/javaee-8.0.html">Java EE Full Platform 8.0</a> feature.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="conv"><a class="anchor" href="#conv"></a>Convenience features</h3>
@@ -5406,82 +5501,6 @@ An API behavior change is made available as a new version of a feature so that y
 These versioned features continue to be supported across Open Liberty updates.
 If you continue to use the same feature version, you never need to migrate your application.
 For more information about zero migration with Open Liberty, see <a href="../../zero-migration-architecture.html" class="xref page">Zero-migration architecture</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_combining_features"><a class="anchor" href="#_combining_features"></a>Combining features</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you try to configure a server to have different versions of a feature, an error is reported because Open Liberty doesn&#8217;t support combining different versions of the same feature.
-This means that most Open Liberty features are singleton features.
-A singleton feature is a feature for which you can configure only one version for use in a server.</p>
-</div>
-<div class="paragraph">
-<p>If you have applications that need different versions of the singleton feature, you must deploy them in different servers.
-If your server configuration includes multiple versions of a singleton feature, either through direct configuration in the <code>server.xml</code> file, or through feature dependencies, that configuration is in error and neither version of that feature is loaded.
-To resolve this problem, ensure that the configured features all specify, or tolerate, the same version of that singleton feature.
-If you have hard requirements on both feature versions, you must move some of your applications to a different server.</p>
-</div>
-<div class="paragraph">
-<p>Open Liberty doesn&#8217;t support combining features from both Java EE 7 and Java EE 8, except when the Java EE 7 and Java EE 8 specifications share a component specification version.
-If you combine Java EE 7 and Java EE 8 features in a server configuration, the server reports errors at startup.</p>
-</div>
-<div class="paragraph">
-<p>The following features are included in both Java EE 7 and Java EE 8:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="/docs/latest/reference/feature/appClientSupport-1.0.html">Application Client Support for Server 1.0</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/batch-1.0.html">Batch API 1.0</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/concurrent-1.0.html">Concurrency Utilities for Java EE 1.0</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/ejb-3.2.html">Enterprise JavaBeans 3.2</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/j2eeManagement-1.1.html">J2EE Management 1.1</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/jacc-1.5.html">Java Authorization Contract for Containers 1.5</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/jca-1.7.html">Java Connector Architecture 1.7</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/jcaInboundSecurity-1.0.html">Java Connector Architecture Security Inflow 1.0</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/jdbc-4.2.html">Java Database Connectivity 4.2</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/jdbc-4.3.html">Java Database Connectivity 4.3</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/jms-2.0.html">Java Message Service 2.0</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/jaxws-2.2.html">Java Web Services 2.2</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/wasJmsClient-2.0.html">JMS 2.0 Client for Message Server</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/wasJmsServer-1.0.html">Message Server 1.0</a></p>
-</li>
-<li>
-<p><a href="/docs/latest/reference/feature/wasJmsSecurity-1.0.html">Message Server Security 1.0</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For a complete list of features that support Java EE 7, see the <a href="/docs/latest/reference/feature/javaee-7.0.html">Java EE Full Platform 7.0</a> feature.
-For a complete list of features that support Java EE 8, see the <a href="/docs/latest/reference/feature/javaee-8.0.html">Java EE Full Platform 8.0</a> feature.</p>
 </div>
 </div>
 </div>

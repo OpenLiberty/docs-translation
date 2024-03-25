@@ -67,14 +67,14 @@
         </div>
     </nav>
 </header><div class="body">
-<div class="nav-container" data-component="docs" data-version="24.0.0.2">
+<div class="nav-container" data-component="docs" data-version="24.0.0.3">
   <aside class="nav" aria-label="Navigation table of contents">
     <div class="panels">
       <div class="nav-panel-explore" data-panel="explore">
     <div class="doc_select version_select">
       <div class="context">
         <span class="title">Version</span>
-        <a class="version" href="#">24.0.0.2</a>
+        <a class="version" href="#">24.0.0.3</a>
         <img src="/_/img/chevron.svg" class="version_select_chevron"/>
       </div>
       <ul class="components">
@@ -82,7 +82,11 @@
           <ul class="versions">
               <li class="version is-current">
                 <span class="title">Version</span>
-                          <a href="transaction.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
+                          <a href="transaction.html" aria-label="Version 24.0.0.3">24.0.0.3</a>
+              </li>
+              <li class="version">
+                <span class="title">Version</span>
+                          <a href="../../../24.0.0.2/reference/config/transaction.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
               </li>
               <li class="version">
                 <span class="title">Version</span>
@@ -5574,6 +5578,20 @@ Max: 100</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Specifies the direction that is used to complete a transaction that has a heuristic outcome; either the application server commits or rolls back the transaction, or depends on manual completion by the administrator.  Allowed values are: COMMIT, ROLLBACK and MANUAL</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>propagateXAResourceTransactionTimeout</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>boolean</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>false</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Specifies whether the remaining time left in a global transaction is propagated to XAResources on enlistment.</p>
 </div></div></td>
 </tr>
 <tr>

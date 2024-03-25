@@ -67,14 +67,14 @@
         </div>
     </nav>
 </header><div class="body">
-<div class="nav-container" data-component="docs" data-version="24.0.0.2">
+<div class="nav-container" data-component="docs" data-version="24.0.0.3">
   <aside class="nav" aria-label="Navigation table of contents">
     <div class="panels">
       <div class="nav-panel-explore" data-panel="explore">
     <div class="doc_select version_select">
       <div class="context">
         <span class="title">Version</span>
-        <a class="version" href="#">24.0.0.2</a>
+        <a class="version" href="#">24.0.0.3</a>
         <img src="/_/img/chevron.svg" class="version_select_chevron"/>
       </div>
       <ul class="components">
@@ -82,7 +82,11 @@
           <ul class="versions">
               <li class="version is-current">
                 <span class="title">Version</span>
-                          <a href="liberty-kafka-connector-config-security.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
+                          <a href="liberty-kafka-connector-config-security.html" aria-label="Version 24.0.0.3">24.0.0.3</a>
+              </li>
+              <li class="version">
+                <span class="title">Version</span>
+                          <a href="../24.0.0.2/liberty-kafka-connector-config-security.html" aria-label="Version 24.0.0.2">24.0.0.2</a>
               </li>
               <li class="version">
                 <span class="title">Version</span>
@@ -5296,7 +5300,7 @@
       <img id="docs_github_logo" src="/img/docs_github_logo.svg" alt="GitHub logo">
       <a id="open_issue_link" href="https://github.com/OpenLiberty/docs/issues/new?body=Document: Kafka connector security configuration%0Ahttp://openliberty.io/docs/latest/liberty-kafka-connector-config-security.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it.**" target="_blank">Open Issue</a> 
       | 
-      <a id="edit_topic_link" href="https://github.com/OpenLiberty/docs/edit/v24.0.0.2/modules/ROOT/pages/liberty-kafka-connector-config-security.adoc" target="_blank" rel="noopener">Edit Topic</a>
+      <a id="edit_topic_link" href="https://github.com/OpenLiberty/docs/edit/v24.0.0.3/modules/ROOT/pages/liberty-kafka-connector-config-security.adoc" target="_blank" rel="noopener">Edit Topic</a>
     </div>
 </div>
 <article class="doc">   
@@ -5304,27 +5308,26 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>For configuring the Kafka connector and security in Open Liberty, you can focus on the distinction between channel-specific and connector-wide properties for tailored messaging behavior.
-Connector-wide properties, like <code>bootstrap.servers</code> apply globally, whereas channel-specific properties, such as <code>topic</code> or <code>group.id</code>, customize the individual channel behavior.</p>
+<p>You can configure security for reactive messaging channels at both the channel level and the connector level. Connector-wide properties, like <code>bootstrap.servers</code> apply globally, whereas channel-specific properties, such as <code>topic</code> or <code>group.id</code>, customize the individual channel behavior.</p>
 </div>
 <div class="paragraph">
-<p>For security, Open Liberty supports multiple authentication methods:</p>
+<p>Open Liberty enhances secure communication by supporting various protocols, each designed to safeguard data exchanges.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#ssl">Secure Sockets Layer (SSL)</a></p>
+<p><a href="#ssl">Secure Sockets Layer (SSL): For encrypted data transmission.</a></p>
 </li>
 <li>
-<p><a href="#sasl">Simple Authentication and Security Layer (SASL)/PLAIN </a></p>
+<p><a href="#sasl">Simple Authentication and Security Layer (SASL)/PLAIN: For authenticated and encrypted communication.</a></p>
 </li>
 <li>
-<p><a href="#mtls">Mutual TLS (mTLS)</a></p>
+<p><a href="#mtls">Mutual TLS (mTLS): For mutually authenticated and encrypted communication.</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>To make sure of secure communication with Kafka brokers, you can set the appropriate security properties within the <a href="microprofile-config-properties.html#react" class="xref page">microprofile-config.properties</a> file, facilitating the support of any of the authentication methods.</p>
+<p>These protocols help maintain the interactions with services and data to be confidential and secure. To secure communication with Kafka brokers, set the necessary security properties in the <a href="microprofile-config-properties.html#react" class="xref page">microprofile-config.properties</a> file to support various authentication protocols such as SSL/TLS, SASL/PLAIN or mTLS.</p>
 </div>
 </div>
 </div>
@@ -5342,6 +5345,9 @@ mp.messaging.connector.liberty-kafka.ssl.truststore.password=kafka-teststore
 mp.messaging.connector.liberty-kafka.ssl.truststore.location=kafka-truststore.jks</pre>
 </div>
 </div>
+<div class="paragraph">
+<p>In the example, specifying the truststore location and password is crucial for securing communications with Kafka brokers. The client can authenticate the server identity through trusted certificates, hence establishing a secure SSL/TLS connection. The truststore location (<code>ssl.truststore.location</code>) identifies the file that contains these certificates. Meanwhile, the truststore password (<code>ssl.truststore.password</code>) protects this file, safeguarding the integrity and confidentiality of data transmitted between the client and server. This streamlined setup is essential for preventing unauthorized access and facilitating encrypted, authenticated communication in line with best security practices.s</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -5349,7 +5355,7 @@ mp.messaging.connector.liberty-kafka.ssl.truststore.location=kafka-truststore.jk
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following example demonstrates the setup of the SASL/PLAIN authentication with either the Open Liberty Kafka Login Module or the Kafka Plain Login Module.
-This configuration enables encrypted communication and authentication with Kafka brokers. It uses properties set in the <code>microprofile-config.properties</code> file to support different authentication methods, including password encryption with Open Liberty <a href="reference/command/securityUtility-encode.html" class="xref page">securityUtility encode</a>. Applications can maintain the confidentiality and integrity of messages, ensuring secure data flow across distributed systems.</p>
+This configuration enables encrypted communication and authentication with Kafka brokers. It uses properties set in the <code>microprofile-config.properties</code> file to support different authentication protocols, including password encryption with Open Liberty <a href="reference/command/securityUtility-encode.html" class="xref page">securityUtility encode</a>. Applications can maintain the confidentiality and integrity of messages, ensuring secure data flow across distributed systems.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -5414,7 +5420,6 @@ Mutual TLS not only secures the data in transit but also makes sure that each co
 mp.messaging.connector.liberty-kafka.security.protocol=SSL
 mp.messaging.connector.liberty-kafka.ssl.truststore.location=kafka-truststore.jks
 mp.messaging.connector.liberty-kafka.ssl.truststore.password=kafka-teststore
-mp.messaging.connector.liberty-kafka.ssl.truststore.location=kafka-truststore.jks
 
 mp.messaging.incoming.test-in.connector=liberty-kafka
 mp.messaging.incoming.test-in.ssl.keystore.location=kafka-keystore.jks
@@ -5428,9 +5433,6 @@ mp.messaging.outgoing.test-out.topic=outgoing-topic
 mp.messaging.outgoing.test-out.ssl.keystore.location=kafka-keystore2.jks
 mp.messaging.outgoing.test-out.ssl.keystore.password=kafka-teststore</pre>
 </div>
-</div>
-<div class="paragraph">
-<p>Using Open Liberty&#8217;s support for multiple authentication methods, including SSL, SASL/PLAIN, and mTLS, enhances the security of data in transit and ensures the authentication of both clients and servers. This careful attention to configuration and security contributes to the creation of a resilient architecture. Such an architecture can protect sensitive information and maintain the integrity of communication between microservices.</p>
 </div>
 </div>
 </div>
