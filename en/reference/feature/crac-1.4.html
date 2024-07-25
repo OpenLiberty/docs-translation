@@ -3,29 +3,30 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Modifications for featureUtility commands :: Open Liberty Docs</title>
-<link href="https://openliberty.io/docs/latest/reference/command/featureUtility-modifications.html" rel="canonical"/>
+<title>Coordinated Restore at Checkpoint 1.4 :: Open Liberty Docs</title>
+<link href="https://openliberty.io/docs/latest/reference/feature/crac-1.4.html" rel="canonical"/>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Asap:400,500" rel="stylesheet"/>
 <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.3/styles/default.min.css" rel="stylesheet"/>
 <link href="../../../../_/css/site.css" rel="stylesheet"/>
-<meta content="noindex" name="robots"/>
-<meta content="You can modify several behaviors of the `featureUtility` commands by declaring environment variables in the shell environment or by specifying properties in the `featureUtility.properties` file that's located in the `{wlp.install.dir}/etc/` directory." name="description"/>
-<meta content="summary" name="twitter:card"/>
-<meta content="@OpenLibertyIO" name="twitter:site"/>
-<meta content="Open Liberty Docs" name="twitter:title"/>
-<meta content="You can modify several behaviors of the `featureUtility` commands by declaring environment variables in the shell environment or by specifying properties in the `featureUtility.properties` file that's located in the `{wlp.install.dir}/etc/` directory." name="twitter:description"/>
-<meta content="https://openliberty.io/img/twitter_card.jpg" name="twitter:image"/>
+<meta content="Open Liberty documentation and reference materials for developers to build applications and for administrators and operation teams to manage DevOps and deploy workloads to clouds by using open cloud-native Java. This content covers Open Liberty basics, development, security, deployment, and operations topics. It also includes Javadoc for Jakarta EE APIs, MicroProfile APIs, Java EE APIs, and Open Liberty APIs and SPIs." name="description"/>
 <meta content="Open Liberty Docs" property="og:title"/>
-<meta content="You can modify several behaviors of the `featureUtility` commands by declaring environment variables in the shell environment or by specifying properties in the `featureUtility.properties` file that's located in the `{wlp.install.dir}/etc/` directory." property="og:description"/>
+<meta content="Open Liberty documentation and reference materials for developers to build applications and for administrators and operation teams to manage DevOps and deploy workloads to clouds by using open cloud-native Java. This content covers Open Liberty basics, development, security, deployment, and operations topics. It also includes Javadoc for Jakarta EE APIs, MicroProfile APIs, Java EE APIs, and Open Liberty APIs and SPIs." property="og:description"/>
 <meta content="https://openliberty.io/img/twitter_card.jpg" property="og:image"/>
 <meta content="website" property="og:type"/>
-<meta content="https://openliberty.io/docs/latest/reference/command/featureUtility-modifications.html" property="og:url"/>
-<script async="" src="../../../../_/js/vendor/highlight.js "></script>
+<meta content="https://openliberty.io/docs/latest/reference/feature/crac-1.4.html" property="og:url"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKP3KJ7');</script> <script async="" src="../../../../_/js/vendor/highlight.js "></script>
 <script crossorigin="anonymous" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 </head>
 <body class="article">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TKP3KJ7" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header>
 <nav aria-label="Navigation header links" id="nav_bar">
 <div id="nav_header">
@@ -55,7 +56,6 @@
 </li>
 </ul>
 <div id="header_round_links_container">
-<a aria-label="Twitter" class="header_round_button" href="https://twitter.com/OpenLibertyIO" id="header_twitter_link" rel="noopener noreferrer" target="_blank"></a>
 <a aria-label="Open Liberty questions on Stack Overflow" class="header_round_button" href="https://stackoverflow.com/questions/tagged/open-liberty" id="header_stackoverflow_link" rel="noopener noreferrer" target="_blank"></a>
 <a aria-label="Open Liberty Groups.io" class="header_round_button" href="https://groups.io/g/openliberty" id="header_groupsio_link" rel="noopener noreferrer" target="_blank"></a>
 <a aria-label="Open Liberty Gitter" class="header_round_button" href="https://app.gitter.im/#/room/#OpenLiberty_development:gitter.im" id="header_gitter_link" rel="noopener noreferrer" target="_blank"></a>
@@ -63,78 +63,84 @@
 </div>
 </nav>
 </header><div class="body">
-<div class="nav-container" data-component="docs" data-version="24.0.0.3">
+<div class="nav-container" data-component="docs" data-version="24.0.0.7">
 <aside aria-label="Navigation table of contents" class="nav">
 <div class="panels">
 <div class="nav-panel-explore" data-panel="explore">
-<div class="doc_select version_select">
 <div class="context">
 <span class="title">Version</span>
-<a class="version" href="#">24.0.0.3</a>
-<img class="version_select_chevron" src="/_/img/chevron.svg"/>
+<a class="version" href="#">24.0.0.7</a>
 </div>
 <ul class="components">
 <li class="component is-current">
 <ul class="versions">
 <li class="version is-current">
 <span class="title">Version</span>
-<a aria-label="Version 24.0.0.3" href="featureUtility-modifications.html">24.0.0.3</a>
+<a aria-label="Version 24.0.0.7" href="crac-1.4.html">24.0.0.7</a>
 </li>
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 24.0.0.2" href="../../../24.0.0.2/reference/command/featureUtility-modifications.html">24.0.0.2</a>
+<a aria-label="Version 24.0.0.6" href="../../../24.0.0.6/reference/feature/crac-1.4.html">24.0.0.6</a>
 </li>
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 24.0.0.1" href="../../../24.0.0.1/reference/command/featureUtility-modifications.html">24.0.0.1</a>
+<a aria-label="Version 24.0.0.5" href="/docs/24.0.0.5/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">24.0.0.5</a>
 </li>
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 23.0.0.12" href="../../../23.0.0.12/reference/command/featureUtility-modifications.html">23.0.0.12</a>
+<a aria-label="Version 24.0.0.4" href="/docs/24.0.0.4/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">24.0.0.4</a>
 </li>
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 23.0.0.11" href="../../../23.0.0.11/reference/command/featureUtility-modifications.html">23.0.0.11</a>
+<a aria-label="Version 24.0.0.3" href="/docs/24.0.0.3/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">24.0.0.3</a>
 </li>
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 23.0.0.10" href="../../../23.0.0.10/reference/command/featureUtility-modifications.html">23.0.0.10</a>
+<a aria-label="Version 24.0.0.2" href="/docs/24.0.0.2/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">24.0.0.2</a>
 </li>
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 23.0.0.9" href="../../../23.0.0.9/reference/command/featureUtility-modifications.html">23.0.0.9</a>
+<a aria-label="Version 24.0.0.1" href="/docs/24.0.0.1/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">24.0.0.1</a>
 </li>
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 23.0.0.8" href="../../../23.0.0.8/reference/command/featureUtility-modifications.html">23.0.0.8</a>
+<a aria-label="Version 23.0.0.12" href="/docs/23.0.0.12/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">23.0.0.12</a>
+</li>
+<li class="version">
+<span class="title">Version</span>
+<a aria-label="Version 23.0.0.11" href="/docs/23.0.0.11/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">23.0.0.11</a>
+</li>
+<li class="version">
+<span class="title">Version</span>
+<a aria-label="Version 23.0.0.10" href="/docs/23.0.0.10/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">23.0.0.10</a>
+</li>
+<li class="version">
+<span class="title">Version</span>
+<a aria-label="Version 23.0.0.9" href="/docs/23.0.0.9/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">23.0.0.9</a>
+</li>
+<li class="version">
+<span class="title">Version</span>
+<a aria-label="Version 23.0.0.8" href="/docs/23.0.0.8/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">23.0.0.8</a>
+</li>
+<li class="version">
+<span class="title">Version</span>
+<a aria-label="Version 23.0.0.6" href="/docs/23.0.0.6/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">23.0.0.6</a>
+</li>
+<li class="version">
+<span class="title">Version</span>
+<a aria-label="Version 23.0.0.3" href="/docs/23.0.0.3/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">23.0.0.3</a>
+</li>
+<li class="version">
+<span class="title">Version</span>
+<a aria-label="Version 22.0.0.12" href="/docs/22.0.0.12/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">22.0.0.12</a>
+</li>
+<li class="version">
+<span class="title">Version</span>
+<a aria-label="Version 22.0.0.9" href="/docs/22.0.0.9/noversion.html?ref=/docs/latest/reference/feature/crac-1.4.html">22.0.0.9</a>
 </li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="doc_select language_select">
-<div class="context lang_picker">
-<img class="globe_icon" src="../../../../_/img/filled_globe.svg"/>
-<a class="version" href="#">
-</a>
-<img class="version_select_chevron" src="../../../../Users/nataliebernhard/openliberty.io/_/img/chevron.svg"/>
-</div>
-<ul class="components language_list">
-<li class="component">
-<ul class="versions">
-<li class="version is-current">
-<a href="/docs/latest/reference/command/featureUtility-modifications.html" translate="no">English</a>
-</li>
-<li class="version">
-<a href="../../../../ja/docs/latest/reference/command/featureUtility-modifications.html" translate="no">日本語</a>
-</li>
-<li class="version">
-<a href="../../../../zh-Hans/docs/latest/reference/command/featureUtility-modifications.html" translate="no">中文（简体)</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
 </div>
 <div class="nav-panel-menu is-active" data-panel="menu">
 <nav aria-label="Navigation menu for Open Liberty docs" class="nav-menu">
@@ -1148,6 +1154,9 @@
 <a class="nav-link" href="/docs/latest/reference/feature/cloudant-1.0.html" tabindex="0">Cloudant Integration</a>
 </li>
 <li class="nav-item" data-depth="2">
+<a class="nav-link" href="/docs/latest/reference/feature/crac-1.4.html" tabindex="0">Coordinated Restore at Checkpoint</a>
+</li>
+<li class="nav-item" data-depth="2">
 <a class="nav-link" href="/docs/latest/reference/feature/couchdb-1.0.html" tabindex="0">CouchDB Integration</a>
 </li>
 <li class="nav-item" data-depth="2">
@@ -1439,113 +1448,113 @@
 </li></li>
 <li class="nav-item" data-depth="1">
 <button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
-<a class="nav-link" href="command-overview.html" tabindex="0">Commands</a>
+<a class="nav-link" href="../command/command-overview.html" tabindex="0">Commands</a>
 <ul class="nav-list">
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="auditUtility-auditReader.html" tabindex="0">auditUtility auditReader</a>
+<a class="nav-link" href="../command/auditUtility-auditReader.html" tabindex="0">auditUtility auditReader</a>
 </li>
 <li class="nav-item" data-depth="2">
 <button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
-<a class="nav-link" href="featureUtility-commands.html" tabindex="0">featureUtility commands</a>
+<a class="nav-link" href="../command/featureUtility-commands.html" tabindex="0">featureUtility commands</a>
 <ul class="nav-list">
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="featureUtility-find.html" tabindex="0">find</a>
+<a class="nav-link" href="../command/featureUtility-find.html" tabindex="0">find</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="featureUtility-help.html" tabindex="0">help</a>
+<a class="nav-link" href="../command/featureUtility-help.html" tabindex="0">help</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="featureUtility-installFeature.html" tabindex="0">installFeature</a>
+<a class="nav-link" href="../command/featureUtility-installFeature.html" tabindex="0">installFeature</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="featureUtility-installServerFeatures.html" tabindex="0">installServerFeatures</a>
+<a class="nav-link" href="../command/featureUtility-installServerFeatures.html" tabindex="0">installServerFeatures</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="featureUtility-viewSettings.html" tabindex="0">viewSettings</a>
+<a class="nav-link" href="../command/featureUtility-viewSettings.html" tabindex="0">viewSettings</a>
 </li>
 </ul>
 </li>
 <li class="nav-item" data-depth="2">
 <button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
-<a class="nav-link" href="securityUtility-commands.html" tabindex="0">securityUtility commands</a>
+<a class="nav-link" href="../command/securityUtility-commands.html" tabindex="0">securityUtility commands</a>
 <ul class="nav-list">
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="securityUtility-createLTPAKeys.html" tabindex="0">createLTPAKeys</a>
+<a class="nav-link" href="../command/securityUtility-createLTPAKeys.html" tabindex="0">createLTPAKeys</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="securityUtility-createSSLCertificate.html" tabindex="0">createSSLCertificate</a>
+<a class="nav-link" href="../command/securityUtility-createSSLCertificate.html" tabindex="0">createSSLCertificate</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="securityUtility-encode.html" tabindex="0">encode</a>
+<a class="nav-link" href="../command/securityUtility-encode.html" tabindex="0">encode</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="securityUtility-help.html" tabindex="0">help</a>
+<a class="nav-link" href="../command/securityUtility-help.html" tabindex="0">help</a>
 </li>
 </ul>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="schemaGen.html" tabindex="0">schemaGen</a>
+<a class="nav-link" href="../command/schemaGen.html" tabindex="0">schemaGen</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="serverSchemaGen.html" tabindex="0">serverSchemaGen</a>
+<a class="nav-link" href="../command/serverSchemaGen.html" tabindex="0">serverSchemaGen</a>
 </li>
 <li class="nav-item" data-depth="2">
 <button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
-<a class="nav-link" href="server-commands.html" tabindex="0">server commands</a>
+<a class="nav-link" href="../command/server-commands.html" tabindex="0">server commands</a>
 <ul class="nav-list">
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-create.html" tabindex="0">create</a>
+<a class="nav-link" href="../command/server-create.html" tabindex="0">create</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-debug.html" tabindex="0">debug</a>
+<a class="nav-link" href="../command/server-debug.html" tabindex="0">debug</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-dump.html" tabindex="0">dump</a>
+<a class="nav-link" href="../command/server-dump.html" tabindex="0">dump</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-help.html" tabindex="0">help</a>
+<a class="nav-link" href="../command/server-help.html" tabindex="0">help</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-javadump.html" tabindex="0">javadump</a>
+<a class="nav-link" href="../command/server-javadump.html" tabindex="0">javadump</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-list.html" tabindex="0">list</a>
+<a class="nav-link" href="../command/server-list.html" tabindex="0">list</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-package.html" tabindex="0">package</a>
+<a class="nav-link" href="../command/server-package.html" tabindex="0">package</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-pause.html" tabindex="0">pause</a>
+<a class="nav-link" href="../command/server-pause.html" tabindex="0">pause</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-resume.html" tabindex="0">resume</a>
+<a class="nav-link" href="../command/server-resume.html" tabindex="0">resume</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-run.html" tabindex="0">run</a>
+<a class="nav-link" href="../command/server-run.html" tabindex="0">run</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-start.html" tabindex="0">start</a>
+<a class="nav-link" href="../command/server-start.html" tabindex="0">start</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-status.html" tabindex="0">status</a>
+<a class="nav-link" href="../command/server-status.html" tabindex="0">status</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-stop.html" tabindex="0">stop</a>
+<a class="nav-link" href="../command/server-stop.html" tabindex="0">stop</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="server-version.html" tabindex="0">version</a>
+<a class="nav-link" href="../command/server-version.html" tabindex="0">version</a>
 </li>
 </ul>
 </li>
 <li class="nav-item" data-depth="2">
 <button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
-<a class="nav-link" href="springbootUtility-commands.html" tabindex="0">springbootUtility commands</a>
+<a class="nav-link" href="../command/springbootUtility-commands.html" tabindex="0">springbootUtility commands</a>
 <ul class="nav-list">
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="springbootUtility-help.html" tabindex="0">help</a>
+<a class="nav-link" href="../command/springbootUtility-help.html" tabindex="0">help</a>
 </li>
 <li class="nav-item" data-depth="3">
-<a class="nav-link" href="springbootUtility-thin.html" tabindex="0">thin</a>
+<a class="nav-link" href="../command/springbootUtility-thin.html" tabindex="0">thin</a>
 </li>
 </ul>
 </li>
@@ -4778,117 +4787,88 @@
 <nav aria-label="breadcrumbs" class="breadcrumbs">
 <ul>
 <li><a href="../../overview.html">Docs overview</a></li>
-<li><a href="featureUtility-modifications.html">Modifications for featureUtility commands</a></li>
+<li>Reference</li>
+<li><a href="feature-overview.html">Features</a></li>
+<li><a href="crac-1.4.html">Coordinated Restore at Checkpoint</a></li>
 </ul>
 </nav>
-<div id="github_link">
-<img alt="GitHub logo" id="docs_github_logo" src="/img/docs_github_logo.svg"/>
-<a href="https://github.com/OpenLiberty/docs/issues/new?body=Document: Modifications for featureUtility commands%0Ahttp://openliberty.io/docs/latest/reference/command/featureUtility-modifications.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it. Please specify which language you are viewing the documentation in as well.**" id="open_issue_link" target="_blank">Open Issue</a> 
-      | 
-      <a href="https://github.com/OpenLiberty/docs/edit/v24.0.0.3/modules/reference/pages/command/featureUtility-modifications.adoc" id="edit_topic_link" rel="noopener" target="_blank">Edit Topic</a>
-</div>
 </div>
 <article class="doc">
-<h1 class="page">Modifications for featureUtility commands</h1>
+<h1 class="page"><div id="feature_name"><div aria-label="Coordinated Restore at Checkpoint" full_title="Coordinated Restore at Checkpoint" id="feature_name_string" tabindex="0">Coordinated Restore at Checkpoint</div></div><div id="feature_versions"><div aria-label="Version 1.4" class="feature_version" href="crac-1.4.html" role="button" tabindex="0">1.4</div></div></h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can modify several behaviors of the <code translate="no">featureUtility</code> commands by declaring environment variables in the shell environment or by specifying properties in the <code translate="no">featureUtility.properties</code> file that’s located in the <code translate="no">{wlp.install.dir}/etc/</code> directory.</p>
+<p>This feature enables the org.crac Coordinated Restore at Checkpoint APIs.</p>
 </div>
 <div class="paragraph">
-<p>Properties that are specified in the <code translate="no">featureUtility.properties</code> file take precedence over environment variables that are declared in the shell environment.
-For example, if you specify the <code translate="no">featureLocalRepo</code> property in the <code translate="no">featureUtility.properties</code> file, then any value set with the <code translate="no">FEATURE_LOCAL_REPO</code> environment variable is overridden.
-You can specify modifications to the <code translate="no">featureUtility</code> commands by using properties in the <code translate="no">featureUtility.properties</code> file rather than environment variables.
-You can also easily see Maven repository and proxy settings that are contained in the <code translate="no">featureUtility.properties</code> file by running the <a class="xref page" href="featureUtility-viewSettings.html">featureUtility viewSettings command</a>.
-Settings that are configured with environment variables don’t show up with this information.</p>
+<p>These APIs integrate with the Liberty <a class="xref page" href="../../instanton.html">InstantOn support</a>.</p>
 </div>
 <div class="paragraph">
-<p>The following table lists the environment variables and their corresponding properties that you can specify to modify the <code translate="no">featureUtility</code> commands:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;"/>
-<col style="width: 33.3333%;"/>
-<col style="width: 33.3334%;"/>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Environment variable</th>
-<th class="tableblock halign-left valign-top">Corresponding properties</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">FEATURE_REPO_URL</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">mavenCentralMirror.url</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides Maven Central with an on-premises Maven repository.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">FEATURE_REPO_USER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">mavenCentralMirror.user</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The username for <code translate="no">FEATURE_REPO_URL</code> user credentials.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">FEATURE_REPO_PASSWORD</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">mavenCentralMirror.password</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The password for <code translate="no">FEATURE_REPO_URL</code> user credentials.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">FEATURE_LOCAL_REPO</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">featureLocalRepo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Overrides the local Maven repository.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">http_proxy</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">proxyHost</code>, <code translate="no">proxyPort</code>, <code translate="no">proxyUser</code>, and <code translate="no">proxyPassword</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Configures the outbound HTTP proxy.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">https_proxy</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code translate="no">proxyHost</code>, <code translate="no">proxyPort</code>, <code translate="no">proxyUser</code>, and <code translate="no">proxyPassword</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Configures the outbound HTTPS proxy.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><br/></p>
+<p>The <a href="https://javadoc.io/doc/org.crac/crac/1.4.0/index.html">org.crac</a> package provides APIs for receiving checkpoint/restore notifications. These notifications enable applications to perform actions before they checkpoint an application process and after they restore the application process. For example, this package allows Spring-based applications to support checkpoint and restore. The use of <code translate="no">org.crac</code> is not limited to Spring-based applications. Any application that runs on Liberty can choose to receive checkpoint/restore notifications by enabling this feature.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_install_user_features"><a class="anchor" href="#_install_user_features"></a>Install user features</h2>
+<h2 id="_enabling_this_feature"><a class="anchor" href="#_enabling_this_feature"></a>Enabling this feature</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can specify the maven coordinates for the features BOM file to install user features by adding the <code translate="no">customBomFileName.featuresbom</code> property in the <code translate="no">featureUtility.properties</code> file, as shown in the following example:</p>
+<p>To enable the Coordinated Restore at Checkpoint 1.4 feature, add the following element declaration into your <code translate="no">server.xml</code> file, inside the <code translate="no">featureManager</code> element:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre translate="no">customBomFileName.featuresbom=my.maven.coordinate:my-features-bom:version</pre>
+<pre translate="no">&lt;feature&gt;crac-1.4&lt;/feature&gt;</pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_define_custom_repositories"><a class="anchor" href="#_define_custom_repositories"></a>Define custom repositories</h2>
+<h2 id="_stable_api_packages_provided_by_this_feature"><a class="anchor" href="#_stable_api_packages_provided_by_this_feature"></a>Stable API packages provided by this feature</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>org.crac</p>
+</li>
+<li>
+<p>org.crac.management</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_supported_java_versions"><a class="anchor" href="#_supported_java_versions"></a>Supported Java versions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>JavaSE-1.8</p>
+</li>
+<li>
+<p>JavaSE-11.0</p>
+</li>
+<li>
+<p>JavaSE-17.0</p>
+</li>
+<li>
+<p>JavaSE-21.0</p>
+</li>
+<li>
+<p>JavaSE-22.0</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_developing_a_feature_that_depends_on_this_feature"><a class="anchor" href="#_developing_a_feature_that_depends_on_this_feature"></a>Developing a feature that depends on this feature</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can also define remote repositories by adding the <code translate="no">customRepoName.url</code> property in the <code translate="no">featureUtility.properties</code> file.
-Each repository name must be unique, and defined repositories are accessed in the order that they’re specified.
-If a repository requires a username and password, also set the <code translate="no">customRepoName.user</code> and <code translate="no">customRepoName.password</code> properties.
-In the following example, two custom repositories, <code translate="no">remoteRepo1</code> and <code translate="no">remoteRepo2</code>, are defined.
-The <code translate="no">remoteRepo2</code> repository is secure so it also requires a username and password:</p>
+<p>If you are developing a feature that depends on this feature, include the following item in the <code translate="no">Subsystem-Content</code> header in your feature manifest file.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre translate="no">remoteRepo1.url=http://my-remote-server1/maven2
-remoteRepo2.url=https://my-remote-server2/secure/maven2
-remoteRepo2.user=operator
-remoteRepo2.password={aes}KM8dhwcv892Ss1sawu9R+</pre>
+<pre class="highlightjs highlight" translate="no"><code class="language-none hljs" translate="no">io.openliberty.crac-1.4; type="osgi.subsystem.feature"</code></pre>
 </div>
 </div>
 </div>
@@ -4905,7 +4885,6 @@ remoteRepo2.password={aes}KM8dhwcv892Ss1sawu9R+</pre>
 </div>
 <div id="footer_round_links_container">
 <a aria-label="Github" class="footer_round_btn" href="https://github.com/OpenLiberty/" id="footer_github_link" rel="noopener" target="_blank"></a>
-<a aria-label="Twitter" class="footer_round_btn" href="https://twitter.com/OpenLibertyIO" id="footer_twitter_link" rel="noopener" target="_blank"></a>
 <a aria-label="Open Liberty questions on Stack Overflow" class="footer_round_btn" href="https://stackoverflow.com/questions/tagged/open-liberty" id="footer_stackoverflow_link" rel="noopener" target="_blank"></a>
 <a aria-label="Open Liberty Groups.io" class="footer_round_btn" href="https://groups.io/g/openliberty" id="footer_groupsio_link" rel="noopener" target="_blank"></a>
 <a aria-label="Open Liberty Gitter" class="footer_round_btn" href="https://app.gitter.im/#/room/#OpenLiberty_development:gitter.im" id="footer_gitter_link" rel="noopener" target="_blank"></a>
@@ -4932,7 +4911,6 @@ remoteRepo2.password={aes}KM8dhwcv892Ss1sawu9R+</pre>
 <!-- PRE-LOADED IMAGES FOR ON HOVER BEHAVIOR -->
 <div class="d-none hidden">
 <img alt="OpenLiberty Github link" src="../../../../_/img/Footer_GitCat_Hover.svg"/>
-<img alt="OpenLibertyIO Twitter link" src="../../../../_/img/Footer_TwitterBird_Hover.svg"/>
 <img alt="Open-liberty Stack Overflow link" src="../../../../_/img/Footer_StackO_Hover.svg"/>
 <img alt="Openliberty Groups IO link" src="../../../../_/img/Footer_GroupsIO_Hover.svg"/>
 <img alt="Openliberty Gitter link" src="../../../../_/img/footer_gitter_hover.svg"/>
@@ -4940,6 +4918,7 @@ remoteRepo2.password={aes}KM8dhwcv892Ss1sawu9R+</pre>
 <script src="../../../../_/js/01-nav.js"></script>
 <script src="../../../../_/js/02-fragment-jumper.js"></script>
 <script src="../../../../_/js/03-mobile-navbar.js"></script>
+<script src="../../../../_/js/05-features.js"></script>
 <script src="../../../../_/js/07-tabs.js"></script>
 <script src="../../../../_/js/08-links.js"></script>
 <script async="" src="../../../../_/js/vendor/highlight.js"></script>
