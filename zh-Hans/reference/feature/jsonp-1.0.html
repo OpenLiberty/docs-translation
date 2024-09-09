@@ -9,18 +9,24 @@
 <link href="https://fonts.googleapis.com/css?family=Asap:400,500" rel="stylesheet"/>
 <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.3/styles/default.min.css" rel="stylesheet"/>
 <link href="../../../../_/css/site.css" rel="stylesheet"/>
-<meta content="noindex" name="robots"/>
 <meta content="Open Liberty 文档和参考资料，供开发人员构建应用程序，供管理员和操作团队使用开放式云本机 Java 来管理 DevOps 并将工作负载部署到云。 此内容涵盖 Open Liberty 基础知识，开发，安全性，部署和操作主题。 它还包括 Javadoc for Jakarta EE API ， MicroProfile API ， Java EE API 以及 Open Liberty API 和 SPI。" name="description"/>
 <meta content="Open Liberty Docs" property="og:title"/>
 <meta content="Open Liberty documentation and reference materials for developers to build applications and for administrators and operation teams to manage DevOps and deploy workloads to clouds by using open cloud-native Java. This content covers Open Liberty basics, development, security, deployment, and operations topics. It also includes Javadoc for Jakarta EE APIs, MicroProfile APIs, Java EE APIs, and Open Liberty APIs and SPIs." property="og:description"/>
 <meta content="https://openliberty.io/img/twitter_card.jpg" property="og:image"/>
 <meta content="website" property="og:type"/>
 <meta content="https://openliberty.io/docs/latest/reference/feature/jsonp-1.0.html" property="og:url"/>
-<script async="" src="../../../../_/js/vendor/highlight.js "></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKP3KJ7');</script> <script async="" src="../../../../_/js/vendor/highlight.js "></script>
 <script crossorigin="anonymous" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 </head>
 <body class="article">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TKP3KJ7" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header>
 <nav aria-label="导航标题链接" id="nav_bar">
 <div id="nav_header"><a aria-label="Open Liberty 主页" href="/" id="home_link"> <img alt="Open Liberty 徽标" id="ol_logo" src="../../../../_/img/docs_openliberty_logo.png"/> </a> <button aria-label="切换导航菜单" id="hamburger_toggle_button" onclick="$('#nav_bar').toggleClass('responsive');"> <span id="hamburger_toggle_icon"></span> </button></div>
@@ -36,29 +42,30 @@
 </div>
 </nav>
 </header><div class="body">
-<div class="nav-container" data-component="docs" data-version="24.0.0.5">
+<div class="nav-container" data-component="docs" data-version="24.0.0.8">
 <aside aria-label="导航目录" class="nav">
 <div class="panels">
 <div class="nav-panel-explore" data-panel="explore">
 <div class="doc_select version_select">
-<div class="context"><span class="title">V</span> <a class="version" href="#">24.0.0.5</a> <img class="version_select_chevron" src="../../../../_/img/chevron.svg"/></div>
+<div class="context"><span class="title">版本</span> <a class="version" href="#">24.0.0.8</a> <img class="version_select_chevron" src="../../../../_/img/chevron.svg"/></div>
 <ul class="components">
 <li class="component is-current"><ul class="versions">
-<li class="version is-current"><span class="title">V</span> <a aria-label="版本 24.0.0.5" href="jsonp-1.0.html">24.0.0.5</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 24.0.0.4" href="../../../24.0.0.4/reference/feature/jsonp-1.0.html">24.0.0.4</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 24.0.0.3" href="../../../24.0.0.3/reference/feature/jsonp-1.0.html">24.0.0.3</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 24.0.0.2" href="../../../24.0.0.2/reference/feature/jsonp-1.0.html">24.0.0.2</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 24.0.0.1" href="../../../24.0.0.1/reference/feature/jsonp-1.0.html">24.0.0.1</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 23.0.0.12" href="../../../23.0.0.12/reference/feature/jsonp-1.0.html">23.0.0.12</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 23.0.0.11" href="../../../23.0.0.11/reference/feature/jsonp-1.0.html">23.0.0.11</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 23.0.0.10" href="../../../23.0.0.10/reference/feature/jsonp-1.0.html">23.0.0.10</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 23.0.0.9" href="../../../23.0.0.9/reference/feature/jsonp-1.0.html">23.0.0.9</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 23.0.0.8" href="../../../23.0.0.8/reference/feature/jsonp-1.0.html">23.0.0.8</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 23.0.0.6" href="../../../23.0.0.6/reference/feature/jsonp-1.0.html">23.0.0.6</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 23.0.0.3" href="../../../23.0.0.3/reference/feature/jsonp-1.0.html">23.0.0.3</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 22.0.0.12" href="../../../22.0.0.12/reference/feature/jsonp-1.0.html">22.0.0.12</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 22.0.0.9" href="../../../22.0.0.9/reference/feature/jsonp-1.0.html">22.0.0.9</a></li>
-<li class="version"><span class="title">V</span> <a aria-label="版本 22.0.0.6" href="../../../22.0.0.6/reference/feature/jsonp-1.0.html">22.0.0.6</a></li>
+<li class="version is-current"><span class="title">版本</span> <a aria-label="版本 24.0.0.8" href="jsonp-1.0.html">24.0.0.8</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 24.0.0.7" href="../../../24.0.0.7/reference/feature/jsonp-1.0.html">24.0.0.7</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 24.0.0.6" href="../../../24.0.0.6/reference/feature/jsonp-1.0.html">24.0.0.6</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 24.0.0.5" href="../../../24.0.0.5/reference/feature/jsonp-1.0.html">24.0.0.5</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 24.0.0.4" href="../../../24.0.0.4/reference/feature/jsonp-1.0.html">24.0.0.4</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 24.0.0.3" href="../../../24.0.0.3/reference/feature/jsonp-1.0.html">24.0.0.3</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 24.0.0.2" href="../../../24.0.0.2/reference/feature/jsonp-1.0.html">24.0.0.2</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 24.0.0.1" href="../../../24.0.0.1/reference/feature/jsonp-1.0.html">24.0.0.1</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 23.0.0.12" href="../../../23.0.0.12/reference/feature/jsonp-1.0.html">23.0.0.12</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 23.0.0.11" href="../../../23.0.0.11/reference/feature/jsonp-1.0.html">23.0.0.11</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 23.0.0.10" href="../../../23.0.0.10/reference/feature/jsonp-1.0.html">23.0.0.10</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 23.0.0.9" href="../../../23.0.0.9/reference/feature/jsonp-1.0.html">23.0.0.9</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 23.0.0.6" href="../../../23.0.0.6/reference/feature/jsonp-1.0.html">23.0.0.6</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 23.0.0.3" href="../../../23.0.0.3/reference/feature/jsonp-1.0.html">23.0.0.3</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 22.0.0.12" href="../../../22.0.0.12/reference/feature/jsonp-1.0.html">22.0.0.12</a></li>
+<li class="version"><span class="title">版本</span> <a aria-label="版本 22.0.0.9" href="../../../22.0.0.9/reference/feature/jsonp-1.0.html">22.0.0.9</a></li>
 </ul>
 </li>
 </ul>
@@ -88,11 +95,11 @@
 <li class="nav-item" data-depth="1"><a class="nav-link" href="https://openliberty.io/guides/getting-started.html" tabindex="0">指南: Open Liberty</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="0"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">开发</span><ul class="nav-list">
+<li class="nav-item" data-depth="0"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">发展</span><ul class="nav-list">
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../cloud-native-microservices.html" tabindex="0">云原生微服务</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../microprofile.html" tabindex="0">MicroProfile 概述</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../jakarta-ee.html" tabindex="0">Jakarta EE 概述</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../container-images.html" tabindex="0">容器映像</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../container-images.html" tabindex="0">容器图像</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../verify-signatures-for-container-images-in-open-liberty.html" tabindex="0">验证 Open Liberty中容器映像的签名</a></li>
 </ul>
 </li>
@@ -105,7 +112,7 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#getting_started" tabindex="0">指南: 入门</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../rest-alternatives.html" tabindex="0">REST 替代方法</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../rest-alternatives.html" tabindex="0">REST 的替代方案</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../microprofile-graphql.html" tabindex="0">构建 GraphQL 应用程序</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../grpc-services.html" tabindex="0">提供和使用 gRPC 服务</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../web-socket.html" tabindex="0">使用 WebSocket在服务之间发送双向消息</a></li>
@@ -121,7 +128,7 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#configuration" tabindex="0">指南: 配置</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../cdi-beans.html" tabindex="0">上下文和依赖关系注入</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../cdi-beans.html" tabindex="0">上下文和依赖注入</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../jaxrs-integration-cdi.html" tabindex="0">RESTful Web Service 与 CDI 集成</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/cdi-intro.html" tabindex="0">指南: 将依赖关系注入到微服务中</a></li>
 </ul>
@@ -136,7 +143,7 @@
 </ul>
 </li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../transaction-service.html" tabindex="0">事务恢复</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../distributed-caching-jcache.html" tabindex="0">使用 JCache 的分布式高速缓存</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../distributed-caching-jcache.html" tabindex="0">使用 JCache 进行分布式缓存</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../distributed-session-caching.html" tabindex="0">分布式会话高速缓存</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../configuring-infinispan-support.html" tabindex="0">将 Infinispan 配置为 JCache 提供程序</a></li>
 </ul>
@@ -153,25 +160,25 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#test" tabindex="0">指南: 测试</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../fault-tolerance.html" tabindex="0">故障容错</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../fault-tolerance.html" tabindex="0">容错</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../async-programming-fault-tolerance.html" tabindex="0">弹性异步编程</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#fault_tolerance" tabindex="0">指南: 容错</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../concurrency.html" tabindex="0">并行</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../concurrency.html" tabindex="0">并发性</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../microprofile-context-propagation.html" tabindex="0">与 MicroProfile 上下文传播并行</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../liberty-kafka-connector.html" tabindex="0">优化异步通信</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button><a class="nav-link" href="../../liberty-kafka-connector.html" tabindex="0">优化异步通信</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../liberty-kafka-connector-channel-properties.html" tabindex="0">Liberty-Kafka 连接器选项和通道属性</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../liberty-kafka-connector-config-security.html" tabindex="0">Liberty-Kafka 连接器安全性配置</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><a class="nav-link" href="../../async-io.html" tabindex="0">异步输入和输出</a></li>
+<li class="nav-item" data-depth="1"><a class="nav-link" href="../../async-io.html" tabindex="0">同步输入和输出</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="0"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">安全性</span><ul class="nav-list">
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../authentication.html" tabindex="0">认证</a><ul class="nav-list">
+<li class="nav-item" data-depth="0"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">安全</span><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../authentication.html" tabindex="0">身份验证</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../authentication-filters.html" tabindex="0">认证过滤器</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../authentication-cache.html" tabindex="0">认证缓存</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../user-registries-application-security.html" tabindex="0">用户注册表</a></li>
@@ -186,11 +193,11 @@
 </li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../json-web-token.html" tabindex="0">使用 JSON Web 密钥签署和验证 JSON Web 令牌</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../authorization.html" tabindex="0">权限</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../secure-communication-tls.html" tabindex="0">使用 TLS 进行安全通信</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../secure-communication-tls.html" tabindex="0">使用 TLS 确保通信安全</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../acme-cert-management.html" tabindex="0">使用 ACME 进行自动证书管理</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../security-hardening.html" tabindex="0">安全性强化</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../security-hardening.html" tabindex="0">安全加固</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../server-configuration-hardening.html" tabindex="0">服务器配置</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../network-hardening.html" tabindex="0">网络</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../application-configuration-hardening.html" tabindex="0">应用程序配置</a></li>
@@ -209,9 +216,9 @@
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../deployment-openshift.html" tabindex="0">在 OpenShift</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../open-liberty-operator.html" tabindex="0">Open Liberty 操作程序</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../container-images.html" tabindex="0">容器映像</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../instanton.html" tabindex="0">使用 InstantOn快速启动</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../instanton.html" tabindex="0">使用 InstantOn 加快启动速度</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../instanton-sycalls-json.html" tabindex="0">InstantOn 系统调用</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../../instanton-limitations.html" tabindex="0">InstantOn 限制和已知问题</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../../instanton-limitations.html" tabindex="0">InstantOn的限制和已知问题</a></li>
 </ul>
 </li>
 <li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../deploy-spring-boot.html" tabindex="0">配置和部署 Spring Boot 应用程序</a><ul class="nav-list">
@@ -239,7 +246,7 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../forwarding-logs-logstash.html" tabindex="0">使用 Logstash 收集器转发日志</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../introduction-monitoring-metrics.html" tabindex="0">度量</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../introduction-monitoring-metrics.html" tabindex="0">衡量标准</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../metrics-list.html" tabindex="0">度量参考列表</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../configuring-jmx-connection.html" tabindex="0">配置 JMX 连接</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../jmx-metrics-list.html" tabindex="0">JMX 度量参考列表</a></li>
@@ -247,7 +254,7 @@
 </li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../slow-hung-request-detection.html" tabindex="0">检测运行缓慢和挂起的请求</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../../validating-server-connections.html" tabindex="0">验证服务器连接</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../admin-center.html" tabindex="0">管理中心 GUI</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../../admin-center.html" tabindex="0">Admin Center GUI</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../../oidc-tools.html" tabindex="0">管理中心 OIDC 工具</a></li>
 </ul>
 </li>
@@ -257,7 +264,7 @@
 </li>
 </ul>
 </li>
-<li class="nav-item" data-depth="0"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">参考</span><ul class="nav-list">
+<li class="nav-item" data-depth="0"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">参考文献</span><ul class="nav-list">
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../directory-locations-properties.html" tabindex="0">目录位置和属性</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../default-environment-variables.html" tabindex="0">缺省环境变量</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="../default-port-numbers.html" tabindex="0">缺省端口号</a></li>
@@ -265,7 +272,7 @@
 <li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../config/server-configuration-overview.html" tabindex="0">服务器配置</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/acmeCA.html" tabindex="0">acmeCA</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/acmeRevocationChecker.html" tabindex="0">acmeRevocationChecker</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/acmeTransportConfig.html" tabindex="0">acmeTransport配置</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/acmeTransportConfig.html" tabindex="0">acmeTransportConfig</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/activationSpec.html" tabindex="0">activationSpec</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/activedLdapFilterProperties.html" tabindex="0">activedLdapFilterProperties</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/adminObject.html" tabindex="0">adminObject</a></li>
@@ -274,17 +281,17 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/applicationManager.html" tabindex="0">applicationManager</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/applicationMonitor.html" tabindex="0">applicationMonitor</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/auditEvent.html" tabindex="0">auditEvent</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/auditFileHandler.html" tabindex="0">auditFile处理程序</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/auditFileHandler.html" tabindex="0">auditFileHandler</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/authCache.html" tabindex="0">authCache</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/authData.html" tabindex="0">authData</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/authFilter.html" tabindex="0">authFilter</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/authentication.html" tabindex="0">认证</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/authorization-roles.html" tabindex="0">authorization-roles</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/basicRegistry.html" tabindex="0">basicRegistry</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchJmsDispatcher.html" tabindex="0">batchJms分派器</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchJmsEvents.html" tabindex="0">batchJms事件</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchJmsExecutor.html" tabindex="0">batchJms执行程序</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchJobLogging.html" tabindex="0">batchJob日志记录</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchJmsDispatcher.html" tabindex="0">batchJmsDispatcher</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchJmsEvents.html" tabindex="0">batchJmsEvents</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchJmsExecutor.html" tabindex="0">batchJmsExecutor</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchJobLogging.html" tabindex="0">batchJobLogging</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/batchPersistence.html" tabindex="0">batchPersistence</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/bell.html" tabindex="0">铃声</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/cache.html" tabindex="0">高速缓存</a></li>
@@ -332,13 +339,13 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpEncoding.html" tabindex="0">httpEncoding</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpEndpoint.html" tabindex="0">httpEndpoint</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpOptions.html" tabindex="0">httpOptions</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpProxyRedirect.html" tabindex="0">httpProxy重定向</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpProxyRedirect.html" tabindex="0">httpProxyRedirect</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpSession.html" tabindex="0">httpSession</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpSessionCache.html" tabindex="0">httpSession高速缓存</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpSessionCache.html" tabindex="0">httpSessionCache</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/httpSessionDatabase.html" tabindex="0">httpSessionDatabase</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/idsLdapFilterProperties.html" tabindex="0">idsLdapFilterProperties</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/iiopEndpoint.html" tabindex="0">iiopEndpoint</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/iiopServerPolicies.html" tabindex="0">iiopServer策略</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/iiopServerPolicies.html" tabindex="0">iiopServerPolicies</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/include.html" tabindex="0">include</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/iplanetLdapFilterProperties.html" tabindex="0">iplanetLdapFilterProperties</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/jaasLoginContextEntry.html" tabindex="0">jaasLoginContextEntry</a></li>
@@ -372,7 +379,7 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/mailSession.html" tabindex="0">mailSession</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/managedExecutorService.html" tabindex="0">managedExecutorService</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/managedScheduledExecutorService.html" tabindex="0">managedScheduledExecutorService</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/managedThreadFactory.html" tabindex="0">managedThread工厂</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/managedThreadFactory.html" tabindex="0">managedThreadFactory</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/messagingEngine.html" tabindex="0">messagingEngine</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/mimeTypes.html" tabindex="0">mimeTypes</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/mongo.html" tabindex="0">mongo</a></li>
@@ -385,9 +392,9 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/oauth-roles.html" tabindex="0">oauth-roles</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/oauth2Login.html" tabindex="0">oauth2Login</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/oauthProvider.html" tabindex="0">oauthProvider</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/oidcClientWebapp.html" tabindex="0">oidcClientWeb 应用程序</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/oidcClientWebapp.html" tabindex="0">oidcClientWebapp</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/oidcLogin.html" tabindex="0">oidcLogin</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/okdServiceLogin.html" tabindex="0">okdService登录</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/okdServiceLogin.html" tabindex="0">okdServiceLogin</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/openId.html" tabindex="0">openId</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/openidConnectClient.html" tabindex="0">openidConnectClient</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/openidConnectProvider.html" tabindex="0">openidConnectProvider</a></li>
@@ -403,13 +410,13 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/samesite.html" tabindex="0">Samesite</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/samlWebSso20.html" tabindex="0">samlWebSso20</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/securewayLdapFilterProperties.html" tabindex="0">securewayLdapFilterProperties</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/sipApplicationRouter.html" tabindex="0">sipApplication路由器</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/sipApplicationRouter.html" tabindex="0">sipApplicationRouter</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/sipContainer.html" tabindex="0">sipContainer</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/sipEndpoint.html" tabindex="0">sipEndpoint</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/sipStack.html" tabindex="0">sipStack</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/socialLoginWebapp.html" tabindex="0">socialLoginWeb 应用程序</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/socialLoginWebapp.html" tabindex="0">socialLoginWebapp</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/spnego.html" tabindex="0">SPNEGO</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/springBootApplication.html" tabindex="0">springBoot应用程序</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/springBootApplication.html" tabindex="0">springBootApplication</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/ssl.html" tabindex="0">SSL</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/sslDefault.html" tabindex="0">sslDefault</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/sslOptions.html" tabindex="0">sslOptions</a></li>
@@ -426,23 +433,24 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/webApplication.html" tabindex="0">webApplication</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/webContainer.html" tabindex="0">webContainer</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/webTarget.html" tabindex="0">webTarget</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/wsAtomicTransaction.html" tabindex="0">wsAtomic事务</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../config/wsAtomicTransaction.html" tabindex="0">wsAtomicTransaction</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/wsSecurityClient.html" tabindex="0">wsSecurityClient</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/wsSecurityProvider.html" tabindex="0">wsSecurityProvider</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../config/wsocOutbound.html" tabindex="0">wsocOutbound</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="/docs/latest/reference/feature/feature-overview.html" tabindex="0">功能部件</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="/docs/latest/reference/feature/feature-overview.html" tabindex="0">特点</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/adminCenter-1.0.html" tabindex="0">管理中心</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/localConnector-1.0.html" tabindex="0">管理本地连接器</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/restConnector-2.0.html" tabindex="0">管理 REST 连接器</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/appSecurity-5.0.html" tabindex="0">应用程序安全性 (Jakarta Security)</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/appSecurityClient-1.0.html" tabindex="0">客户机的应用程序安全性</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/audit-1.0.html" tabindex="0">审计</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/audit-2.0.html" tabindex="0">审计</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/acmeCA-2.0.html" tabindex="0">Automatic Certificate Management Environment (ACME) Support</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/bells-1.0.html" tabindex="0">Basic Extensions using Liberty Libraries</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/batchManagement-1.0.html" tabindex="0">Batch Management</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/cloudant-1.0.html" tabindex="0">Cloudant 集成</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/crac-1.4.html" tabindex="0">检查站协调恢复</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/couchdb-1.0.html" tabindex="0">CouchDB 集成</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/sessionDatabase-1.0.html" tabindex="0">Database Session Persistence</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/distributedMap-1.0.html" tabindex="0">Distributed Map interface for Dynamic Caching</a></li>
@@ -450,7 +458,7 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/federatedRegistry-1.0.html" tabindex="0">Federated User Registry</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/grpc-1.0.html" tabindex="0">gRPC</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/grpcClient-1.0.html" tabindex="0">gRPC 客户机</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/appClientSupport-2.0.html" tabindex="0">Jakarta Application Client Server 支持</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/appClientSupport-2.0.html" tabindex="0">服务器的 Jakarta 应用程序客户端支持</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/appAuthentication-3.0.html" tabindex="0">Jakarta 认证</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/appAuthorization-2.1.html" tabindex="0">Jakarta 授权</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/batch-2.1.html" tabindex="0">Jakarta 批处理</a></li>
@@ -461,7 +469,7 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/cdi-4.0.html" tabindex="0">Jakarta 上下文和依赖关系注入</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/jakartaeeClient-10.0.html" tabindex="0">Jakarta EE 应用程序客户机</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/jakartaee-10.0.html" tabindex="0">Jakarta EE Platform</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/webProfile-10.0.html" tabindex="0">Jakarta EE Web 概要文件</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/webProfile-10.0.html" tabindex="0">雅加达 EE 网络简介</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/enterpriseBeans-4.0.html" tabindex="0">Jakarta 企业 Bean</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/enterpriseBeansHome-4.0.html" tabindex="0">Jakarta Enterprise Beans Home 接口</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/enterpriseBeansLite-4.0.html" tabindex="0">Jakarta 企业 Bean Lite</a></li>
@@ -541,17 +549,18 @@
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/latest/reference/feature/wsSecuritySaml-1.1.html" tabindex="0">WSSecurity SAML</a></li>
 </ul>
 </li></li>
+<li class="nav-item" data-depth="1"><a class="nav-link" href="versionless-features.html" tabindex="0">无版本功能</a></li>
 <li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../command/command-overview.html" tabindex="0">命令</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../command/auditUtility-auditReader.html" tabindex="0">auditUtility auditReader</a></li>
 <li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../command/featureUtility-commands.html" tabindex="0">featureUtility 命令</a><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/featureUtility-find.html" tabindex="0">查找</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/featureUtility-help.html" tabindex="0">帮助</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/featureUtility-installFeature.html" tabindex="0">installFeature</a></li>
-<li class="nav-item" data-depth="3"><a class="nav-link" href="../command/featureUtility-installServerFeatures.html" tabindex="0">installServer功能部件</a></li>
+<li class="nav-item" data-depth="3"><a class="nav-link" href="../command/featureUtility-installServerFeatures.html" tabindex="0">installServerFeatures</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/featureUtility-viewSettings.html" tabindex="0">viewSettings</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../command/securityUtility-commands.html" tabindex="0">securityUtility 命令</a><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../command/securityUtility-commands.html" tabindex="0">securityUtility命令</a><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/securityUtility-createLTPAKeys.html" tabindex="0">createLTPAKeys</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/securityUtility-createSSLCertificate.html" tabindex="0">createSSLCertificate</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/securityUtility-encode.html" tabindex="0">encode</a></li>
@@ -559,7 +568,7 @@
 </ul>
 </li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="../command/schemaGen.html" tabindex="0">schemaGen</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="../command/serverSchemaGen.html" tabindex="0">serverSchema生成</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="../command/serverSchemaGen.html" tabindex="0">serverSchemaGen</a></li>
 <li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../command/server-commands.html" tabindex="0">服务器命令</a><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/server-create.html" tabindex="0">创建</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../command/server-debug.html" tabindex="0">debug</a></li>
@@ -622,13 +631,13 @@
 </ul>
 </li>
 <li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../api/open-liberty-apis.html" tabindex="0">Open Liberty API</a><ul class="nav-list">
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">管理 REST 连接器 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Admin REST Connector 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/restConnector-2.0.com.ibm.websphere.filetransfer.html" tabindex="0">com.ibm.websphere.filetransfer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/restConnector-2.0.com.ibm.websphere.jmx.connector.rest.html" tabindex="0">com.ibm.websphere.jmx.connector.rest</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/restConnector-2.0.com.ibm.ws.jmx.connector.client.rest.html" tabindex="0">com.ibm.ws.jmx.connector.client.rest</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Application Client Support for Server 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">应用程序客户端支持服务器 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appClientSupport-1.0.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
@@ -648,7 +657,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-3.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">应用程序安全性 4.0 (Jakarta Security 2.0)</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">应用安全 4.0 （雅加达安全 2.0)</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-4.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-4.0.com.ibm.websphere.security.web.html" tabindex="0">com.ibm.websphere.security.web</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-4.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -657,7 +666,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-4.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">应用程序安全性 5.0 (Jakarta Security 3.0)</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">应用安全 5.0 （雅加达安全 3.0)</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-5.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-5.0.com.ibm.websphere.security.web.html" tabindex="0">com.ibm.websphere.security.web</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-5.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -666,18 +675,18 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurity-5.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Application Security for Client 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">客户端的应用程序安全性 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurityClient-1.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurityClient-1.0.com.ibm.websphere.security.html" tabindex="0">com.ibm.websphere.security</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurityClient-1.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appSecurityClient-1.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">批处理 API 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">批量 API 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/batch-1.0.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">动态高速缓存的分布式映射接口 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">用于动态缓存的分布式地图接口 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/distributedMap-1.0.com.ibm.websphere.cache.html" tabindex="0">com.ibm.websphere.cache</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/distributedMap-1.0.com.ibm.websphere.cache.exception.html" tabindex="0">com.ibm.websphere.cache.exception</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/distributedMap-1.0.com.ibm.websphere.exception.html" tabindex="0">com.ibm.websphere.exception</a></li>
@@ -690,11 +699,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/ejbLite-3.2.com.ibm.websphere.ejbcontainer.mbean.html" tabindex="0">com.ibm.websphere.ejbcontainer.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Enterprise JavaBeans 持久计时器 3.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">企业级 JavaBeans持久计时器 3.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/ejbPersistentTimer-3.2.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Enterprise JavaBeans 远程 3.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">企业级 JavaBeans远程 3.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/ejbRemote-3.2.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
@@ -703,12 +712,12 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/j2eeManagement-1.1.com.ibm.websphere.management.j2ee.html" tabindex="0">com.ibm.websphere.management.j2ee</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JMS 2.0 Client for Message Server</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JMS 2.0消息服务器客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/wasJmsClient-2.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/wasJmsClient-2.0.com.ibm.ws.jca.cm.mbean.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JSON Web 令牌 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JSON网络令牌 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jwt-1.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jwt-1.0.com.ibm.websphere.security.jwt.html" tabindex="0">com.ibm.websphere.security.jwt</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jwt-1.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -717,31 +726,31 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jwt-1.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Application Client Support for Server 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">服务器的 Jakarta 应用程序客户端支持 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appClientSupport-2.0.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Authorization 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta授权 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appAuthorization-2.0.html" tabindex="0">com.ibm.wsspi.security.authorization.jacc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta 授权 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达授权 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/appAuthorization-2.1.html" tabindex="0">com.ibm.wsspi.security.authorization.jacc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Batch 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达批次 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/batch-2.0.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Batch 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达批次 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/batch-2.1.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Connectors 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta连接器 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/connectors-2.0.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Connectors 2.0 入站安全性</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达连接器 2.0 入站安全</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/connectorsInboundSecurity-2.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/connectorsInboundSecurity-2.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/connectorsInboundSecurity-2.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -749,16 +758,16 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/connectorsInboundSecurity-2.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Connectors 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达连接器 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/connectors-2.1.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 10.0 Application Client</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 10.0应用客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jakartaeeClient-10.0.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jakartaeeClient-10.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 9.1 应用程序客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 9.1应用客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jakartaeeClient-9.1.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jakartaeeClient-9.1.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
@@ -768,11 +777,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/enterpriseBeansLite-4.0.com.ibm.websphere.ejbcontainer.mbean.html" tabindex="0">com.ibm.websphere.ejbcontainer.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 持久计时器</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 Persistent Timers</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/enterpriseBeansPersistentTimer-4.0.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 远程</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 Remote</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/enterpriseBeansRemote-4.0.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
@@ -784,11 +793,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messaging-3.1.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web Services 3.0 客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web 服务 3.0客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/restfulWSClient-3.0.html" tabindex="0">com.ibm.websphere.jaxrs20.multipart</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web Services 3.1 客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web 服务 3.1客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/restfulWSClient-3.1.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/restfulWSClient-3.1.com.ibm.websphere.jaxrs20.multipart.html" tabindex="0">com.ibm.websphere.jaxrs20.multipart</a></li>
 </ul>
@@ -823,15 +832,15 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/websocket-2.1.html" tabindex="0">com.ibm.websphere.wsoc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Authorization Contract for Containers 1.5</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">面向容器的 Java 授权合约 1.5</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jacc-1.5.html" tabindex="0">com.ibm.wsspi.security.authorization.jacc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 连接器体系结构 1.7</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java连接器架构 1.7</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jca-1.7.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Connector Architecture Security Inflow 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java连接器体系结构安全流程 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jcaInboundSecurity-1.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jcaInboundSecurity-1.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jcaInboundSecurity-1.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -839,47 +848,47 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jcaInboundSecurity-1.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 数据库连接 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 数据库连接性 4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jdbc-4.0.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 数据库连接 4.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 数据库连接性 4.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jdbc-4.1.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 数据库连接 4.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 数据库连接性 4.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jdbc-4.2.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 数据库连接 4.3</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 数据库连接性 4.3</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jdbc-4.3.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 7 应用程序客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 7 应用客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/javaeeClient-7.0.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/javaeeClient-7.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 8 应用程序客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 8 应用客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/javaeeClient-8.0.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/javaeeClient-8.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 消息服务 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java消息服务 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jms-2.0.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful 服务客户机 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful 服务客户端 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jaxrsClient-2.0.com.ibm.websphere.jaxrs.providers.json4j.html" tabindex="0">com.ibm.websphere.jaxrs.providers.json4j</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jaxrsClient-2.0.com.ibm.websphere.jaxrs20.multipart.html" tabindex="0">com.ibm.websphere.jaxrs20.multipart</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful 服务客户机 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful 服务客户端 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jaxrsClient-2.1.com.ibm.websphere.jaxrs.providers.json4j.html" tabindex="0">com.ibm.websphere.jaxrs.providers.json4j</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/jaxrsClient-2.1.com.ibm.websphere.jaxrs20.multipart.html" tabindex="0">com.ibm.websphere.jaxrs20.multipart</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Servlet 3.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Servlets 3.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/servlet-3.1.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/servlet-3.1.com.ibm.websphere.servlet.container.html" tabindex="0">com.ibm.websphere.servlet.container</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/servlet-3.1.com.ibm.websphere.servlet.context.html" tabindex="0">com.ibm.websphere.servlet.context</a></li>
@@ -890,7 +899,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/servlet-3.1.com.ibm.wsspi.servlet.session.html" tabindex="0">com.ibm.wsspi.servlet.session</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Servlet 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Servlets 4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/servlet-4.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/servlet-4.0.com.ibm.websphere.servlet.container.html" tabindex="0">com.ibm.websphere.servlet.container</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/servlet-4.0.com.ibm.websphere.servlet.context.html" tabindex="0">com.ibm.websphere.servlet.context</a></li>
@@ -909,12 +918,12 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/websocket-1.1.html" tabindex="0">com.ibm.websphere.wsoc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaScript Java 对象表示法 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaScriptJava对象符号 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/json-1.0.com.ibm.json.java.html" tabindex="0">com.ibm.json.java</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/json-1.0.com.ibm.json.xml.html" tabindex="0">com.ibm.json.xml</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Kerberos SPNEGO 的约束授权 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Kerberos SPNEGO 的受限委托 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/constrainedDelegation-1.0.html" tabindex="0">com.ibm.websphere.security.s4u2proxy</a></li>
 </ul>
 </li>
@@ -923,7 +932,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/wasJmsServer-1.0.com.ibm.websphere.messaging.mbean.html" tabindex="0">com.ibm.websphere.messaging.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息服务器安全性 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息服务器安全 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/wasJmsSecurity-1.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/wasJmsSecurity-1.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/wasJmsSecurity-1.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -931,17 +940,17 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/wasJmsSecurity-1.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息传递服务器 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息服务器 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messagingServer-3.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messagingServer-3.0.com.ibm.websphere.messaging.mbean.html" tabindex="0">com.ibm.websphere.messaging.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息传递服务器 3.0 客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息服务器 3.0客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messagingClient-3.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messagingClient-3.0.com.ibm.ws.jca.cm.mbean.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息传递服务器 3.0 安全性</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息服务器 3.0安全性</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messagingSecurity-3.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messagingSecurity-3.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messagingSecurity-3.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -949,11 +958,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/messagingSecurity-3.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile JSON Web 令牌 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile JSON 网络令牌 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/mpJwt-2.1.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile Metrics 5.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile指标 5.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/mpMetrics-5.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/mpMetrics-5.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/mpMetrics-5.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -962,7 +971,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/mpMetrics-5.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile 度量 5.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile 指标 5.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/mpMetrics-5.1.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/mpMetrics-5.1.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/mpMetrics-5.1.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -991,11 +1000,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/openapi-3.1.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenID Connect 客户机 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenID连接客户端 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/openidConnectClient-1.0.html" tabindex="0">com.ibm.websphere.security.openidconnect</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenID Connect 提供者 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenID连接提供程序 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/openidConnectServer-1.0.html" tabindex="0">com.ibm.websphere.security.openidconnect</a></li>
 </ul>
 </li>
@@ -1011,7 +1020,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/passwordUtilities-1.1.com.ibm.websphere.security.jca.html" tabindex="0">com.ibm.websphere.security.jca</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">性能监视 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">性能监控 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/monitor-1.0.html" tabindex="0">com.ibm.websphere.monitor.jmx</a></li>
 </ul>
 </li>
@@ -1034,7 +1043,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/socialLogin-1.0.html" tabindex="0">com.ibm.websphere.security.social</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Web 响应高速缓存 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">网络响应缓存 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/webCache-1.0.com.ibm.websphere.command.html" tabindex="0">com.ibm.websphere.command</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/webCache-1.0.com.ibm.websphere.command.web.html" tabindex="0">com.ibm.websphere.command.web</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/webCache-1.0.com.ibm.websphere.servlet.cache.html" tabindex="0">com.ibm.websphere.servlet.cache</a></li>
@@ -1045,14 +1054,14 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/grpc-1.0.io.openliberty.grpc.annotation.html" tabindex="0">io.openliberty.grpc.annotation</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">gRPC 客户机 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">gRPC客户端 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/api/grpcClient-1.0.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="nav-item" data-depth="1"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <a class="nav-link" href="../spi/open-liberty-spis.html" tabindex="0">Open Liberty SPI</a><ul class="nav-list">
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Application Client Support for Server 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">应用程序客户端支持服务器 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appClientSupport-1.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appClientSupport-1.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appClientSupport-1.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1103,11 +1112,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/beanValidation-2.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">上下文和依赖关系注入 1.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">上下文和依赖注入 1.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/cdi-1.2.html" tabindex="0">io.openliberty.cdi.spi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">上下文和依赖关系注入 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">上下文和依赖注入 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/cdi-2.0.html" tabindex="0">io.openliberty.cdi.spi</a></li>
 </ul>
 </li>
@@ -1128,13 +1137,13 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/ejbLite-3.2.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">联合用户注册表 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">联邦用户注册表 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/federatedRegistry-1.0.com.ibm.wsspi.security.wim.html" tabindex="0">com.ibm.wsspi.security.wim</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/federatedRegistry-1.0.com.ibm.wsspi.security.wim.exception.html" tabindex="0">com.ibm.wsspi.security.wim.exception</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/federatedRegistry-1.0.com.ibm.wsspi.security.wim.model.html" tabindex="0">com.ibm.wsspi.security.wim.model</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Application Client Support for Server 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">服务器的 Jakarta 应用程序客户端支持 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appClientSupport-2.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appClientSupport-2.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appClientSupport-2.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1151,15 +1160,15 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appClientSupport-2.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta 认证 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达身份验证 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appAuthentication-2.0.html" tabindex="0">com.ibm.wsspi.security.jaspi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta 认证 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达身份验证 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/appAuthentication-3.0.html" tabindex="0">com.ibm.wsspi.security.jaspi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Bean Validation 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Bean 验证 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/beanValidation-3.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/beanValidation-3.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/beanValidation-3.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1176,7 +1185,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/beanValidation-3.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Concurrency 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta 并发 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/concurrent-3.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/concurrent-3.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/concurrent-3.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1193,15 +1202,15 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/concurrent-3.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Contexts and Dependency Injection 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta 上下文和依赖注入 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/cdi-3.0.html" tabindex="0">io.openliberty.cdi.spi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Contexts and Dependency Injection 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta 上下文和依赖注入 4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/cdi-4.0.html" tabindex="0">io.openliberty.cdi.spi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 10.0 Application Client</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 10.0应用客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jakartaeeClient-10.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jakartaeeClient-10.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jakartaeeClient-10.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1218,7 +1227,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jakartaeeClient-10.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 9.1 应用程序客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 9.1应用客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jakartaeeClient-9.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jakartaeeClient-9.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jakartaeeClient-9.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1252,7 +1261,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/enterpriseBeansLite-4.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 消息驱动的 Bean</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 消息驱动的 Beans</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mdb-4.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mdb-4.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mdb-4.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1269,7 +1278,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mdb-4.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Mail 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达邮件 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mail-2.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mail-2.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mail-2.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1286,7 +1295,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mail-2.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Mail 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">雅加达邮件 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mail-2.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mail-2.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mail-2.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1320,11 +1329,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/managedBeans-2.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web Services 3.0 客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web 服务 3.0客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/restfulWSClient-3.0.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web Services 3.1 客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web 服务 3.1客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/restfulWSClient-3.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/restfulWSClient-3.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/restfulWSClient-3.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1417,7 +1426,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-6.0.com.ibm.wsspi.webcontainer.webapp.html" tabindex="0">com.ibm.wsspi.webcontainer.webapp</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta XML Web Service 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta XML Web 服务 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/xmlWS-3.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/xmlWS-3.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/xmlWS-3.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1435,7 +1444,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/xmlWS-3.0.com.ibm.wsspi.webservices.handler.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta XML Web Service 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta XML Web 服务 4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/xmlWS-4.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/xmlWS-4.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/xmlWS-4.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1452,11 +1461,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/xmlWS-4.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java 容器认证 SPI 1.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0"> 适用于容器的 Java 身份验证 SPI 1.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jaspic-1.1.html" tabindex="0">com.ibm.wsspi.security.jaspi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 7 应用程序客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 7 应用客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaeeClient-7.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaeeClient-7.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaeeClient-7.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1473,7 +1482,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaeeClient-7.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 8 应用程序客户机</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 8 应用客户端</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaeeClient-8.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaeeClient-8.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaeeClient-8.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1490,7 +1499,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaeeClient-8.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 受管 Bean 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE Managed Bean 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/managedBeans-1.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/managedBeans-1.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/managedBeans-1.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1532,15 +1541,15 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jaxrs-2.1.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful 服务客户机 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful 服务客户端 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jaxrsClient-2.0.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful 服务客户机 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful 服务客户端 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jaxrsClient-2.1.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Servlet 3.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Servlets 3.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-3.1.com.ibm.websphere.servlet.filter.html" tabindex="0">com.ibm.websphere.servlet.filter</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-3.1.com.ibm.websphere.servlet.request.html" tabindex="0">com.ibm.websphere.servlet.request</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-3.1.com.ibm.websphere.servlet.response.html" tabindex="0">com.ibm.websphere.servlet.response</a></li>
@@ -1573,7 +1582,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-3.1.com.ibm.wsspi.webcontainer.webapp.html" tabindex="0">com.ibm.wsspi.webcontainer.webapp</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Servlet 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Servlets 4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-4.0.com.ibm.websphere.servlet.filter.html" tabindex="0">com.ibm.websphere.servlet.filter</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-4.0.com.ibm.websphere.servlet.request.html" tabindex="0">com.ibm.websphere.servlet.request</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-4.0.com.ibm.websphere.servlet.response.html" tabindex="0">com.ibm.websphere.servlet.response</a></li>
@@ -1606,7 +1615,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/servlet-4.0.com.ibm.wsspi.webcontainer.webapp.html" tabindex="0">com.ibm.wsspi.webcontainer.webapp</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Web Service 2.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java网络服务 2.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jaxws-2.2.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jaxws-2.2.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jaxws-2.2.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1658,15 +1667,15 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/javaMail-1.6.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaServer Pages 2.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaServer页 2.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jsp-2.2.html" tabindex="0">com.ibm.wsspi.jsp.taglib.config</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaServer 页面 2.3</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaServer页 2.3</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/jsp-2.3.html" tabindex="0">com.ibm.wsspi.jsp.taglib.config</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息驱动的 Bean 3.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">消息驱动的豆 3.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mdb-3.2.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mdb-3.2.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mdb-3.2.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1683,7 +1692,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mdb-3.2.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile JSON Web 令牌 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile JSON 网络令牌 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpJwt-2.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpJwt-2.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpJwt-2.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1702,7 +1711,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpJwt-2.1.com.ibm.wsspi.http.ee8.html" tabindex="0">com.ibm.wsspi.http.ee8</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile Metrics 5.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile指标 5.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpMetrics-5.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpMetrics-5.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpMetrics-5.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1721,7 +1730,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpMetrics-5.0.com.ibm.wsspi.http.ee8.html" tabindex="0">com.ibm.wsspi.http.ee8</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile 度量 5.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile 指标 5.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpMetrics-5.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpMetrics-5.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/mpMetrics-5.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1753,23 +1762,23 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/openapi-3.1.html" tabindex="0">com.ibm.wsspi.openapi31</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">开放式跟踪 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Opentracing 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/opentracing-1.0.html" tabindex="0">com.ibm.ws.opentracing.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenTracing 1.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Opentracing 1.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/opentracing-1.1.html" tabindex="0">com.ibm.ws.opentracing.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">开放式跟踪 1.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">前倾 1.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/opentracing-1.2.html" tabindex="0">com.ibm.ws.opentracing.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">开放式跟踪 1.3</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Opentracing 1.3</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/opentracing-1.3.html" tabindex="0">com.ibm.ws.opentracing.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenTracing 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Opentracing 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/opentracing-2.0.html" tabindex="0">io.openliberty.opentracing.spi.tracer</a></li>
 </ul>
 </li>
@@ -1777,11 +1786,11 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/ssl-1.0.html" tabindex="0">com.ibm.wsspi.ssl</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">WS-AT 服务 1.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">WS-AT服务 1.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/wsAtomicTransaction-1.2.html" tabindex="0">com.ibm.wsspi.webservices.wsat</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Web 响应高速缓存 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">网络响应缓存 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/webCache-1.0.html" tabindex="0">com.ibm.wsspi.cache.web</a></li>
 </ul>
 </li>
@@ -1790,7 +1799,7 @@
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/grpc-1.0.com.ibm.wsspi.http.ee8.html" tabindex="0">com.ibm.wsspi.http.ee8</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">gRPC 客户机 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="展开此类别下的页面" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">gRPC客户端 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/grpcClient-1.0.com.ibm.wsspi.http.html" tabindex="0">com.ibm.wsspi.http</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="../javadoc/spi/grpcClient-1.0.com.ibm.wsspi.http.ee8.html" tabindex="0">com.ibm.wsspi.http.ee8</a></li>
 </ul>
@@ -1828,7 +1837,7 @@
 <h2 id="_enabling_this_feature"><a class="anchor" href="#_enabling_this_feature"></a>启用此功能</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>要启用 JavaScript 对象表示法处理 1.0 功能，请在 <code translate="no">server.xml</code> 文件中的 <code translate="no">featureManager</code> 元素内添加以下元素声明:</p>
+<p>要启用 JavaScript Object Notation Processing 1.0 功能，请在 <code translate="no">server.xml</code> 文件中的 <code translate="no">featureManager</code> 元素内添加以下元素声明：</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1838,7 +1847,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_standard_api_packages_provided_by_this_feature"><a class="anchor" href="#_standard_api_packages_provided_by_this_feature"></a>此功能部件提供的标准 API 包</h2>
+<h2 id="_standard_api_packages_provided_by_this_feature"><a class="anchor" href="#_standard_api_packages_provided_by_this_feature"></a>此功能提供的标准 API 包</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -1872,7 +1881,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_features_that_enable_this_feature"><a class="anchor" href="#_features_that_enable_this_feature"></a>启用此功能的功能部件</h2>
+<h2 id="_features_that_enable_this_feature"><a class="anchor" href="#_features_that_enable_this_feature"></a>启用此功能的特性</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -1909,10 +1918,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_developing_a_feature_that_depends_on_this_feature"><a class="anchor" href="#_developing_a_feature_that_depends_on_this_feature"></a>开发依赖于此功能部件的功能部件</h2>
+<h2 id="_developing_a_feature_that_depends_on_this_feature"><a class="anchor" href="#_developing_a_feature_that_depends_on_this_feature"></a>开发依赖于此功能的功能</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>如果要开发依赖于此功能部件的功能部件，请在功能部件清单文件的 <code translate="no">Subsystem-Content</code> 头中包含以下项。</p>
+<p>如果您正在开发依赖于此功能的功能，请在功能清单文件的 <code translate="no">Subsystem-Content</code> 标头中包含以下项目。</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1934,9 +1943,9 @@
 </div>
 <div class="footer_container container-fluid" id="footer_bottom_container">
 <div id="footer_bottom_left_section">
-<p id="footer_copyright">© Copyright IBM Corp. 2017 ， 2024</p>
+<p id="footer_copyright">© Copyright IBM Corp</p>
 <p class="vertical_bar">|</p><a class="left_footer_link" href="https://www.ibm.com/privacy/" id="footer_privacy_policy_link" rel="noopener" target="_blank">隐私策略</a><p class="vertical_bar">|</p><a class="left_footer_link" href="https://github.com/OpenLiberty/open-liberty/blob/release/LICENSE" id="footer_license_link" rel="noopener" target="_blank">许可</a><p class="vertical_bar">|</p><a class="left_footer_link" href="https://github.com/OpenLiberty/logos" id="footer_logos_link" rel="noopener" target="_blank">徽标</a></div>
-<div id="footer_bottom_right_section"><a aria-label="Open Liberty 文档" class="right_footer_link blue_link_light_background" href="/docs" id="footer_docs_link">文档</a> <a aria-label="Open Liberty 博客" class="right_footer_link blue_link_light_background" href="/blog" id="footer_blog_link">博客</a> <a aria-label="Open Liberty 支持" class="right_footer_link blue_link_light_background" href="/support" id="footer_support_link">支持</a></div>
+<div id="footer_bottom_right_section"><a aria-label="Open Liberty 文档" class="right_footer_link blue_link_light_background" href="/docs" id="footer_docs_link">文件</a> <a aria-label="Open Liberty 博客" class="right_footer_link blue_link_light_background" href="/blog" id="footer_blog_link">博客</a> <a aria-label="Open Liberty 支持" class="right_footer_link blue_link_light_background" href="/support" id="footer_support_link">支持</a></div>
 </div>
 </footer>
 <!-- PRE-LOADED IMAGES FOR ON HOVER BEHAVIOR -->
@@ -1953,4 +1962,4 @@
 </body>
 </html>
 
-<!-- v2.2 : caits-prod-app-gp_openliberty_20240604T140939-2_en_zh-Hans -->
+<!-- v2.2.3 : caits-prod-app-gp_openliberty_20240909T132426-2_en_zh-Hans -->
