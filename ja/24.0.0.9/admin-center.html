@@ -6,7 +6,7 @@
 <title>管理センターでOpen Libertyを管理する :：Open Libertyドキュメント</title>
 <link href="https://openliberty.io/docs/latest/admin-center.html" rel="canonical"/>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" rel="stylesheet"/>
-<link href="../../_/font/Asap.woff2" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Asap:400,500" rel="stylesheet"/>
 <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.3/styles/default.min.css" rel="stylesheet"/>
 <link href="../../_/css/site.css" rel="stylesheet"/>
 <meta content="Admin Center機能は、Open LibertyサーバーのWebベースのグラフィカル・ユーザー・インターフェース（GUI）を実現します。 Admin Centerを使用して、サーバー構成、OpenIDConnectのアクセス許可、Javaバッチジョブを管理できます。" name="description"/>
@@ -46,7 +46,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <aside aria-label="ナビゲーション目次" class="nav">
 <div class="panels">
 <div class="nav-panel-explore" data-panel="explore">
-<div class="context"><span class="title">バージョン</span> <a class="version" href="#">24.0.0.9</a></div>
+<div class="doc_select version_select">
+<div class="context"><span class="title">バージョン</span> <a class="version" href="#">24.0.0.9</a> <img class="version_select_chevron" src="../../_/img/chevron.svg"/></div>
 <ul class="components">
 <li class="component is-current"><ul class="versions">
 <li class="version"><span class="title">バージョン</span> <a aria-label="バージョン24.0.0.11" href="../latest/admin-center.html">24.0.0.11</a></li>
@@ -58,6 +59,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </li>
 </ul>
+</div>
+<div class="doc_select language_select">
+<div class="context lang_picker"><img class="globe_icon" src="../../_/img/filled_globe.svg"/> <a class="version" href="#"> </a> <img class="version_select_chevron" src="../../_/img/chevron.svg"/></div>
+<ul class="components language_list">
+<li class="component"><ul class="versions">
+<li class="version is-current"><a href="/docs/24.0.0.9/admin-center.html" translate="no">English</a></li>
+<li class="version"><a href="/ja/docs/24.0.0.9/admin-center.html" translate="no">日本語</a></li>
+<li class="version"><a href="/zh-Hans/docs/24.0.0.9/admin-center.html" translate="no">中文（简体)</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div class="nav-menu-filter"><input aria-label="フィルタータイトル" id="filter_titles" placeholder="タイトルを絞り込む..." type="text"/> <button aria-label="フィルター検索をクリアする" id="clear_filter" tabindex="0" type="reset">X</button></div> <div class="nav-panel-menu is-active" data-panel="menu">
 <nav aria-label="Open Libertyドキュメントのナビゲーションメニュー" class="nav-menu">
@@ -77,7 +90,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="1"><a class="nav-link" href="cloud-native-microservices.html" tabindex="0">クラウドネイティブなマイクロサービス</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="microprofile.html" tabindex="0">MicroProfile 概要</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="jakarta-ee.html" tabindex="0">ジャカルタEE概要</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="container-images.html" tabindex="0">コンテナ画像</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="container-images.html" tabindex="0">コンテナイメージ</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="verify-signatures-for-container-images-in-open-liberty.html" tabindex="0"> Open Libertyでコンテナイメージの署名を検証する</a></li>
 </ul>
 </li>
@@ -90,14 +103,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#getting_started" tabindex="0">ガイドスタート</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="rest-alternatives.html" tabindex="0">RESTに代わるもの</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="rest-alternatives.html" tabindex="0">RESTの代替案</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="microprofile-graphql.html" tabindex="0"> GraphQLアプリケーションの構築</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="grpc-services.html" tabindex="0"> gRPCサービスの提供と利用</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="web-socket.html" tabindex="0"> WebSocketてサービス間で双方向メッセージを送信する</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#rest_alternatives" tabindex="0">ガイドRESTの代替案</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="documentation-openapi.html" tabindex="0">APIの文書化</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="documentation-openapi.html" tabindex="0">APIのドキュメント化</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/microprofile-openapi.html" tabindex="0">ガイドRESTful APIを文書化する</a></li>
 </ul>
 </li>
@@ -121,7 +134,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="transaction-service.html" tabindex="0">トランザクション・リカバリー</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="distributed-caching-jcache.html" tabindex="0">JCacheによる分散キャッシング</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="distributed-caching-jcache.html" tabindex="0">JCacheによる分散キャッシュ</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="distributed-session-caching.html" tabindex="0">分散セッション・キャッシング</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="configuring-infinispan-support.html" tabindex="0">InfinispanをJCacheプロバイダとして設定する</a></li>
 </ul>
@@ -137,16 +150,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#observability" tabindex="0">ガイド観測可能性</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="integration-testing.html" tabindex="0">テスト</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="integration-testing.html" tabindex="0">検査</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#test" tabindex="0">ガイドテスト</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="fault-tolerance.html" tabindex="0">フォールト・トレランス</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="fault-tolerance.html" tabindex="0">耐障害性</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="async-programming-fault-tolerance.html" tabindex="0">レジリエントな非同期プログラミング</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#fault_tolerance" tabindex="0">ガイドフォールト・トレランス</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="concurrency.html" tabindex="0">コンカレンシー</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="concurrency.html" tabindex="0">同時性</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="microprofile-context-propagation.html" tabindex="0"> MicroProfile伝搬による並行処理</a></li>
 </ul>
 </li>
@@ -158,7 +171,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="1"><a class="nav-link" href="async-io.html" tabindex="0">非同期入出力</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="0"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">セキュリティ</span><ul class="nav-list">
+<li class="nav-item" data-depth="0"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">安全</span><ul class="nav-list">
 <li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="authentication.html" tabindex="0">認証</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="authentication-filters.html" tabindex="0">認証フィルター</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="authentication-cache.html" tabindex="0">認証キャッシュ</a></li>
@@ -178,7 +191,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="acme-cert-management.html" tabindex="0">ACMEによる証明書の自動管理</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="security-hardening.html" tabindex="0">セキュリティの強化</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="security-hardening.html" tabindex="0">セキュリティ強化</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="server-configuration-hardening.html" tabindex="0">サーバー構成</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="network-hardening.html" tabindex="0">ネットワーク</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="application-configuration-hardening.html" tabindex="0">アプリケーション構成</a></li>
@@ -193,16 +206,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="1"><a class="nav-link" href="https://openliberty.io/guides/#security" tabindex="0">ガイドセキュリティ</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="0"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">配備</span><ul class="nav-list">
+<li class="nav-item" data-depth="0"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">展開</span><ul class="nav-list">
 <li class="nav-item" data-depth="1"><a class="nav-link" href="deployment-openshift.html" tabindex="0"> OpenShiftへのデプロイ</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="open-liberty-operator.html" tabindex="0">Open Liberty オペレーター</a></li>
 <li class="nav-item" data-depth="1"><a class="nav-link" href="container-images.html" tabindex="0">コンテナー・イメージ</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="instanton.html" tabindex="0">InstantOnによる起動の高速化</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="instanton.html" tabindex="0">InstantOnで起動が高速化</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="instanton-sycalls-json.html" tabindex="0">InstantOnのシステムコール</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="instanton-limitations.html" tabindex="0">InstantOnの制限と既知の問題</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="instanton-limitations.html" tabindex="0">InstantOnの制限事項と既知の問題</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="deploy-spring-boot.html" tabindex="0">Spring Boot アプリケーションの設定とデプロイ</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="deploy-spring-boot.html" tabindex="0">Spring Bootの設定とデプロイ</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="configure-spring-boot-actuator.html" tabindex="0"> Spring Bootアクチュエータのデフォルト以外の設定を行う</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/spring-boot.html" tabindex="0">ガイドSpring Bootアプリケーションのコンテナ化、パッケージ化、実行</a></li>
 </ul>
@@ -217,7 +230,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 <li class="nav-item" data-depth="0"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button><span class="nav-text" role="button" tabindex="0"> 操作</span><ul class="nav-list">
 <li class="nav-item" data-depth="1"><a class="nav-link" href="microprofile-telemetry.html" tabindex="0"> MicroProfileTelemetryによる観測可能性の実現</a></li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="log-trace-configuration.html" tabindex="0">過去ログ</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="log-trace-configuration.html" tabindex="0">ログ</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="log-management.html" tabindex="0">ログ管理</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="access-logging.html" tabindex="0">HTTP アクセスのロギング</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="jdbc-tracing.html" tabindex="0">JDBCトレース</a></li>
@@ -229,7 +242,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="forwarding-logs-logstash.html" tabindex="0">Logstashコレクターでログを転送する</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="introduction-monitoring-metrics.html" tabindex="0">指標</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="introduction-monitoring-metrics.html" tabindex="0">測定基準</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="mptelemetry-metrics-list.html" tabindex="0">MicroProfileTelemetry メトリクスの参照リスト</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="metrics-list.html" tabindex="0">MicroProfileMetricsリファレンスリスト</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="configuring-jmx-connection.html" tabindex="0">JMX接続の設定</a></li>
@@ -242,7 +255,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="oidc-tools.html" tabindex="0">管理センター OIDCツール</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="performance-tuning.html" tabindex="0">パフォーマンス・チューニング</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="performance-tuning.html" tabindex="0">パフォーマンスチューニング</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="thread-pool-tuning.html" tabindex="0">スレッドプールのチューニング</a></li>
 </ul>
 </li>
@@ -425,7 +438,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/config/wsocOutbound.html" tabindex="0">wsocOutbound</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="/docs/24.0.0.9/reference/feature/feature-overview.html" tabindex="0">特徴</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="/docs/24.0.0.9/reference/feature/feature-overview.html" tabindex="0">機能</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/adminCenter-1.0.html" tabindex="0">Admin Center</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/localConnector-1.0.html" tabindex="0">管理者ローカルコネクター</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/restConnector-2.0.html" tabindex="0">管理者用RESTコネクタ</a></li>
@@ -444,7 +457,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/federatedRegistry-1.0.html" tabindex="0">Federated User Registry</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/grpc-1.0.html" tabindex="0">gRPC</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/grpcClient-1.0.html" tabindex="0">gRPC Client</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/appClientSupport-2.0.html" tabindex="0">ジャカルタ・アプリケーション・クライアントのサーバー対応</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/appClientSupport-2.0.html" tabindex="0">ジャカルタ サーバー用アプリケーション・クライアント・サポート</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/appAuthentication-3.0.html" tabindex="0">Jakarta 認証</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/appAuthorization-2.1.html" tabindex="0">Jakarta 許可</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/batch-2.1.html" tabindex="0">ジャカルタ・バッチ</a></li>
@@ -455,7 +468,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/cdi-4.0.html" tabindex="0">Jakarta Contexts and Dependency Injection</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/jakartaeeClient-10.0.html" tabindex="0">Jakarta EE アプリケーション・クライアント</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/jakartaee-10.0.html" tabindex="0">Jakarta EE Platform</a></li>
-<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/webProfile-10.0.html" tabindex="0">ジャカルタEEウェブ・プロフィール</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/webProfile-10.0.html" tabindex="0">Jakarta EE Web Profile</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/enterpriseBeans-4.0.html" tabindex="0">Jakarta Enterprise Beans</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/enterpriseBeansHome-4.0.html" tabindex="0">Jakarta Enterprise Beans ホーム・インターフェース</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="/docs/24.0.0.9/reference/feature/enterpriseBeansLite-4.0.html" tabindex="0">Jakarta Enterprise Beans Lite</a></li>
@@ -538,7 +551,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="1"><a class="nav-link" href="reference/feature/versionless-features.html" tabindex="0">バージョンレス機能</a></li>
 <li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/command/command-overview.html" tabindex="0">コマンド</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/command/auditUtility-auditReader.html" tabindex="0">auditUtility auditReader</a></li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/command/featureUtility-commands.html" tabindex="0">featureUtility コマンド</a><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/command/featureUtility-commands.html" tabindex="0">featureUtilityコマンド</a><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/featureUtility-find.html" tabindex="0">検索</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/featureUtility-help.html" tabindex="0">ヘルプ</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/featureUtility-installFeature.html" tabindex="0">installFeature</a></li>
@@ -546,7 +559,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/featureUtility-viewSettings.html" tabindex="0">viewSettings</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/command/securityUtility-commands.html" tabindex="0">securityUtility コマンド</a><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/command/securityUtility-commands.html" tabindex="0">securityUtility</a><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/securityUtility-createLTPAKeys.html" tabindex="0">createLTPAKeys</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/securityUtility-createSSLCertificate.html" tabindex="0">createSSLCertificate</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/securityUtility-encode.html" tabindex="0">encode</a></li>
@@ -572,14 +585,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/server-version.html" tabindex="0">version</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/command/springbootUtility-commands.html" tabindex="0">springbootUtility コマンド</a><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/command/springbootUtility-commands.html" tabindex="0">springbootUtility</a><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/springbootUtility-help.html" tabindex="0">ヘルプ</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/command/springbootUtility-thin.html" tabindex="0">thin</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/jakarta-ee-api.html" tabindex="0">ジャカルタEE API</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/jakarta-ee-api.html" tabindex="0">Jakarta EE API</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/javadoc/liberty-jakartaee10-javadoc.html" tabindex="0">Jakarta EE 10</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/javadoc/liberty-jakartaee9.1-javadoc.html" tabindex="0">ジャカルタEE9.1</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/javadoc/liberty-jakartaee8-javadoc.html" tabindex="0">ジャカルタ EE 8</a></li>
@@ -588,12 +601,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/diff/jakarta-ee9-feature-updates.html" tabindex="0">Jakarta EE9.1機能アップデート</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/java-ee-api.html" tabindex="0">Java EE API</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/java-ee-api.html" tabindex="0">Java EE</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/javadoc/liberty-javaee8-javadoc.html" tabindex="0">Java EE 8</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/javadoc/liberty-javaee7-javadoc.html" tabindex="0">Java EE 7</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/microprofile-api.html" tabindex="0">MicroProfile API</a><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/microprofile-api.html" tabindex="0">MicroProfile</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/javadoc/microprofile-6.1-javadoc.html" tabindex="0">MicroProfile 6.1</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/javadoc/microprofile-6.0-javadoc.html" tabindex="0">MicroProfile 6.0</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/javadoc/microprofile-5.0-javadoc.html" tabindex="0">MicroProfile 5.0</a></li>
@@ -616,18 +629,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="2"><a class="nav-link" href="reference/diff/mp-21-22-diff.html" tabindex="0"> MicroProfile 2.222.1と</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/api/open-liberty-apis.html" tabindex="0">Open Liberty API</a><ul class="nav-list">
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Admin REST Connector 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/api/open-liberty-apis.html" tabindex="0">Open Liberty</a><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">管理 REST コネクタ 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/restConnector-2.0.com.ibm.websphere.filetransfer.html" tabindex="0">com.ibm.websphere.filetransfer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/restConnector-2.0.com.ibm.websphere.jmx.connector.rest.html" tabindex="0">com.ibm.websphere.jmx.connector.rest</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/restConnector-2.0.com.ibm.ws.jmx.connector.client.rest.html" tabindex="0">com.ibm.ws.jmx.connector.client.rest</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">サーバー 1.0 0のアプリケーションクライアントサポート</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">アプリケーション・クライアント・サポート・フォー・ 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appClientSupport-1.0.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">アプリケーション・セキュリティ 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-2.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-2.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-2.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -635,7 +648,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-2.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">アプリケーション・セキュリティ 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-3.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-3.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-3.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -643,7 +656,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-3.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">アプリケーション・セキュリティ 4.0 （ジャカルタ・セキュリティ 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">アプリケーションセキュリティ 4.0 (Jakarta Security 2.0 )</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-4.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-4.0.com.ibm.websphere.security.web.html" tabindex="0">com.ibm.websphere.security.web</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-4.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -652,7 +665,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-4.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">アプリケーション・セキュリティ 5.0 （ジャカルタ・セキュリティ 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">5.0 3.0 ）</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-5.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-5.0.com.ibm.websphere.security.web.html" tabindex="0">com.ibm.websphere.security.web</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-5.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -661,7 +674,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurity-5.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">クライアント用アプリケーションセキュリティ 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">クライアント向けアプリケーションセキュリティ 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurityClient-1.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurityClient-1.0.com.ibm.websphere.security.html" tabindex="0">com.ibm.websphere.security</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appSecurityClient-1.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
@@ -672,7 +685,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/batch-1.0.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ダイナミック・キャッシングのための分散マップ・インターフェース 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">分散マップインターフェースによる動的キャッシング 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/distributedMap-1.0.com.ibm.websphere.cache.html" tabindex="0">com.ibm.websphere.cache</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/distributedMap-1.0.com.ibm.websphere.cache.exception.html" tabindex="0">com.ibm.websphere.cache.exception</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/distributedMap-1.0.com.ibm.websphere.exception.html" tabindex="0">com.ibm.websphere.exception</a></li>
@@ -680,12 +693,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/distributedMap-1.0.com.ibm.wsspi.cache.html" tabindex="0">com.ibm.wsspi.cache</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Enterprise JavaBeans Lite 3.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">エンタープライズ JavaBeans 3.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/ejbLite-3.2.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/ejbLite-3.2.com.ibm.websphere.ejbcontainer.mbean.html" tabindex="0">com.ibm.websphere.ejbcontainer.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Enterprise JavaBeansの永続タイマー 3.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">エンター JavaBeans 永続的タイマー 3.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/ejbPersistentTimer-3.2.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
@@ -693,17 +706,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/ejbRemote-3.2.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">J2EE マネジメント 1.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/j2eeManagement-1.1.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/j2eeManagement-1.1.com.ibm.websphere.management.j2ee.html" tabindex="0">com.ibm.websphere.management.j2ee</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージサーバー用JMS 2.0 クライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージサーバー用 2.0 クライアント</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/wasJmsClient-2.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/wasJmsClient-2.0.com.ibm.ws.jca.cm.mbean.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JSONウェブトークン 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JSON Web トークン 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jwt-1.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jwt-1.0.com.ibm.websphere.security.jwt.html" tabindex="0">com.ibm.websphere.security.jwt</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jwt-1.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -712,7 +725,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jwt-1.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・アプリケーション・クライアントのサーバー 2.0への対応</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Application Client Support for 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appClientSupport-2.0.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
@@ -720,23 +733,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appAuthorization-2.0.html" tabindex="0">com.ibm.wsspi.security.authorization.jacc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ認可 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ認証 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/appAuthorization-2.1.html" tabindex="0">com.ibm.wsspi.security.authorization.jacc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・バッチ 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/batch-2.0.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・バッチ 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ バッチ 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/batch-2.1.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・コネクター 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタコネクターズ 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/connectors-2.0.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・コネクタ 2.0 インバウンド・セキュリティ</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタコネクター 2.0 インバウンドセキュリティ</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/connectorsInboundSecurity-2.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/connectorsInboundSecurity-2.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/connectorsInboundSecurity-2.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -744,30 +757,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/connectorsInboundSecurity-2.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・コネクター 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタコネクタ 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/connectors-2.1.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 10.0 アプリケーションクライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">10.0 アプリケーションクライアント</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jakartaeeClient-10.0.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jakartaeeClient-10.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 9.1 アプリケーションクライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">9.1 アプリケーションクライアント</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jakartaeeClient-9.1.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jakartaeeClient-9.1.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 Lite</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/enterpriseBeansLite-4.0.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/enterpriseBeansLite-4.0.com.ibm.websphere.ejbcontainer.mbean.html" tabindex="0">com.ibm.websphere.ejbcontainer.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 永続タイマー</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.0 持続的タイマー</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/enterpriseBeansPersistentTimer-4.0.html" tabindex="0">com.ibm.websphere.persistence.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 リモート</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/enterpriseBeansRemote-4.0.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
@@ -779,7 +792,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messaging-3.1.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web Services 3.0 クライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web 3.0 クライアント</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/restfulWSClient-3.0.html" tabindex="0">com.ibm.websphere.jaxrs20.multipart</a></li>
 </ul>
 </li>
@@ -788,7 +801,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/restfulWSClient-3.1.com.ibm.websphere.jaxrs20.multipart.html" tabindex="0">com.ibm.websphere.jaxrs20.multipart</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・サーブレット 5.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタサーブレット 5.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-5.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-5.0.com.ibm.websphere.servlet.container.html" tabindex="0">com.ibm.websphere.servlet.container</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-5.0.com.ibm.websphere.servlet.context.html" tabindex="0">com.ibm.websphere.servlet.context</a></li>
@@ -799,7 +812,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-5.0.com.ibm.wsspi.servlet.session.html" tabindex="0">com.ibm.wsspi.servlet.session</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・サーブレット 6.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタサーブレット 6.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-6.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-6.0.com.ibm.websphere.servlet.container.html" tabindex="0">com.ibm.websphere.servlet.container</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-6.0.com.ibm.websphere.servlet.context.html" tabindex="0">com.ibm.websphere.servlet.context</a></li>
@@ -818,15 +831,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/websocket-2.1.html" tabindex="0">com.ibm.websphere.wsoc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">コンテナ用Java認可契約 1.5</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">コンテナ用Java認証契約 1.5</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jacc-1.5.html" tabindex="0">com.ibm.wsspi.security.authorization.jacc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaコネクタ・アーキテクチャ 1.7</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java コネクタアーキテクチャ 1.7</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jca-1.7.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaコネクタ・アーキテクチャ・セキュリティ・インフロー 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java コネクター アーキテクチャ セキュリティ インフロー 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jcaInboundSecurity-1.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jcaInboundSecurity-1.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jcaInboundSecurity-1.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -834,23 +847,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jcaInboundSecurity-1.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaデータベース接続 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jdbc-4.0.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaデータベース接続 4.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jdbc-4.1.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaデータベース接続 4.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jdbc-4.2.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaデータベース接続 4.3</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.3</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jdbc-4.3.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 7 アプリケーションクライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/javaeeClient-7.0.com.ibm.websphere.ejbcontainer.html" tabindex="0">com.ibm.websphere.ejbcontainer</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/javaeeClient-7.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
@@ -860,16 +873,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/javaeeClient-8.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Message Service 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jms-2.0.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTfulサービス・クライアント 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful サービス クライアント 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jaxrsClient-2.0.com.ibm.websphere.jaxrs.providers.json4j.html" tabindex="0">com.ibm.websphere.jaxrs.providers.json4j</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jaxrsClient-2.0.com.ibm.websphere.jaxrs20.multipart.html" tabindex="0">com.ibm.websphere.jaxrs20.multipart</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful サービス・クライアント 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful サービス クライアント 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jaxrsClient-2.1.com.ibm.websphere.jaxrs.providers.json4j.html" tabindex="0">com.ibm.websphere.jaxrs.providers.json4j</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/jaxrsClient-2.1.com.ibm.websphere.jaxrs20.multipart.html" tabindex="0">com.ibm.websphere.jaxrs20.multipart</a></li>
 </ul>
@@ -885,7 +898,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-3.1.com.ibm.wsspi.servlet.session.html" tabindex="0">com.ibm.wsspi.servlet.session</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaサーブレット 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-4.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-4.0.com.ibm.websphere.servlet.container.html" tabindex="0">com.ibm.websphere.servlet.container</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-4.0.com.ibm.websphere.servlet.context.html" tabindex="0">com.ibm.websphere.servlet.context</a></li>
@@ -896,29 +909,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/servlet-4.0.com.ibm.wsspi.servlet.session.html" tabindex="0">com.ibm.wsspi.servlet.session</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java WebSocket 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャワ WebSocket 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/websocket-1.0.html" tabindex="0">com.ibm.websphere.wsoc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java WebSocket 1.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャワ WebSocket 1.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/websocket-1.1.html" tabindex="0">com.ibm.websphere.wsoc</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java用 JavaScript オブジェクト記法 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaScript 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/json-1.0.com.ibm.json.java.html" tabindex="0">com.ibm.json.java</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/json-1.0.com.ibm.json.xml.html" tabindex="0">com.ibm.json.xml</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">SPNEGO 1.0のための Kerberos 制約付き委任</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.0Kerberos制約付き委任</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/constrainedDelegation-1.0.html" tabindex="0">com.ibm.websphere.security.s4u2proxy</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージサーバー 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/wasJmsServer-1.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/wasJmsServer-1.0.com.ibm.websphere.messaging.mbean.html" tabindex="0">com.ibm.websphere.messaging.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージ・サーバー・セキュリティ 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージサーバーセキュリティ 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/wasJmsSecurity-1.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/wasJmsSecurity-1.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/wasJmsSecurity-1.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -926,17 +939,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/wasJmsSecurity-1.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージング・サーバー 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージ3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messagingServer-3.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messagingServer-3.0.com.ibm.websphere.messaging.mbean.html" tabindex="0">com.ibm.websphere.messaging.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージング・サーバー 3.0 クライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージング3.0 クライアント</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messagingClient-3.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messagingClient-3.0.com.ibm.ws.jca.cm.mbean.html" tabindex="0">com.ibm.ws.jca.cm.mbean</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージング・サーバー 3.0 セキュリティ</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージングサーバー 3.0 セキュリティ</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messagingSecurity-3.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messagingSecurity-3.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messagingSecurity-3.0.com.ibm.wsspi.security.common.auth.module.html" tabindex="0">com.ibm.wsspi.security.common.auth.module</a></li>
@@ -944,11 +957,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/messagingSecurity-3.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile JSON ウェブトークン 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile JSON Web トークン 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpJwt-2.1.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile 5.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">5.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpMetrics-5.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpMetrics-5.0.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpMetrics-5.0.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -957,7 +970,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpMetrics-5.0.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile 5.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">5.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpMetrics-5.1.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpMetrics-5.1.com.ibm.websphere.security.auth.callback.html" tabindex="0">com.ibm.websphere.security.auth.callback</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpMetrics-5.1.com.ibm.wsspi.security.auth.callback.html" tabindex="0">com.ibm.wsspi.security.auth.callback</a></li>
@@ -966,7 +979,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/mpMetrics-5.1.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OAuth 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/oauth-2.0.com.ibm.oauth.core.api.attributes.html" tabindex="0">com.ibm.oauth.core.api.attributes</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/oauth-2.0.com.ibm.oauth.core.api.config.html" tabindex="0">com.ibm.oauth.core.api.config</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/oauth-2.0.com.ibm.oauth.core.api.error.html" tabindex="0">com.ibm.oauth.core.api.error</a></li>
@@ -986,11 +999,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/openapi-3.1.com.ibm.wsspi.security.token.html" tabindex="0">com.ibm.wsspi.security.token</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenID Connect クライアント 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/openidConnectClient-1.0.html" tabindex="0">com.ibm.websphere.security.openidconnect</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenID Connect プロバイダ 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OpenID 接続プロバイダ 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/openidConnectServer-1.0.html" tabindex="0">com.ibm.websphere.security.openidconnect</a></li>
 </ul>
 </li>
@@ -1006,11 +1019,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/passwordUtilities-1.1.com.ibm.websphere.security.jca.html" tabindex="0">com.ibm.websphere.security.jca</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">パフォーマンス・モニタリング 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">パフォーマンスモニタリング 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/monitor-1.0.html" tabindex="0">com.ibm.websphere.monitor.jmx</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">SIPサーブレット 1.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/sipServlet-1.1.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/sipServlet-1.1.com.ibm.websphere.sip.html" tabindex="0">com.ibm.websphere.sip</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/sipServlet-1.1.com.ibm.websphere.sip.resolver.html" tabindex="0">com.ibm.websphere.sip.resolver</a></li>
@@ -1020,16 +1033,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/sipServlet-1.1.com.ibm.websphere.sip.unmatchedMessages.events.html" tabindex="0">com.ibm.websphere.sip.unmatchedMessages.events</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">セキュア・ソケット・レイヤー 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">セキュア・ソケット 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/ssl-1.0.com.ibm.websphere.endpoint.html" tabindex="0">com.ibm.websphere.endpoint</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/ssl-1.0.com.ibm.websphere.ssl.html" tabindex="0">com.ibm.websphere.ssl</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ソーシャルメディア・ログイン 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ソーシャルメディアログイン 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/socialLogin-1.0.html" tabindex="0">com.ibm.websphere.security.social</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ウェブ・レスポンス・キャッシュ 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ウェブ応答キャッシュ 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/webCache-1.0.com.ibm.websphere.command.html" tabindex="0">com.ibm.websphere.command</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/webCache-1.0.com.ibm.websphere.command.web.html" tabindex="0">com.ibm.websphere.command.web</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/api/webCache-1.0.com.ibm.websphere.servlet.cache.html" tabindex="0">com.ibm.websphere.servlet.cache</a></li>
@@ -1046,8 +1059,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
 </ul>
 </li>
-<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/spi/open-liberty-spis.html" tabindex="0">Open Liberty SPI</a><ul class="nav-list">
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">サーバー 1.0 0のアプリケーションクライアントサポート</span><ul class="nav-list">
+<li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="reference/spi/open-liberty-spis.html" tabindex="0">Open Liberty サービス・プロバイダ・インターフェース</a><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">アプリケーション・クライアント・サポート・フォー・ 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/appClientSupport-1.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/appClientSupport-1.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/appClientSupport-1.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1064,7 +1077,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/appClientSupport-1.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">豆の検証 1.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-1.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-1.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-1.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1081,7 +1094,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-1.1.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">豆の検証 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-2.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-2.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-2.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1098,7 +1111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-2.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">コンテキストと依存性注入 1.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">コンテキストと依存性の注入 1.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/cdi-1.2.html" tabindex="0">io.openliberty.cdi.spi</a></li>
 </ul>
 </li>
@@ -1106,7 +1119,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/cdi-2.0.html" tabindex="0">io.openliberty.cdi.spi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Enterprise JavaBeans Lite 3.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">エンタープライズ JavaBeans 3.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/ejbLite-3.2.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/ejbLite-3.2.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/ejbLite-3.2.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1129,7 +1142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/federatedRegistry-1.0.com.ibm.wsspi.security.wim.model.html" tabindex="0">com.ibm.wsspi.security.wim.model</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・アプリケーション・クライアントのサーバー 2.0への対応</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Application Client Support for 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/appClientSupport-2.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/appClientSupport-2.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/appClientSupport-2.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1154,7 +1167,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/appAuthentication-3.0.html" tabindex="0">com.ibm.wsspi.security.jaspi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ豆検証 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・ビーン・バリデーション 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-3.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-3.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-3.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1171,7 +1184,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/beanValidation-3.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・コンカレンシー 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ同時並行 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/concurrent-3.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/concurrent-3.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/concurrent-3.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1188,15 +1201,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/concurrent-3.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・コンテキストと依存性注入 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ コンテキストと依存性の注入 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/cdi-3.0.html" tabindex="0">io.openliberty.cdi.spi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・コンテキストと依存性注入 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ コンテキストと依存性の注入 4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/cdi-4.0.html" tabindex="0">io.openliberty.cdi.spi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 10.0 アプリケーションクライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">10.0 アプリケーションクライアント</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jakartaeeClient-10.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jakartaeeClient-10.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jakartaeeClient-10.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1213,7 +1226,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jakartaeeClient-10.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta EE 9.1 アプリケーションクライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">9.1 アプリケーションクライアント</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jakartaeeClient-9.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jakartaeeClient-9.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jakartaeeClient-9.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1230,7 +1243,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jakartaeeClient-9.1.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 Lite</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/enterpriseBeansLite-4.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/enterpriseBeansLite-4.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/enterpriseBeansLite-4.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1247,7 +1260,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/enterpriseBeansLite-4.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta Enterprise Beans 4.0 メッセージ駆動豆</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.0 メッセージ駆動型Bean</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mdb-4.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mdb-4.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mdb-4.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1264,7 +1277,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mdb-4.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・メール 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mail-2.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mail-2.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mail-2.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1281,7 +1294,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mail-2.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・メール 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタメール 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mail-2.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mail-2.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mail-2.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1298,7 +1311,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mail-2.1.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・マネージド・ビーンズ 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・マネージド・ビ 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/managedBeans-2.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/managedBeans-2.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/managedBeans-2.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1315,7 +1328,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/managedBeans-2.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web Services 3.0 クライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Jakarta RESTful Web 3.0 クライアント</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/restfulWSClient-3.0.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
@@ -1338,15 +1351,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/restfulWSClient-3.1.com.ibm.wsspi.http.ee8.html" tabindex="0">com.ibm.wsspi.http.ee8</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・サーバー・ページ 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタサーバーページズ 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/pages-3.0.html" tabindex="0">com.ibm.wsspi.jsp.taglib.config</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・サーバー・ページ 3.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタサーバーページズ 3.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/pages-3.1.html" tabindex="0">com.ibm.wsspi.jsp.taglib.config</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・サーブレット 5.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタサーブレット 5.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-5.0.com.ibm.websphere.servlet.filter.html" tabindex="0">com.ibm.websphere.servlet.filter</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-5.0.com.ibm.websphere.servlet.request.html" tabindex="0">com.ibm.websphere.servlet.request</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-5.0.com.ibm.websphere.servlet.response.html" tabindex="0">com.ibm.websphere.servlet.response</a></li>
@@ -1379,7 +1392,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-5.0.com.ibm.wsspi.webcontainer.webapp.html" tabindex="0">com.ibm.wsspi.webcontainer.webapp</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ・サーブレット 6.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタサーブレット 6.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-6.0.com.ibm.websphere.servlet.filter.html" tabindex="0">com.ibm.websphere.servlet.filter</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-6.0.com.ibm.websphere.servlet.request.html" tabindex="0">com.ibm.websphere.servlet.request</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-6.0.com.ibm.websphere.servlet.response.html" tabindex="0">com.ibm.websphere.servlet.response</a></li>
@@ -1412,7 +1425,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-6.0.com.ibm.wsspi.webcontainer.webapp.html" tabindex="0">com.ibm.wsspi.webcontainer.webapp</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタXMLウェブサービス 3.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ジャカルタ XML ウェブサービス 3.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/xmlWS-3.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/xmlWS-3.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/xmlWS-3.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1451,7 +1464,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jaspic-1.1.html" tabindex="0">com.ibm.wsspi.security.jaspi</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 7 アプリケーションクライアント</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/javaeeClient-7.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/javaeeClient-7.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/javaeeClient-7.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1485,7 +1498,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/javaeeClient-8.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE Managed Bean 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java EE 管理ビーン 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/managedBeans-1.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/managedBeans-1.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/managedBeans-1.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1502,7 +1515,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/managedBeans-1.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaネーミング・ディレクトリ・インターフェース 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jndi-1.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jndi-1.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jndi-1.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1519,19 +1532,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jndi-1.0.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful Services 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jaxrs-2.0.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful Services 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTfulサービス 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jaxrs-2.1.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTfulサービス・クライアント 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful サービス クライアント 2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jaxrsClient-2.0.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful サービス・クライアント 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java RESTful サービス クライアント 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jaxrsClient-2.1.html" tabindex="0">com.ibm.wsspi.webservices.handler</a></li>
 </ul>
 </li>
@@ -1568,7 +1581,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-3.1.com.ibm.wsspi.webcontainer.webapp.html" tabindex="0">com.ibm.wsspi.webcontainer.webapp</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaサーブレット 4.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">4.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-4.0.com.ibm.websphere.servlet.filter.html" tabindex="0">com.ibm.websphere.servlet.filter</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-4.0.com.ibm.websphere.servlet.request.html" tabindex="0">com.ibm.websphere.servlet.request</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-4.0.com.ibm.websphere.servlet.response.html" tabindex="0">com.ibm.websphere.servlet.response</a></li>
@@ -1601,7 +1614,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/servlet-4.0.com.ibm.wsspi.webcontainer.webapp.html" tabindex="0">com.ibm.wsspi.webcontainer.webapp</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Javaウェブサービス 2.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Java Webサービス 2.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jaxws-2.2.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jaxws-2.2.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jaxws-2.2.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1653,15 +1666,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/javaMail-1.6.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaServer Pages 2.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jsp-2.2.html" tabindex="0">com.ibm.wsspi.jsp.taglib.config</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">JavaServer Pages 2.3</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.3</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/jsp-2.3.html" tabindex="0">com.ibm.wsspi.jsp.taglib.config</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージ駆動豆 3.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">メッセージ駆動型Bean 3.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mdb-3.2.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mdb-3.2.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mdb-3.2.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1678,7 +1691,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mdb-3.2.com.ibm.wsspi.artifact.overlay.html" tabindex="0">com.ibm.wsspi.artifact.overlay</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile JSON ウェブトークン 2.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile JSON Web トークン 2.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpJwt-2.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpJwt-2.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpJwt-2.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1697,7 +1710,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpJwt-2.1.com.ibm.wsspi.http.ee8.html" tabindex="0">com.ibm.wsspi.http.ee8</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile 5.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">5.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpMetrics-5.0.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpMetrics-5.0.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpMetrics-5.0.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1716,7 +1729,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpMetrics-5.0.com.ibm.wsspi.http.ee8.html" tabindex="0">com.ibm.wsspi.http.ee8</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">MicroProfile 5.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">5.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpMetrics-5.1.com.ibm.ws.adaptable.module.structure.html" tabindex="0">com.ibm.ws.adaptable.module.structure</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpMetrics-5.1.com.ibm.ws.anno.classsource.specification.html" tabindex="0">com.ibm.ws.anno.classsource.specification</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpMetrics-5.1.com.ibm.wsspi.adaptable.module.html" tabindex="0">com.ibm.wsspi.adaptable.module</a></li>
@@ -1739,7 +1752,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/mpOpenTracing-3.0.html" tabindex="0">io.openliberty.opentracing.spi.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">OAuth 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/oauth-2.0.com.ibm.wsspi.security.oauth20.html" tabindex="0">com.ibm.wsspi.security.oauth20</a></li>
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/oauth-2.0.com.ibm.wsspi.security.openidconnect.html" tabindex="0">com.ibm.wsspi.security.openidconnect</a></li>
 </ul>
@@ -1748,35 +1761,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/openapi-3.1.html" tabindex="0">com.ibm.wsspi.openapi31</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Opentracing 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/opentracing-1.0.html" tabindex="0">com.ibm.ws.opentracing.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Opentracing 1.1</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.1</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/opentracing-1.1.html" tabindex="0">com.ibm.ws.opentracing.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Opentracing 1.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/opentracing-1.2.html" tabindex="0">com.ibm.ws.opentracing.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">Opentracing 1.3</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.3</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/opentracing-1.3.html" tabindex="0">com.ibm.ws.opentracing.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">オープントレーシング 2.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">2.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/opentracing-2.0.html" tabindex="0">io.openliberty.opentracing.spi.tracer</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">セキュア・ソケット・レイヤー 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">セキュア・ソケット 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/ssl-1.0.html" tabindex="0">com.ibm.wsspi.ssl</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">WS-ATサービス 1.2</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">1.2</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/wsAtomicTransaction-1.2.html" tabindex="0">com.ibm.wsspi.webservices.wsat</a></li>
 </ul>
 </li>
-<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ウェブ・レスポンス・キャッシュ 1.0</span><ul class="nav-list">
+<li class="nav-item" data-depth="2"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <span class="nav-text" role="button" tabindex="0">ウェブ応答キャッシュ 1.0</span><ul class="nav-list">
 <li class="nav-item" data-depth="3"><a class="nav-link" href="reference/javadoc/spi/webCache-1.0.html" tabindex="0">com.ibm.wsspi.cache.web</a></li>
 </ul>
 </li>
@@ -1808,7 +1821,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><a href="admin-center.html">管理センターGUI</a></li>
 </ul>
 </nav>
-<div id="github_link"><img alt="GitHub ロゴ" id="docs_github_logo" src="/img/docs_github_logo.svg"/> <a href="https://github.com/OpenLiberty/docs/issues/new?body=Document: Manage Open Liberty with Admin Center%0Ahttp://openliberty.io/docs/24.0.0.9/admin-center.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it.**" id="open_issue_link" target="_blank">課題を開く</a> ｜ <a href="https://github.com/OpenLiberty/docs/edit/v24.0.0.9/modules/ROOT/pages/admin-center.adoc" id="edit_topic_link" rel="noopener" target="_blank">トピックを編集する</a></div>
+<div id="github_link"><img alt="GitHub ロゴ" id="docs_github_logo" src="../../img/docs_github_logo.svg"/> <a href="https://github.com/OpenLiberty/docs/issues/new?body=Document: Manage Open Liberty with Admin Center%0Ahttp://openliberty.io/docs/24.0.0.9/admin-center.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it. Please specify which language you are viewing the documentation in as well.**" id="open_issue_link" target="_blank">未解決の問題</a> <a href="https://github.com/OpenLiberty/docs/edit/v24.0.0.9/modules/ROOT/pages/admin-center.adoc" id="edit_topic_link" rel="noopener" target="_blank">｜トピックの編集</a></div>
 </div>
 <article class="doc">
 <h1 class="page">管理センターでOpen Libertyを管理</h1>
@@ -1867,7 +1880,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="sect1">
-<h2 id="_log_in_to_admin_center"><a class="anchor" href="#_log_in_to_admin_center"></a>管理者センターにログイン</h2>
+<h2 id="_log_in_to_admin_center"><a class="anchor" href="#_log_in_to_admin_center"></a>管理センターにログイン</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Admin Center GUI にアクセスする前に、サーバーが稼動していることを確認してください。 ウェブブラウザで、以下の URLの Admin Centerログインページにアクセスする。</p>
@@ -1888,7 +1901,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>管理センターへのアクセスは、ブラウザからの直接アクセスにのみ対応しています。 HTTPプロキシサーバー経由でのアクセスはサポートされていません。</p>
 </div>
 <div class="paragraph">
-<p>ブラウザで接続が信頼されていることを確認するよう求められた場合は、例外を指定するか、または接続を有効にして Admin Center への接続を続行します。 Admin Center にログインするには、管理ロールの構成からユーザー名とパスワードを指定します。 例えば、先に提供した「<code>server.xml</code>コンフィギュレーションの例を使用する場合、ユーザー名に「<code>admin</code>、パスワードに「<code>adminpwd</code>」を指定する。</p>
+<p>ブラウザが接続を信頼できるかどうかを確認するメッセージを表示した場合は、例外を指定するか、または接続を有効にして管理センターに接続を継続します。 Admin Center にログインするには、管理ロールの構成からユーザー名とパスワードを指定します。 例えば、先に提供した「<code>server.xml</code>コンフィギュレーションの例を使用する場合、ユーザー名に「<code>admin</code>、パスワードに「<code>adminpwd</code>」を指定する。</p>
 </div>
 <div class="paragraph">
 <p>次の画面キャプチャは<strong>Admin Centerのログイン</strong>画面を示す。</p>
@@ -1947,10 +1960,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="paragraph">
-<p><strong>Server Config</strong> ツールは、 <code>server.xml</code> ファイルなどの構成ファイルを 2 つのモードで表示します： <strong>Design</strong> と <strong>Source</strong> です。 これらの各モードは、ツール内のブラウザ・タブからアクセスできる。 これらのモードは、<strong>設定</strong>アイコンをクリックしてカスタマイズできます。 例えば、<strong>Design</strong>モードでパラメータ説明を追加または削除したり、<strong>Source</strong>モードで行番号を追加または削除することができます。</p>
+<p><strong>サーバー構成ツール</strong>は、 <code>server.xml</code> ファイルなどの構成ファイルを <strong>「デザイン」</strong> と <strong>「ソース」</strong> の2つのモードで表示します。 これらの各モードは、ツール内のブラウザ・タブからアクセスできる。 これらのモードは、<strong>設定</strong>アイコンをクリックしてカスタマイズできます。 例えば、<strong>Design</strong>モードでパラメータ説明を追加または削除したり、<strong>Source</strong>モードで行番号を追加または削除することができます。</p>
 </div>
 <div class="paragraph">
-<p><strong>デザイン・</strong> モードでは、インライン・ドキュメンテーションを備えたグラフィカル・コントロールを使用して、コンフィギュレーション・ファイルの内容を表示します。 このモードでは、コンフィギュレーション内のエレメントを選択し、有効な機能とパラメータ設定を確認します。</p>
+<p><strong>デザインモード</strong>では、インラインドキュメント付きのグラフィカルコントロールを使用して、構成ファイルの内容を表示します。 このモードでは、有効な機能とパラメータ設定を確認するために、構成で要素を選択します。</p>
 </div>
 <div class="paragraph">
 <p><strong>ソース</strong>モードは、ファイルテキストを編集するための直接アクセスを可能にし、ファイル要素のためのツールチップの説明を提供します。 要素やパラメータにカーソルを合わせると、そのドキュメントが表示されます。 Ctrl+Space を押すとコンテンツ・アシストを使用できます。コンテンツ・アシストは、新しいエレメント、パラメーター、および値の追加を支援します。 ただし、<strong>ソース・</strong>モード・エディタは、指定した設定値を検証しません。 <strong>ソース</strong>モードで行った変更は、実行中のサーバーに適用されます。 無効な設定値を指定すると、エラーが発生したり、サーバーが故障したりすることがあります。</p>
@@ -2014,7 +2027,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><strong>Explore</strong>ツールを使用して、Open Libertyリソースを監視および管理できます。 このツールは、サーバーとそのアプリケーションに関する情報を表示するためのオプションを提供します。 また、リソースの停止、開始、再起動にも使用できる。</p>
 </div>
 <div class="paragraph">
-<p><strong>Explore</strong> ツールでサーバーとアプリケーションのステータスをよりタイムリーに更新するには、サーバー構成に <a href="/docs/latest/reference/feature/websocket.html">Web Socket</a> 機能を追加します。 この機能は、サイズに関係なく、トポロジーのライブビューを提供する。 Web ソケット機能がない場合、Admin Center は定期的かつ頻繁に変更をポーリングします。</p>
+<p><strong>Exploreツール</strong>のサーバーおよびアプリケーションのステータスをよりタイムリーに更新するには、 <a href="/docs/latest/reference/feature/websocket.html">WebSocket機能</a>をサーバー構成に追加します。 この機能により、規模に関わらず、トポロジーのライブビューを提供します。 Web ソケット機能がない場合、Admin Center は定期的かつ頻繁に変更をポーリングします。</p>
 </div>
 <div class="paragraph">
 <p>ナビゲーションバーから<strong>［アプリケーション］</strong>ビューを選択すると、サーバー上で実行中のアプリケーションの監視、停止、起動、再起動を行うことができます。</p>
@@ -2098,7 +2111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">OpenID Connectクライアント管理</dt>
+<dt class="hdlist1">OpenID クライアント管理</dt>
 <dd><p>このツールを使って、管理者がOIDCプロバイダ上のクライアントを管理することができます。</p>
 </dd>
 <dt class="hdlist1">OpenIDConnect パーソナル・トークンの管理</dt>
@@ -2128,9 +2141,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="footer_container container-fluid" id="footer_bottom_container">
 <div id="footer_bottom_left_section">
-<p id="footer_copyright">© Copyright IBM Corp</p>
+<p id="footer_copyright">© Copyright IBM 2017, 2024</p>
 <p class="vertical_bar">|</p><a class="left_footer_link" href="https://www.ibm.com/privacy/" id="footer_privacy_policy_link" rel="noopener" target="_blank">プライバシー・ポリシー</a><p class="vertical_bar">|</p><a class="left_footer_link" href="https://github.com/OpenLiberty/open-liberty/blob/release/LICENSE" id="footer_license_link" rel="noopener" target="_blank">使用許諾条件</a><p class="vertical_bar">|</p><a class="left_footer_link" href="https://github.com/OpenLiberty/logos" id="footer_logos_link" rel="noopener" target="_blank">ロゴス (論理)</a></div>
-<div id="footer_bottom_right_section"><a aria-label="Open Liberty" class="right_footer_link blue_link_light_background" href="/docs" id="footer_docs_link">資料</a> <a aria-label="Open Liberty" class="right_footer_link blue_link_light_background" href="/blog" id="footer_blog_link">ブログ</a> <a aria-label="Open Liberty のサポート" class="right_footer_link blue_link_light_background" href="/support" id="footer_support_link">サポート</a></div>
+<div id="footer_bottom_right_section"><a aria-label="Open Liberty" class="right_footer_link blue_link_light_background" href="/docs" id="footer_docs_link">文書</a> <a aria-label="Open Liberty" class="right_footer_link blue_link_light_background" href="/blog" id="footer_blog_link">ブログ</a> <a aria-label="Open Liberty のサポート" class="right_footer_link blue_link_light_background" href="/support" id="footer_support_link">支援</a></div>
 </div>
 </footer>
 <!-- PRE-LOADED IMAGES FOR ON HOVER BEHAVIOR -->
@@ -2146,4 +2159,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </body>
 </html>
 
-<!-- v2.3.7 : caits-prod-app-gp_openliberty_20241229T123617-1_en_ja -->
+<!-- v2.3.7 : caits-prod-app-gp_openliberty_20250101T143131-2_en_ja -->
