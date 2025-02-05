@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>HTTPアクセスロギング ::Open LibertyDocs</title>
-<link href="https://openliberty.io/docs/latest/access-logging.html" rel="canonical"/>
+<title>ドックスへようこそ :：Open Liberty</title>
+<link href="https://openliberty.io/docs/latest/overview.html" rel="canonical"/>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" rel="stylesheet"/>
 <link href="../../_/font/Asap.woff2" rel="stylesheet"/>
 <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.3/styles/default.min.css" rel="stylesheet"/>
@@ -14,7 +14,7 @@
 <meta content="Open Liberty documentation and reference materials for developers to build applications and for administrators and operation teams to manage DevOps and deploy workloads to clouds by using open cloud-native Java. This content covers Open Liberty basics, development, security, deployment, and operations topics. It also includes Javadoc for Jakarta EE APIs, MicroProfile APIs, Java EE APIs, and Open Liberty APIs and SPIs." property="og:description"/>
 <meta content="https://openliberty.io/img/twitter_card.jpg" property="og:image"/>
 <meta content="website" property="og:type"/>
-<meta content="https://openliberty.io/docs/24.0.0.9/access-logging.html" property="og:url"/>
+<meta content="https://openliberty.io/docs/24.0.0.9/overview.html" property="og:url"/>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PXYTWCYE18"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -46,12 +46,12 @@
 <div class="panels">
 <div class="nav-panel-explore" data-panel="explore">
 <div class="doc_select version_select">
-<div class="context"><span class="title">バージョン</span> <a class="version" href="#">24.0.0.9</a> <img class="version_select_chevron" src="../../_/img/chevron.svg"/></div>
+<div class="context"><span class="title">バージョン</span><a class="version" href="#">24.0.0.9</a><img class="version_select_chevron" src="../../_/img/chevron.svg"/></div>
 <ul class="components">
 <li class="component is-current"><ul class="versions">
-<li class="version"><span class="title">バージョン</span><a aria-label="バージョン24.0.0.11" href="../latest/access-logging.html">24.0.0.11</a></li>
-<li class="version"><span class="title">バージョン</span><a aria-label="バージョン24.0.0.10" href="../24.0.0.10/access-logging.html">24.0.0.10</a></li>
-<li class="version is-current"><span class="title">バージョン</span><a aria-label="バージョン24.0.0.9" href="access-logging.html">24.0.0.9</a></li>
+<li class="version"><span class="title">バージョン</span> <a aria-label="バージョン24.0.0.11" href="../latest/overview.html">24.0.0.11</a></li>
+<li class="version"><span class="title">バージョン</span> <a aria-label="バージョン24.0.0.10" href="../24.0.0.10/overview.html">24.0.0.10</a></li>
+<li class="version is-current"><span class="title">バージョン</span> <a aria-label="バージョン24.0.0.9" href="overview.html">24.0.0.9</a></li>
 </ul>
 </li>
 </ul>
@@ -60,9 +60,9 @@
 <div class="context lang_picker"><img class="globe_icon" src="../../_/img/filled_globe.svg"/> <a class="version" href="#"> </a> <img class="version_select_chevron" src="../../_/img/chevron.svg"/></div>
 <ul class="components language_list">
 <li class="component"><ul class="versions">
-<li class="version is-current"><a href="/docs/24.0.0.9/access-logging.html" translate="no">English</a></li>
-<li class="version"><a href="/ja/docs/24.0.0.9/access-logging.html" translate="no">日本語</a></li>
-<li class="version"><a href="/zh-Hans/docs/24.0.0.9/access-logging.html" translate="no">中文（简体)</a></li>
+<li class="version is-current"><a href="/docs/24.0.0.9/overview.html" translate="no">English</a></li>
+<li class="version"><a href="/ja/docs/24.0.0.9/overview.html" translate="no">日本語</a></li>
+<li class="version"><a href="/zh-Hans/docs/24.0.0.9/overview.html" translate="no">中文（简体)</a></li>
 </ul>
 </li>
 </ul>
@@ -111,7 +111,7 @@
 </ul>
 </li>
 <li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="external-configuration.html" tabindex="0">マイクロサービスの外部構成</a><ul class="nav-list">
-<li class="nav-item" data-depth="2"><a class="nav-link" href="microprofile-config-properties.html" tabindex="0">MicroProfileコンフィグのプロパティ</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="microprofile-config-properties.html" tabindex="0">MicroProfileコンフィグプロパティ</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="https://openliberty.io/guides/#configuration" tabindex="0">ガイドコンフィギュレーション</a></li>
 </ul>
 </li>
@@ -228,7 +228,7 @@
 <li class="nav-item" data-depth="1"><a class="nav-link" href="microprofile-telemetry.html" tabindex="0"> MicroProfileTelemetryによる観測可能性の実現</a></li>
 <li class="nav-item" data-depth="1"><button aria-label="このカテゴリのページを展開する" class="nav-item-toggle"></button> <a class="nav-link" href="log-trace-configuration.html" tabindex="0">ログ</a><ul class="nav-list">
 <li class="nav-item" data-depth="2"><a class="nav-link" href="log-management.html" tabindex="0">ログ管理</a></li>
-<li class="nav-item is-current-page" data-depth="2"><a class="nav-link" href="access-logging.html" tabindex="0">HTTP アクセスのロギング</a></li>
+<li class="nav-item" data-depth="2"><a class="nav-link" href="access-logging.html" tabindex="0">HTTP アクセスのロギング</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="jdbc-tracing.html" tabindex="0">JDBCトレース</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="mptel-log-events-list.html" tabindex="0">MicroProfileTelemetry ログイベントリファレンスリスト</a></li>
 <li class="nav-item" data-depth="2"><a class="nav-link" href="json-log-events-list.html" tabindex="0">JSONログイベントリファレンスリスト</a></li>
@@ -1813,275 +1813,33 @@
 <div aria-label="このドキュメントのツールバー" class="toolbar" role="navigation"><button aria-label="ナビゲーションメニューの切り替え" class="nav-toggle"></button><nav aria-label="パンくずリスト" class="breadcrumbs">
 <ul>
 <li><a href="overview.html">ドキュメント概要</a></li>
-<li>操作</li>
-<li><a href="log-trace-configuration.html">ログ</a></li>
-<li><a href="access-logging.html">HTTP アクセスのロギング</a></li>
+<li><a href="overview.html">ドックスへようこそ</a></li>
 </ul>
 </nav>
-<div id="github_link"><img alt="GitHub ロゴ" id="docs_github_logo" src="/img/docs_github_logo.svg"/> <a href="https://github.com/OpenLiberty/docs/issues/new?body=Document: HTTP access logging%0Ahttp://openliberty.io/docs/24.0.0.9/access-logging.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it.**" id="open_issue_link" target="_blank">未解決の問題</a> <a href="https://github.com/OpenLiberty/docs/edit/v24.0.0.9/modules/ROOT/pages/access-logging.adoc" id="edit_topic_link" rel="noopener" target="_blank">｜トピックの編集</a></div>
+<div id="github_link"><img alt="GitHub ロゴ" id="docs_github_logo" src="/img/docs_github_logo.svg"/> <a href="https://github.com/OpenLiberty/docs/issues/new?body=Document: Welcome to Docs%0Ahttp://openliberty.io/docs/24.0.0.9/overview.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it.**" id="open_issue_link" target="_blank">未解決の問題</a> <a href="https://github.com/OpenLiberty/docs/edit/v24.0.0.9/modules/ROOT/pages/overview.adoc" id="edit_topic_link" rel="noopener" target="_blank">｜トピックの編集</a></div>
 </div>
 <article class="doc">
-<h1 class="page">HTTP アクセスのロギング</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">ドックスへようこそ</h1>
 <div class="paragraph">
-<p>HTTP エンドポイントのアクセス・ログ設定を構成することができます。 HTTP のアクセスログには、 HTTP のエンドポイントで処理されたすべてのクライアントからのリクエストの記録が含まれています。</p>
+<p>サイドバーのカテゴリから選択して、当社のドキュメントをご覧ください。</p>
 </div>
 <div class="paragraph">
-<p>Open LibertyServerでアクセスログを有効にするには、複数のエンドポイントに対して1つのログを記録するモードと、各エンドポイントに対して1つのログを記録するモードの2種類があります。 属性を指定しないと、デフォルトが使用されます。 デフォルト属性の一覧は<a class="xref page" href="reference/config/httpAccessLogging.html">httpAccessLogging</a>を参照。</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_http_access_log_settings"><a class="anchor" href="#_http_access_log_settings"></a>HTTP アクセスログの設定</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>HTTPアクセスログの設定は、共通のログ設定を共有する複数のエンドポイント、または個々のエンドポイントに対して行うことができます。</p>
-</div>
-<div class="sect2">
-<h3 id="_settings_for_a_common_log"><a class="anchor" href="#_settings_for_a_common_log"></a>共通ログの設定</h3>
-<div class="paragraph">
-<p>To enable logging for multiple endpoints with common settings, include <code>httpAccessLogging</code> as a top-level element in your <code>server.xml</code> file. 次の例のように、複数の&#39;<code>httpEndpoint</code>要素からこの要素を参照する。</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpAccessLogging id="accessLogging"/&gt;
-&lt;httpEndpoint id="defaultHttpEndpoint" accessLoggingRef="accessLogging" httpPort="9080" httpsPort="9443"/&gt;
-&lt;httpEndpoint id="otherHttpEndpoint" accessLoggingRef="accessLogging" httpPort="9081" httpsPort="9444"/&gt;</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_settings_for_distinct_logs_for_each_endpoint"><a class="anchor" href="#_settings_for_distinct_logs_for_each_endpoint"></a>各エンドポイントのログを区別する設定</h3>
-<div class="paragraph">
-<p>個々のエンドポイントのログを有効にするには、 <code>accessLogging</code> の子要素を使用し、他のログと競合しないファイルパスを指定します。次の例を参照してください。</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"&gt;
-    &lt;accessLogging filepath="${server.output.dir}/logs/http_defaultEndpoint_access.log"/&gt;
-&lt;/httpEndpoint&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_http_access_log_format"><a class="anchor" href="#_http_access_log_format"></a>HTTP アクセスログフォーマット</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><code>accessLogFormat</code>プロパティを使用して、HTTPトランスポート・チャネルのNCSAアクセス・ログに含める情報と形式を指定します。 このプロパティの値は、スペースで区切られたオプションのリストです。</p>
-</div>
-<div class="paragraph">
-<p>以下の例に示すように、&#39;<code>server.xml</code>ファイル内の&#39;<code>httpAcccessLogging</code>または&#39;<code>accessLogging</code>要素の&#39;<code>logFormat</code>属性でログフォーマット文字列を指定する。</p>
-</div>
-<div class="paragraph">
-<p>次の&#39;<code>server.xml</code>ファイルの例では、&#39;<code>httpAcccessLogging</code>要素の&#39;<code>logformat</code>属性はログフォーマット文字列を指定する。 複数のエンドポイントは、&#39;<code>accessLogging</code>コンフィギュレーション ID を参照することで、この文字列を指定することができる。</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpAccessLogging id="accessLogging" logFormat='%h %u %{t}W "%r" %s %b %D %{R}W'/&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>次の &#39;<code>server.xml</code>ファイルの例では、&#39;<code>accessLogging</code>サブ要素の &#39;<code>logformat</code>属性は、&#39;<code>httpEndpoint</code>要素で定義されている特定のエンドポイントのログフォーマット文字列を指定する。</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"&gt;
-   &lt;accessLogging filepath="${server.output.dir}/logs/http_defaultEndpoint_access.log"
-                  logFormat='%h %i %u %t "%r" %s %b %D %{R}W' /&gt;
-&lt;/httpEndpoint&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>次の表は、使用可能なログフォーマットオプションの一覧です。</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;"/>
-<col style="width: 50%;"/>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">ログフォーマットオプション</th>
-<th class="tableblock halign-left valign-top">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%a</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リモート IP アドレス</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%A</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ローカル IP アドレス</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%b</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ヘッダーを除くレスポンスサイズ（バイト）</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%B</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ヘッダーを除いたレスポンスのサイズ（バイト単位）。 If no value is found, <code>0</code> is printed instead of <code>-</code>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">% {CookieName} C または %C</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">括弧内で指定されたリクエストクッキー。 括弧が含まれていない場合、リクエストクッキーをすべて印刷する。</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%D</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リクエストの経過時間（マイクロ秒単位</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%h</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リモート・ホスト</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%i または % i {HeaderName}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リクエストの <code>HeaderName</code> ヘッダー値</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%m</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リクエスト・メソッド</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%o または% o {HeaderName}</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">レスポンスの <code>HeaderName</code> ヘッダー値</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%q</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">任意のパスワードをマスクしたクエリ文字列を出力する</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%r</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">要求の先頭行</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%{remote}p</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リクエストを行ったクライアントの一時的なポート</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%{R}W</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">要求が受信された時点から応答の最初のバイト・セットが送信されるまでの要求のサービス時間 (ミリ秒の正確度、マイクロ秒の精度)。</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%s</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">応答の状況コード</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%t</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リクエストの開始時刻（NCSA形式</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%{t}W</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">リクエストの終了時刻（NCSA形式</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%u</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Open Liberty 固有の <code>$WSRU</code> ヘッダーによるリモートユーザー</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">%U</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URL パス、クエリー文字列を含まない</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>個々のオプションは引用符で囲むことができますが、引用符が必須ではありません。 特に記載がない限り、オプションで要求された情報を入手できない場合、そのオプションには「<code>-</code>」という値が出力されます。</p>
-</div>
-<div class="paragraph">
-<p>オプションを指定する順序によって、ログにおけるこの情報のフォーマットが決まります。 例えば、 <code>accessLogFormat</code> プロパティの値として、以下のディレクティブを指定することができます</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre> %h %i %u %t &quot;%r&quot; %s %b %D % {R} W</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>この設定に基づき、NCSA アクセスログには、指定された順序で各リクエストに関する以下の情報が含まれます</p>
+<p>まだお探しのものが見つかりませんか？</p>
 </div>
 <div class="ulist">
 <ul>
-<li><p>リモート・ホスト</p>
+<li><p>私たちの<a href="/guides">ガイド</a>をお試しください。Open Libertyのすべてを知る最短の方法です。</p>
 </li>
-<li><p>要求の HeaderName ヘッダー値</p>
+<li><p>最新ニュース、チュートリアルなどは<a href="https://www.openliberty.io/blog/">ブログ</a>でチェック。</p>
 </li>
-<li><p>WebSphere 固有の $WSRU ヘッダーによるリモート・ユーザー</p>
+<li><p><a href="/contribute">コントリビューターのリソース</a>を検索したり、コントリビューターになることもできます。</p>
 </li>
-<li><p>要求の開始時刻の NCSA 形式</p>
-</li>
-<li><p>要求の先頭行</p>
-</li>
-<li><p>応答の状況コード</p>
-</li>
-<li><p>ヘッダーを除いた応答サイズ (バイト)</p>
-</li>
-<li><p>クライアントとネットワークの時間を含む、エンドツーエンドでのリクエストの経過時間（マイクロ秒単位</p>
-</li>
-<li><p>レスポンスの最初のバイトが送信されるまでの経過時間（マイクロ秒）。 この値は多くの場合、アプリケーションの応答時間の近似値となる。</p>
+<li><p><a href="https://github.com/OpenLiberty/docs">GitHub</a>でドキュメントを閲覧することもできる。</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_time_based_http_access_log_rollover"><a class="anchor" href="#_time_based_http_access_log_rollover"></a>時間ベースのHTTPアクセスログのロールオーバー</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>ログロールオーバー開始時刻とログロールオーバー間隔期間を指定することで、HTTPアクセスログファイルの時間ベースの定期的なロールオーバーを有効にできます。 指定されたロールオーバー開始時刻は、HTTPアクセス・ログ・ファイルが最初にロールオーバーされる時刻である。 ロールオーバー間隔期間は、連続したHTTPアクセス・ログ・ファイルのロールオーバー間の時間間隔である。</p>
-</div>
-<div class="paragraph">
-<p>たとえば、ロールオーバー開始時刻が午前0時で、ロールオーバー間隔が1日のサーバーは、HTTPアクセスログを毎日1回、午前0時にロールオーバーする。</p>
-</div>
-<div class="paragraph">
-<p><code>server.xml</code>ファイルの&#39;<code>httpAcccessLogging</code>または&#39;<code>accessLogging</code>要素の&#39;<code>rolloverStartTime</code>および&#39;<code>rolloverInterval</code>属性を使用して、HTTPアクセスログファイルの時間ベースのロールオーバーを有効にします。 次の表は、2つの属性、それぞれの説明、および許可される値の一覧です。</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;"/>
-<col style="width: 50%;"/>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">時間ベースのログ・ロールオーバー属性</th>
-<th class="tableblock halign-left valign-top">説明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rolloverStartTime</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HTTPアクセス・ログ・ファイルの時間ベースのログ・ロールオーバーを有効にするには、この設定を単独で、または「<code>rolloverInterval</code>属性とともに使用します。 この設定では、ログを最初にロールオーバーする時刻を指定します。 <code>rolloverInterval</code>設定期間は「<code>rolloverStartTime</code>」から始まる。 有効な値は、24時間制の ISO-8601 日時形式（HH:MM）に従います。00:00は深夜0時を表します。 ゼロを埋め込む必要があります。 <code>rolloverInterval</code> 属性が指定されている場合、 <code>rolloverStartTime</code> 属性のデフォルト値は00:00、深夜となります。</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rolloverInterval</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HTTPアクセス・ログ・ファイルの時間ベースのログ・ロールオーバーを有効にするには、この設定を単独で、または「<code>rolloverStartTime</code>属性とともに使用します。 この設定では、ログのローテーションを行う間隔を分単位で指定します。時間単位が指定されていない場合は分単位で指定します。 正整数の後に時間単位 (日 (d)、時間 (h)、または分 (m)) を付けて指定してください。 例えば、5 時間を 5hと指定します。 1 つのエントリーに複数の値を含めることができます。 例えば、1d5h は 1 日と 5 時間に相当します。 <code>rolloverStartTime</code> 属性が指定されている場合、 <code>rolloverInterval</code> 属性のデフォルト値は1日です。</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>以下の例は、「<code>httpAcccessLogging</code>」と「<code>accessLogging</code>要素でHTTPアクセスログファイルの時間ベースの定期的なロールオーバーを有効にする方法を示している。 <code>rolloverStartTime</code>属性は真夜中に設定され、&#39;<code>rolloverInterval</code>属性は1日に設定される。</p>
-</div>
-<div class="paragraph">
-<p>次の &#39;<code>server.xml</code>ファイルの例では、&#39;<code>httpAcccessLogging</code>要素の &#39;<code>rolloverStartTime</code>属性と &#39;<code>rolloverInterval</code>属性は、&#39;<code>accessLogging</code>構成 ID を参照する複数のエンドポイントのログのロールオーバー開始時間と間隔を指定する。</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpAccessLogging id="accessLogging`" rolloverStartTime="00:00" rolloverInterval="1d"/&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>以下のserver.xmlファイルの例では、&#39;<code>accessLogging</code>サブ要素の属性は、&#39;<code>httpEndpoint</code>要素で定義されている特定のエンドポイントの設定を指定している。 <code>rolloverStartTime</code>属性と &#39;<code>rolloverInterval</code>属性は、エンドポイントのログ・ロールオーバー開始時間と間隔を指定する。</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"&gt;
-   &lt;accessLogging filepath="${server.output.dir}/logs/http_defaultEndpoint_access.log"
-                 rolloverStartTime="00:00" rolloverInterval="1d" /&gt;
-&lt;/httpEndpoint&gt;</code></pre>
-</div>
-</div>
-</div>
+<p>もし何かがうまく機能せず、早急に修理が必要な場合は、IBMの <a href="/support">Open LibertySupport</a>をチェックしてください。</p>
 </div>
 </article>
 </main>
@@ -2114,4 +1872,4 @@
 </body>
 </html>
 
-<!-- v2.3.12 : caits-prod-app-gp_openliberty_20250205T160428-2_en_ja -->
+<!-- v2.3.12 : caits-prod-app-gp_openliberty_20250205T160434-1_en_ja -->
