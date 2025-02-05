@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Welcome to Docs :: Open Liberty Docs</title>
-<link href="https://openliberty.io/docs/latest/overview.html" rel="canonical"/>
+<title>HTTP access logging :: Open Liberty Docs</title>
+<link href="https://openliberty.io/docs/latest/access-logging.html" rel="canonical"/>
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" rel="stylesheet"/>
 <link href="../../_/font/Asap.woff2" rel="stylesheet"/>
 <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.3/styles/default.min.css" rel="stylesheet"/>
@@ -14,7 +14,7 @@
 <meta content="Open Liberty documentation and reference materials for developers to build applications and for administrators and operation teams to manage DevOps and deploy workloads to clouds by using open cloud-native Java. This content covers Open Liberty basics, development, security, deployment, and operations topics. It also includes Javadoc for Jakarta EE APIs, MicroProfile APIs, Java EE APIs, and Open Liberty APIs and SPIs." property="og:description"/>
 <meta content="https://openliberty.io/img/twitter_card.jpg" property="og:image"/>
 <meta content="website" property="og:type"/>
-<meta content="https://openliberty.io/docs/24.0.0.10/overview.html" property="og:url"/>
+<meta content="https://openliberty.io/docs/24.0.0.9/access-logging.html" property="og:url"/>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PXYTWCYE18"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -62,14 +62,14 @@
 </div>
 </nav>
 </header><div class="body">
-<div class="nav-container" data-component="docs" data-version="24.0.0.10">
+<div class="nav-container" data-component="docs" data-version="24.0.0.9">
 <aside aria-label="Navigation table of contents" class="nav">
 <div class="panels">
 <div class="nav-panel-explore" data-panel="explore">
 <div class="doc_select version_select">
 <div class="context">
 <span class="title">Version</span>
-<a class="version" href="#">24.0.0.10</a>
+<a class="version" href="#">24.0.0.9</a>
 <img class="version_select_chevron" src="../../_/img/chevron.svg"/>
 </div>
 <ul class="components">
@@ -77,15 +77,15 @@
 <ul class="versions">
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 24.0.0.11" href="../latest/overview.html">24.0.0.11</a>
-</li>
-<li class="version is-current">
-<span class="title">Version</span>
-<a aria-label="Version 24.0.0.10" href="overview.html">24.0.0.10</a>
+<a aria-label="Version 24.0.0.11" href="../latest/access-logging.html">24.0.0.11</a>
 </li>
 <li class="version">
 <span class="title">Version</span>
-<a aria-label="Version 24.0.0.9" href="../24.0.0.9/overview.html">24.0.0.9</a>
+<a aria-label="Version 24.0.0.10" href="../24.0.0.10/access-logging.html">24.0.0.10</a>
+</li>
+<li class="version is-current">
+<span class="title">Version</span>
+<a aria-label="Version 24.0.0.9" href="access-logging.html">24.0.0.9</a>
 </li>
 </ul>
 </li>
@@ -102,13 +102,13 @@
 <li class="component">
 <ul class="versions">
 <li class="version is-current">
-<a href="/docs/24.0.0.10/overview.html" translate="no">English</a>
+<a href="/docs/24.0.0.9/access-logging.html" translate="no">English</a>
 </li>
 <li class="version">
-<a href="/ja/docs/24.0.0.10/overview.html" translate="no">日本語</a>
+<a href="/ja/docs/24.0.0.9/access-logging.html" translate="no">日本語</a>
 </li>
 <li class="version">
-<a href="/zh-Hans/docs/24.0.0.10/overview.html" translate="no">中文（简体)</a>
+<a href="/zh-Hans/docs/24.0.0.9/access-logging.html" translate="no">中文（简体)</a>
 </li>
 </ul>
 </li>
@@ -238,9 +238,6 @@
 <button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
 <a class="nav-link" href="cdi-beans.html" tabindex="0">Context and Dependency Injection</a>
 <ul class="nav-list">
-<li class="nav-item" data-depth="2">
-<a class="nav-link" href="cdi-extension-user-feature.html" tabindex="0">Creating a CDI extension inside a user feature</a>
-</li>
 <li class="nav-item" data-depth="2">
 <a class="nav-link" href="jaxrs-integration-cdi.html" tabindex="0">RESTful Web Services integration with CDI</a>
 </li>
@@ -526,7 +523,7 @@
 <li class="nav-item" data-depth="2">
 <a class="nav-link" href="log-management.html" tabindex="0">Log management</a>
 </li>
-<li class="nav-item" data-depth="2">
+<li class="nav-item is-current-page" data-depth="2">
 <a class="nav-link" href="access-logging.html" tabindex="0">HTTP access logging</a>
 </li>
 <li class="nav-item" data-depth="2">
@@ -1124,345 +1121,333 @@
 </li>
 <li class="nav-item" data-depth="1"><li class="nav-item" data-depth="1">
 <button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/feature-overview.html" tabindex="0">Features</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/feature-overview.html" tabindex="0">Features</a>
 <ul class="nav-list">
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/adminCenter-1.0.html" tabindex="0">Admin Center</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/adminCenter-1.0.html" tabindex="0">Admin Center</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/localConnector-1.0.html" tabindex="0">Admin Local Connector</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/localConnector-1.0.html" tabindex="0">Admin Local Connector</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/restConnector-2.0.html" tabindex="0">Admin REST Connector</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/restConnector-2.0.html" tabindex="0">Admin REST Connector</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/appSecurity-5.0.html" tabindex="0">Application Security (Jakarta Security )</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/appSecurity-5.0.html" tabindex="0">Application Security (Jakarta Security )</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/appSecurityClient-1.0.html" tabindex="0">Application Security for Client</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/appSecurityClient-1.0.html" tabindex="0">Application Security for Client</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/audit-2.0.html" tabindex="0">Audit</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/audit-2.0.html" tabindex="0">Audit</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/acmeCA-2.0.html" tabindex="0">Automatic Certificate Management Environment (ACME) Support</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/acmeCA-2.0.html" tabindex="0">Automatic Certificate Management Environment (ACME) Support</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/bells-1.0.html" tabindex="0">Basic Extensions using Liberty Libraries</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/bells-1.0.html" tabindex="0">Basic Extensions using Liberty Libraries</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/batchManagement-1.0.html" tabindex="0">Batch Management</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/batchManagement-1.0.html" tabindex="0">Batch Management</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/cloudant-1.0.html" tabindex="0">Cloudant Integration</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/cloudant-1.0.html" tabindex="0">Cloudant Integration</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/crac-1.4.html" tabindex="0">Coordinated Restore at Checkpoint</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/crac-1.4.html" tabindex="0">Coordinated Restore at Checkpoint</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/couchdb-1.0.html" tabindex="0">CouchDB Integration</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/couchdb-1.0.html" tabindex="0">CouchDB Integration</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/sessionDatabase-1.0.html" tabindex="0">Database Session Persistence</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/sessionDatabase-1.0.html" tabindex="0">Database Session Persistence</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/distributedMap-1.0.html" tabindex="0">Distributed Map interface for Dynamic Caching</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/distributedMap-1.0.html" tabindex="0">Distributed Map interface for Dynamic Caching</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/eventLogging-1.0.html" tabindex="0">Event Logging</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/eventLogging-1.0.html" tabindex="0">Event Logging</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/federatedRegistry-1.0.html" tabindex="0">Federated User Registry</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/federatedRegistry-1.0.html" tabindex="0">Federated User Registry</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/grpc-1.0.html" tabindex="0">gRPC</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/grpc-1.0.html" tabindex="0">gRPC</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/grpcClient-1.0.html" tabindex="0">gRPC Client</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/grpcClient-1.0.html" tabindex="0">gRPC Client</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/appClientSupport-2.0.html" tabindex="0">Jakarta Application Client Support for Server</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/appClientSupport-2.0.html" tabindex="0">Jakarta Application Client Support for Server</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/appAuthentication-3.0.html" tabindex="0">Jakarta Authentication</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/appAuthentication-3.0.html" tabindex="0">Jakarta Authentication</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/appAuthorization-2.1.html" tabindex="0">Jakarta Authorization</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/appAuthorization-2.1.html" tabindex="0">Jakarta Authorization</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/batch-2.1.html" tabindex="0">Jakarta Batch</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/batch-2.1.html" tabindex="0">Jakarta Batch</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/beanValidation-3.0.html" tabindex="0">Jakarta Bean Validation</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/beanValidation-3.0.html" tabindex="0">Jakarta Bean Validation</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/concurrent-3.0.html" tabindex="0">Jakarta Concurrency</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/concurrent-3.0.html" tabindex="0">Jakarta Concurrency</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/connectors-2.1.html" tabindex="0">Jakarta Connectors</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/connectors-2.1.html" tabindex="0">Jakarta Connectors</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/connectorsInboundSecurity-2.0.html" tabindex="0">Jakarta Connectors Inbound Security</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/connectorsInboundSecurity-2.0.html" tabindex="0">Jakarta Connectors Inbound Security</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/cdi-4.0.html" tabindex="0">Jakarta Contexts and Dependency Injection</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/cdi-4.0.html" tabindex="0">Jakarta Contexts and Dependency Injection</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jakartaeeClient-10.0.html" tabindex="0">Jakarta EE Application Client</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jakartaeeClient-10.0.html" tabindex="0">Jakarta EE Application Client</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jakartaee-10.0.html" tabindex="0">Jakarta EE Platform</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jakartaee-10.0.html" tabindex="0">Jakarta EE Platform</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/webProfile-10.0.html" tabindex="0">Jakarta EE Web Profile</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/webProfile-10.0.html" tabindex="0">Jakarta EE Web Profile</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/enterpriseBeans-4.0.html" tabindex="0">Jakarta Enterprise Beans</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/enterpriseBeans-4.0.html" tabindex="0">Jakarta Enterprise Beans</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/enterpriseBeansHome-4.0.html" tabindex="0">Jakarta Enterprise Beans Home Interfaces</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/enterpriseBeansHome-4.0.html" tabindex="0">Jakarta Enterprise Beans Home Interfaces</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/enterpriseBeansLite-4.0.html" tabindex="0">Jakarta Enterprise Beans Lite</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/enterpriseBeansLite-4.0.html" tabindex="0">Jakarta Enterprise Beans Lite</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mdb-4.0.html" tabindex="0">Jakarta Enterprise Beans Message-Driven Beans</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mdb-4.0.html" tabindex="0">Jakarta Enterprise Beans Message-Driven Beans</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/enterpriseBeansPersistentTimer-4.0.html" tabindex="0">Jakarta Enterprise Beans Persistent Timers</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/enterpriseBeansPersistentTimer-4.0.html" tabindex="0">Jakarta Enterprise Beans Persistent Timers</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/enterpriseBeansRemote-4.0.html" tabindex="0">Jakarta Enterprise Beans Remote</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/enterpriseBeansRemote-4.0.html" tabindex="0">Jakarta Enterprise Beans Remote</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/expressionLanguage-5.0.html" tabindex="0">Jakarta Expression Language</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/expressionLanguage-5.0.html" tabindex="0">Jakarta Expression Language</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/faces-4.0.html" tabindex="0">Jakarta Faces</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/faces-4.0.html" tabindex="0">Jakarta Faces</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/facesContainer-4.0.html" tabindex="0">Jakarta Faces Container</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/facesContainer-4.0.html" tabindex="0">Jakarta Faces Container</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jsonb-3.0.html" tabindex="0">Jakarta JSON Binding</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jsonb-3.0.html" tabindex="0">Jakarta JSON Binding</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jsonbContainer-3.0.html" tabindex="0">Jakarta JSON Binding Container</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jsonbContainer-3.0.html" tabindex="0">Jakarta JSON Binding Container</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jsonp-2.1.html" tabindex="0">Jakarta JSON Processing</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jsonp-2.1.html" tabindex="0">Jakarta JSON Processing</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jsonpContainer-2.1.html" tabindex="0">Jakarta JSON Processing Container</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jsonpContainer-2.1.html" tabindex="0">Jakarta JSON Processing Container</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mail-2.1.html" tabindex="0">Jakarta Mail</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mail-2.1.html" tabindex="0">Jakarta Mail</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/managedBeans-2.0.html" tabindex="0">Jakarta Managed Beans</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/managedBeans-2.0.html" tabindex="0">Jakarta Managed Beans</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/messaging-3.1.html" tabindex="0">Jakarta Messaging</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/messaging-3.1.html" tabindex="0">Jakarta Messaging</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/persistence-3.1.html" tabindex="0">Jakarta Persistence</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/persistence-3.1.html" tabindex="0">Jakarta Persistence</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/persistenceContainer-3.1.html" tabindex="0">Jakarta Persistence Container</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/persistenceContainer-3.1.html" tabindex="0">Jakarta Persistence Container</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/restfulWS-3.1.html" tabindex="0">Jakarta RESTful Web Services</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/restfulWS-3.1.html" tabindex="0">Jakarta RESTful Web Services</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/restfulWSClient-3.1.html" tabindex="0">Jakarta RESTful Web Services Client</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/restfulWSClient-3.1.html" tabindex="0">Jakarta RESTful Web Services Client</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/pages-3.1.html" tabindex="0">Jakarta Server Pages</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/pages-3.1.html" tabindex="0">Jakarta Server Pages</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/servlet-6.0.html" tabindex="0">Jakarta Servlet</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/servlet-6.0.html" tabindex="0">Jakarta Servlet</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/websocket-2.1.html" tabindex="0">Jakarta WebSocket</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/websocket-2.1.html" tabindex="0">Jakarta WebSocket</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/xmlBinding-4.0.html" tabindex="0">Jakarta XML Binding</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/xmlBinding-4.0.html" tabindex="0">Jakarta XML Binding</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/xmlWS-4.0.html" tabindex="0">Jakarta XML Web Services</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/xmlWS-4.0.html" tabindex="0">Jakarta XML Web Services</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jdbc-4.3.html" tabindex="0">Java Database Connectivity</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jdbc-4.3.html" tabindex="0">Java Database Connectivity</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/javaee-8.0.html" tabindex="0">Java EE Full Platform</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/javaee-8.0.html" tabindex="0">Java EE Full Platform</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jndi-1.0.html" tabindex="0">Java Naming and Directory Interface</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jndi-1.0.html" tabindex="0">Java Naming and Directory Interface</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/json-1.0.html" tabindex="0">JavaScript Object Notation for Java</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/json-1.0.html" tabindex="0">JavaScript Object Notation for Java</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/sessionCache-1.0.html" tabindex="0">JCache Session Persistence</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/sessionCache-1.0.html" tabindex="0">JCache Session Persistence</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/j2eeManagement-1.1.html" tabindex="0">JEE Management</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/j2eeManagement-1.1.html" tabindex="0">JEE Management</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jmsMdb-3.2.html" tabindex="0">JMS Message-Driven Beans</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jmsMdb-3.2.html" tabindex="0">JMS Message-Driven Beans</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jwt-1.0.html" tabindex="0">JSON Web Token</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jwt-1.0.html" tabindex="0">JSON Web Token</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/jwtSso-1.0.html" tabindex="0">JSON Web Token Single Sign-On</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/jwtSso-1.0.html" tabindex="0">JSON Web Token Single Sign-On</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/constrainedDelegation-1.0.html" tabindex="0">Kerberos Constrained Delegation for SPNEGO</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/constrainedDelegation-1.0.html" tabindex="0">Kerberos Constrained Delegation for SPNEGO</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/ldapRegistry-3.0.html" tabindex="0">LDAP User Registry</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/ldapRegistry-3.0.html" tabindex="0">LDAP User Registry</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/kernel.html" tabindex="0">Liberty Kernel</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/kernel.html" tabindex="0">Liberty Kernel</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/logstashCollector-1.0.html" tabindex="0">Logstash Collector</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/logstashCollector-1.0.html" tabindex="0">Logstash Collector</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/messagingServer-3.0.html" tabindex="0">Messaging Server</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/messagingServer-3.0.html" tabindex="0">Messaging Server</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/messagingClient-3.0.html" tabindex="0">Messaging Server Client</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/messagingClient-3.0.html" tabindex="0">Messaging Server Client</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/messagingSecurity-3.0.html" tabindex="0">Messaging Server Security</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/messagingSecurity-3.0.html" tabindex="0">Messaging Server Security</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/microProfile-6.1.html" tabindex="0">MicroProfile</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/microProfile-6.1.html" tabindex="0">MicroProfile</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpConfig-3.1.html" tabindex="0">MicroProfile Config</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpConfig-3.1.html" tabindex="0">MicroProfile Config</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpContextPropagation-1.3.html" tabindex="0">MicroProfile Context Propagation</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpContextPropagation-1.3.html" tabindex="0">MicroProfile Context Propagation</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpFaultTolerance-4.0.html" tabindex="0">MicroProfile Fault Tolerance</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpFaultTolerance-4.0.html" tabindex="0">MicroProfile Fault Tolerance</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpGraphQL-2.0.html" tabindex="0">MicroProfile GraphQL</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpGraphQL-2.0.html" tabindex="0">MicroProfile GraphQL</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpHealth-4.0.html" tabindex="0">MicroProfile Health</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpHealth-4.0.html" tabindex="0">MicroProfile Health</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpJwt-2.1.html" tabindex="0">MicroProfile JSON Web Token</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpJwt-2.1.html" tabindex="0">MicroProfile JSON Web Token</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpMetrics-5.1.html" tabindex="0">MicroProfile Metrics</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpMetrics-5.1.html" tabindex="0">MicroProfile Metrics</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpOpenAPI-3.1.html" tabindex="0">MicroProfile OpenAPI</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpOpenAPI-3.1.html" tabindex="0">MicroProfile OpenAPI</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpOpenTracing-3.0.html" tabindex="0">MicroProfile OpenTracing</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpOpenTracing-3.0.html" tabindex="0">MicroProfile OpenTracing</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpReactiveMessaging-3.0.html" tabindex="0">MicroProfile Reactive Messaging</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpReactiveMessaging-3.0.html" tabindex="0">MicroProfile Reactive Messaging</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpReactiveStreams-3.0.html" tabindex="0">MicroProfile Reactive Streams</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpReactiveStreams-3.0.html" tabindex="0">MicroProfile Reactive Streams</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpRestClient-3.0.html" tabindex="0">MicroProfile Rest Client</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpRestClient-3.0.html" tabindex="0">MicroProfile Rest Client</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mpTelemetry-2.0.html" tabindex="0">MicroProfile Telemetry</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mpTelemetry-2.0.html" tabindex="0">MicroProfile Telemetry</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/mongodb-2.0.html" tabindex="0">MongoDB Integration</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/mongodb-2.0.html" tabindex="0">MongoDB Integration</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/oauth-2.0.html" tabindex="0">OAuth</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/oauth-2.0.html" tabindex="0">OAuth</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/openapi-3.1.html" tabindex="0">OpenAPI</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/openapi-3.1.html" tabindex="0">OpenAPI</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/openid-2.0.html" tabindex="0">OpenID</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/openid-2.0.html" tabindex="0">OpenID</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/openidConnectClient-1.0.html" tabindex="0">OpenID Connect Client</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/openidConnectClient-1.0.html" tabindex="0">OpenID Connect Client</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/openidConnectServer-1.0.html" tabindex="0">OpenID Connect Provider</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/openidConnectServer-1.0.html" tabindex="0">OpenID Connect Provider</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/opentracing-2.0.html" tabindex="0">Opentracing</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/opentracing-2.0.html" tabindex="0">Opentracing</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/osgiConsole-1.0.html" tabindex="0">OSGi Debug Console</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/osgiConsole-1.0.html" tabindex="0">OSGi Debug Console</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/passwordUtilities-1.1.html" tabindex="0">Password Utilities</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/passwordUtilities-1.1.html" tabindex="0">Password Utilities</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/monitor-1.0.html" tabindex="0">Performance Monitoring</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/monitor-1.0.html" tabindex="0">Performance Monitoring</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/requestTiming-1.0.html" tabindex="0">Request Timing</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/requestTiming-1.0.html" tabindex="0">Request Timing</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/samlWeb-2.0.html" tabindex="0">SAML Web Single Sign-On</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/samlWeb-2.0.html" tabindex="0">SAML Web Single Sign-On</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/ssl-1.0.html" tabindex="0">Secure Socket Layer</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/ssl-1.0.html" tabindex="0">Secure Socket Layer</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/spnego-1.0.html" tabindex="0">Simple and Protected GSSAPI Negotiation Mechanism</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/spnego-1.0.html" tabindex="0">Simple and Protected GSSAPI Negotiation Mechanism</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/sipServlet-1.1.html" tabindex="0">SIP Servlet</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/sipServlet-1.1.html" tabindex="0">SIP Servlet</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/socialLogin-1.0.html" tabindex="0">Social Media Login</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/socialLogin-1.0.html" tabindex="0">Social Media Login</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/springBoot-3.0.html" tabindex="0">Spring Boot Support</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/springBoot-3.0.html" tabindex="0">Spring Boot Support</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/transportSecurity-1.0.html" tabindex="0">Transport Security</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/transportSecurity-1.0.html" tabindex="0">Transport Security</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/webCache-1.0.html" tabindex="0">Web Response Cache</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/webCache-1.0.html" tabindex="0">Web Response Cache</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/wsSecurity-1.1.html" tabindex="0">Web Service Security</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/wsSecurity-1.1.html" tabindex="0">Web Service Security</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/wsAtomicTransaction-1.2.html" tabindex="0">WS-AT Service</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/wsAtomicTransaction-1.2.html" tabindex="0">WS-AT Service</a>
 </li>
 <li class="nav-item" data-depth="2">
-<a class="nav-link" href="/docs/24.0.0.10/reference/feature/wsSecuritySaml-1.1.html" tabindex="0">WSSecurity SAML</a>
+<a class="nav-link" href="/docs/24.0.0.9/reference/feature/wsSecuritySaml-1.1.html" tabindex="0">WSSecurity SAML</a>
 </li>
 </ul>
 </li></li>
 <li class="nav-item" data-depth="1">
-<button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
 <a class="nav-link" href="reference/feature/versionless-features.html" tabindex="0">Versionless features</a>
-<ul class="nav-list">
-<li class="nav-item" data-depth="2">
-<a class="nav-link" href="reference/platform/MicroProfile.html" tabindex="0">MicroProfile platforms</a>
-</li>
-<li class="nav-item" data-depth="2">
-<a class="nav-link" href="reference/platform/JavaEE.html" tabindex="0">Java EE platforms</a>
-</li>
-<li class="nav-item" data-depth="2">
-<a class="nav-link" href="reference/platform/JakartaEE.html" tabindex="0">Jakarta EE platforms</a>
-</li>
-</ul>
 </li>
 <li class="nav-item" data-depth="1">
 <button aria-label="Expand the pages under this category" class="nav-item-toggle"></button>
@@ -4805,42 +4790,291 @@
 <nav aria-label="breadcrumbs" class="breadcrumbs">
 <ul>
 <li><a href="overview.html">Docs overview</a></li>
-<li><a href="overview.html">Welcome to Docs</a></li>
+<li>Operations</li>
+<li><a href="log-trace-configuration.html">Logs</a></li>
+<li><a href="access-logging.html">HTTP access logging</a></li>
 </ul>
 </nav>
 <div id="github_link">
 <img alt="GitHub logo" id="docs_github_logo" src="/img/docs_github_logo.svg"/>
-<a href="https://github.com/OpenLiberty/docs/issues/new?body=Document: Welcome to Docs%0Ahttp://openliberty.io/docs/24.0.0.10/overview.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it.**" id="open_issue_link" target="_blank">Open Issue</a> 
+<a href="https://github.com/OpenLiberty/docs/issues/new?body=Document: HTTP access logging%0Ahttp://openliberty.io/docs/24.0.0.9/access-logging.html%0A%0A**Please describe the problem you are having with the documentation. Is information missing, inaccurate, or unclear? Tell us about the context where you encountered the problem so we can understand how to address it.**" id="open_issue_link" target="_blank">Open Issue</a> 
       | 
-      <a href="https://github.com/OpenLiberty/docs/edit/v24.0.0.10/modules/ROOT/pages/overview.adoc" id="edit_topic_link" rel="noopener" target="_blank">Edit Topic</a>
+      <a href="https://github.com/OpenLiberty/docs/edit/v24.0.0.9/modules/ROOT/pages/access-logging.adoc" id="edit_topic_link" rel="noopener" target="_blank">Edit Topic</a>
 </div>
 </div>
 <article class="doc">
-<h1 class="page">Welcome to Docs</h1>
+<h1 class="page">HTTP access logging</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Select from the categories in the sidebar to explore our documentation.</p>
+<p>You can configure access log settings for HTTP endpoints. An HTTP access log contains a record of all inbound client requests that are handled by HTTP endpoints.</p>
 </div>
 <div class="paragraph">
-<p>Still not seeing what you’re looking for?</p>
+<p>You can enable access logging in the Open Liberty Server in two modes, a single log for multiple endpoints or one log for each endpoint.
+If you do not specify attributes, the defaults are used. To see a list of the default attributes, see <a class="xref page" href="reference/config/httpAccessLogging.html">httpAccessLogging</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_http_access_log_settings"><a class="anchor" href="#_http_access_log_settings"></a>HTTP access log settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can configure HTTP access log settings either for multiple endpoints that share common log settings or for individual endpoints.</p>
+</div>
+<div class="sect2">
+<h3 id="_settings_for_a_common_log"><a class="anchor" href="#_settings_for_a_common_log"></a>Settings for a common log</h3>
+<div class="paragraph">
+<p>To enable logging for multiple endpoints with common settings, include <code>httpAccessLogging</code> as a top-level element in your <code>server.xml</code> file. Reference this element from multiple <code>httpEndpoint</code> elements, as shown in the following example.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpAccessLogging id="accessLogging"/&gt;
+&lt;httpEndpoint id="defaultHttpEndpoint" accessLoggingRef="accessLogging" httpPort="9080" httpsPort="9443"/&gt;
+&lt;httpEndpoint id="otherHttpEndpoint" accessLoggingRef="accessLogging" httpPort="9081" httpsPort="9444"/&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_settings_for_distinct_logs_for_each_endpoint"><a class="anchor" href="#_settings_for_distinct_logs_for_each_endpoint"></a>Settings for distinct logs for each endpoint</h3>
+<div class="paragraph">
+<p>To enable logging for individual endpoints, use an <code>accessLogging</code> child element and specify a file path that does not conflict with other logs, as shown in the following example.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"&gt;
+    &lt;accessLogging filepath="${server.output.dir}/logs/http_defaultEndpoint_access.log"/&gt;
+&lt;/httpEndpoint&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_http_access_log_format"><a class="anchor" href="#_http_access_log_format"></a>HTTP access log format</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the <code>accessLogFormat</code> property to specify the information and format you want to include in the NCSA access log for an HTTP transport channel. The value for this property is a space-separated list of options.</p>
+</div>
+<div class="paragraph">
+<p>Specify the log format string with the <code>logFormat</code> attribute of <code>httpAcccessLogging</code> or <code>accessLogging</code> elements in the <code>server.xml</code> file, as shown in the following examples.</p>
+</div>
+<div class="paragraph">
+<p>In the following <code>server.xml</code> file example, The <code>logformat</code> attribute for the <code>httpAcccessLogging</code> element specifies the log format string. Multiple endpoints can specify this string by referencing the <code>accessLogging</code> configuration ID.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpAccessLogging id="accessLogging" logFormat='%h %u %{t}W "%r" %s %b %D %{R}W'/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the following <code>server.xml</code> file example, the <code>logformat</code> attribute for the <code>accessLogging</code> subelement specifies the log format string for a specific endpoint that is defined in the <code>httpEndpoint</code> element.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"&gt;
+   &lt;accessLogging filepath="${server.output.dir}/logs/http_defaultEndpoint_access.log"
+                  logFormat='%h %i %u %t "%r" %s %b %D %{R}W' /&gt;
+&lt;/httpEndpoint&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following table lists the available log format options.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Log format option</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%a</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The remote IP address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The local IP address</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%b</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The response size in bytes excluding the headers</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The response size in bytes excluding the headers.
+If no value is found, <code>0</code> is printed instead of <code>-</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%{CookieName}C or %C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The request cookie that is specified within the brackets. If the brackets are not included, print all of the request cookies.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%D</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The elapsed time of the request, in microseconds</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%h</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The remote host</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%i or %{HeaderName}i</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>HeaderName</code> header value from the request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%m</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The request method</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%o or %{HeaderName}o</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>HeaderName</code> header value from the response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output the query string with any password masked</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%r</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The first line of the request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%{remote}p</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ephemeral port of the client that made the request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%{R}W</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service time of the request from the moment the request is received until the first set of bytes of the response is sent - millisecond accuracy, microsecond precision</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%s</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The status code of the response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%t</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The start time of the request, in NCSA format</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%{t}W</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The end time of the request, in NCSA format</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%u</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The remote user according to the Open Liberty-specific <code>$WSRU</code> header</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%U</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URL Path, not including the query string</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Each option can be enclosed in quotation marks, but the quotation marks are not required. Unless otherwise noted, a value of <code>-</code> is printed for an option if the requested information cannot be obtained for that option.</p>
+</div>
+<div class="paragraph">
+<p>The order that you specify the options determines the format of this information in the log. For example, you might specify the following directives as the value for the <code>accessLogFormat</code> property:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre> %h %i %u %t "%r" %s %b %D %{R}W</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Based on this setting, the NCSA access log includes the following information for each request in the specified order:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Try out our <a href="/guides">guides</a>, the quickest way to learn all things Open Liberty, and beyond.</p>
+<p>The remote host</p>
 </li>
 <li>
-<p>Check out the latest news, tutorials, and more on <a href="https://www.openliberty.io/blog/">our blog</a>.</p>
+<p>The HeaderName header value from the request</p>
 </li>
 <li>
-<p>Explore our <a href="/contribute">contributor resources</a> or become a contributor yourself.</p>
+<p>The remote user according to the WebSphere Specific $WSRU header</p>
 </li>
 <li>
-<p>You can also browse the docs on <a href="https://github.com/OpenLiberty/docs">GitHub</a>.</p>
+<p>The NCSA format of the start time of the request</p>
+</li>
+<li>
+<p>The first line of the request</p>
+</li>
+<li>
+<p>The status code of the response</p>
+</li>
+<li>
+<p>The response size in bytes excluding headers</p>
+</li>
+<li>
+<p>The elapsed time of the request in microseconds, end-to-end, including client and network time</p>
+</li>
+<li>
+<p>The elapsed time in microseconds until the first bytes of the response are sent. This value is often a close approximation of application response time.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time_based_http_access_log_rollover"><a class="anchor" href="#_time_based_http_access_log_rollover"></a>Time-based HTTP access log rollover</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>If something’s not quite working and you need it fixed ASAP, check out <a href="/support">Open Liberty Support</a> from IBM.</p>
+<p>You can enable time-based periodic rollover of your HTTP access log file by specifying a log rollover start time and a log rollover interval duration. The specified rollover start time is the time of day when the HTTP access log file first rolls over. The rollover interval duration is the time interval between consecutive HTTP access log file rollovers.</p>
+</div>
+<div class="paragraph">
+<p>For example, a server with a rollover start time of midnight and a rollover interval of 1 day rolls over the HTTP access log once every day, at midnight.</p>
+</div>
+<div class="paragraph">
+<p>Enable time-based rollover of your HTTP access log file by using the <code>rolloverStartTime</code> and <code>rolloverInterval</code> attributes of the <code>httpAcccessLogging</code> or <code>accessLogging</code> elements in the <code>server.xml</code> file. The following table lists the two attributes, their respective descriptions, and their permitted values.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;"/>
+<col style="width: 50%;"/>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Time-based log rollover attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rolloverStartTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use this setting alone or with the <code>rolloverInterval</code> attribute to enable time-based log rollover for your HTTP access log file. This setting specifies the scheduled time of day for logs to first roll over. The <code>rolloverInterval</code> setting duration begins at <code>rolloverStartTime</code>. Valid values follow a 24-hour ISO-8601 date-time format of HH:MM, where 00:00 represents midnight. Padding zeros are required. If the <code>rolloverInterval</code> attribute is specified, the default value of the <code>rolloverStartTime</code> attribute is 00:00, midnight.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rolloverInterval</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use this setting alone or with the <code>rolloverStartTime</code> attribute to enable time-based log rollover for your HTTP access log file. This setting specifies the time interval in between log rollovers, in minutes if a unit of time is not specified. Specify a positive integer followed by a unit of time, which can be days (d), hours (h), or minutes (m). For example, specify 5 hours as 5h. You can include multiple values in a single entry. For example, 1d5h is equivalent to 1 day and 5 hours. If the <code>rolloverStartTime</code> attribute is specified, the default value of the <code>rolloverInterval</code> attribute is 1 day.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The following examples demonstrate how to enable time-based periodic rollover for the HTTP access log file in the <code>httpAcccessLogging</code> and <code>accessLogging</code> elements. The <code>rolloverStartTime</code> attribute is set to  midnight and the <code>rolloverInterval</code> attribute is set to 1 day.</p>
+</div>
+<div class="paragraph">
+<p>In the following <code>server.xml</code> file example, the <code>rolloverStartTime</code> and  <code>rolloverInterval</code> attributes for the <code>httpAcccessLogging</code> element specify the log rollover start time and interval for multiple endpoints that reference the <code>accessLogging</code> configuration ID.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpAccessLogging id="accessLogging`" rolloverStartTime="00:00" rolloverInterval="1d"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the following server.xml file example, attributes for the <code>accessLogging</code> subelement specify configuration for a specific endpoint that is defined in the <code>httpEndpoint</code> element. The <code>rolloverStartTime</code> and <code>rolloverInterval</code> attributes specify the log rollover start time and interval for the endpoint.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"&gt;
+   &lt;accessLogging filepath="${server.output.dir}/logs/http_defaultEndpoint_access.log"
+                 rolloverStartTime="00:00" rolloverInterval="1d" /&gt;
+&lt;/httpEndpoint&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </article>
 </main>
