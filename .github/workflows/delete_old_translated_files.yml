@@ -1,0 +1,39 @@
+name: Delete Unchanged Files
+on:
+  pull_request:
+    types: [closed]  # Runs when a PR is merged
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for accurate diff
+      
+      - name: Identify and Remove Unchanged Files
+        run: |
+          # Defining the folders to check
+          JA="ja"
+          ZH="zh-Hans"
+          # Getting list of updated files in the last PR (
+          UPDATED_FILES=$(git diff --name-only HEAD^ HEAD -- "$JA" "$ZH")
+          # Get all HTML files in subdirectories
+          ALL_HTML_FILES=$(find "$JA" "$ZH" -type f -name "*.html")
+          # Loop through all HTML files and delete those that were NOT updated
+          for file in $ALL_HTML_FILES; do
+            if ! echo "$UPDATED_FILES" | grep -q "$file"; then
+              echo "Deleting: $file"
+              rm "$file"
+            fi
+          done
+      
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Cleanup: Remove non-updated HTML files" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
