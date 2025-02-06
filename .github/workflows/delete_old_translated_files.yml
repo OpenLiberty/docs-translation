@@ -16,14 +16,16 @@ jobs:
           # Exit if the PR is not from the allowed branch
           if [[ "$PR_BRANCH" != "$ALLOWED_BRANCH" ]]; then
             echo "This PR is not from $ALLOWED_BRANCH. Exiting..."
-            exit 0
+            echo "SKIP_JOB=true" >> $GITHUB_ENV
           fi
       - name: Checkout repository
+        if: env.SKIP_JOB != 'true'
         uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Fetch full history for accurate diff
       
       - name: Identify and Remove Unchanged Files
+        if: env.SKIP_JOB != 'true'
         run: |
           # Defining the folders to check
           JA="ja"
@@ -48,6 +50,7 @@ jobs:
           done
       
       - name: Commit and Push Changes
+        if: env.SKIP_JOB != 'true'
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
