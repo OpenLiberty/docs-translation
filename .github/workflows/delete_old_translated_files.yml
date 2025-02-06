@@ -6,6 +6,18 @@ jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
+      - name: Check PR Source Branch
+        run: |
+          # Define allowed branch
+          ALLOWED_BRANCH="translation-source-control" 
+          # Get the source branch of the PR
+          PR_BRANCH="${{ github.head_ref }}"
+          echo "PR opened from branch: $PR_BRANCH"
+          # Exit if the PR is not from the allowed branch
+          if [[ "$PR_BRANCH" != "$ALLOWED_BRANCH" ]]; then
+            echo "This PR is not from $ALLOWED_BRANCH. Exiting..."
+            exit 0
+          fi
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -18,6 +30,13 @@ jobs:
           ZH="zh-Hans"
           # Getting list of updated files in the last PR (
           UPDATED_FILES=$(git diff --name-only HEAD^ HEAD -- "$JA" "$ZH")
+          #Check if there are updated files, if not do not make changes
+          if [[ -z "$UPDATED_FILES" ]]; then
+            echo "no updated files detected, Exiting..."
+            exit 0
+          fi
+          echo "Updated Files: "
+          echo "$UPDATED_FILES" 
           # Get all HTML files in subdirectories
           ALL_HTML_FILES=$(find "$JA" "$ZH" -type f -name "*.html")
           # Loop through all HTML files and delete those that were NOT updated
